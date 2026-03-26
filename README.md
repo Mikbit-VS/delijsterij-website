@@ -21,6 +21,28 @@ Deze map is de werkbasis voor de nieuwe website van De Lijsterij.
 - De bestaande fotomap staat in `site/assets/images/original-import/`.
 - De `site/` map is de plek waar we verder gaan bouwen.
 
+## GitHub workflow
+
+- De GitHub-repository voor dit project is gekoppeld aan:
+  `https://github.com/Mikbit-VS/delijsterij-website`
+- We werken lokaal in deze map en pushen wijzigingen pas wanneer een stap stabiel genoeg is.
+- De branch is momenteel `main`.
+
+Handige basiscommando's:
+
+```bash
+git status
+git add .
+git commit -m "Korte beschrijving van de wijziging"
+git push
+```
+
+Praktische afspraak:
+
+- Eerst lokaal bouwen en controleren in Live Server.
+- Daarna pas committen.
+- Pas pushen naar GitHub als de stap logisch afgerond is.
+
 ## Eerstvolgende logische stap
 
 1. Het concept omzetten naar een schone `site/index.html`.
