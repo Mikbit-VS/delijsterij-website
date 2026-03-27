@@ -1,0 +1,15 @@
+# Dependencies / builds
+dist/
+build/
+tmp/
+temp/
+
+# Generated / binary
+**/*.png
+**/*.jpg
+**/*.jpeg
+**/*.gif
+**/*.webp
+**/*.svg
+**/*.ico
+

@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
-<body>
+<body class="page-portfolio">
 <header class="site-header">
   <nav aria-label="Hoofdnavigatie">
     <a class="nav-logo" href="index.html" aria-label="Ga naar home">De <em>Lijsterij</em></a>
@@ -18,6 +18,8 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="inlijsten.html">Inlijsten</a></li>
       <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
+      <li><a href="de-nieuwe-vermeer.html">De Nieuwe Vermeer</a></li>
+      <li><a href="restauraties.html">Restauraties</a></li>
       <li><a href="over-ons.html">Over Karolien</a></li>
       <li><a href="index.html#contact" class="nav-cta">Afspraak maken</a></li>
     </ul>
@@ -77,8 +79,9 @@
     </div>
 
     <div class="portfolio-feature">
-      <div class="portfolio-feature-image">
-        <img src="assets/images/portfolio/bekroond-tabernakellijst.jpg" alt="Bekroonde tabernakellijst">
+      <div class="portfolio-feature-image portfolio-feature-image--duo">
+        <img src="assets/images/portfolio/bekroond-tabernakellijst.jpg" alt="Bekroonde tabernakellijst met vrouw in blauw gewaad">
+        <img class="portfolio-feature-image-rembrandt" src="assets/images/portfolio/rembrandt-tabernakellijst.png" alt="Rembrandt in tabernakellijst">
       </div>
       <div class="portfolio-feature-copy">
         <div class="section-eyebrow section-eyebrow-accent">
@@ -90,14 +93,15 @@
       </div>
     </div>
 
-    <div class="portfolio-gallery-grid">
-      <article class="portfolio-work-card">
-        <img src="assets/images/portfolio/bloemwerk-klassieke-eiken-lijst.jpg" alt="Bloemwerk in klassieke eiken lijst">
-        <div class="portfolio-work-copy">
-          <h3>Bloemwerk in eiken lijst</h3>
-          <p>Een klassiekere omlijsting waarin hout, toon en rust de hoofdrol spelen.</p>
-        </div>
-      </article>
+  </section>
+
+  <section class="portfolio-showcase">
+    <div class="section-header">
+      <div class="section-eyebrow">Waardevolle herinneringen</div>
+      <h2>Persoonlijke stukken<br>met emotionele of historische <em>waarde</em></h2>
+      <p class="section-sub">Van een geboortekaartje tot een bijzonder object of restauratie: zorgvuldig ingelijst zodat het verhaal zichtbaar blijft.</p>
+    </div>
+    <div class="portfolio-gallery-grid portfolio-gallery-grid--three">
       <article class="portfolio-work-card">
         <img src="assets/images/portfolio/geboortekaartje-dubbel-zwevend.jpg" alt="Geboortekaartje dubbel zwevend ingelijst">
         <div class="portfolio-work-copy">
@@ -105,20 +109,85 @@
           <p>Dubbel zwevende presentatie die een klein object meer lucht en betekenis geeft.</p>
         </div>
       </article>
-      <article class="portfolio-work-card">
-        <img src="assets/images/portfolio/objectlijst-3d-medaillon.jpg" alt="Objectlijst met medaillon">
+      <article class="portfolio-work-card portfolio-work-card--objectlijst">
+        <img src="assets/images/original-import/Foto's/antiek-medaillon-handgemaakte-3d-lijst-gepolitoerd-gouden-inleg-de-lijsterij.jpg" alt="Objectlijst met medaillon">
         <div class="portfolio-work-copy">
           <h3>Objectlijst in 3D</h3>
           <p>Een oplossing voor werk en objecten die diepte nodig hebben om goed tot hun recht te komen.</p>
         </div>
       </article>
       <article class="portfolio-work-card">
-        <img src="assets/images/restauratie/restauratie-zwaar-beschadigde-lijst-na.jpg" alt="Gerestaureerde beschadigde lijst">
+        <a href="restauraties.html" aria-label="Bekijk restauraties door De Lijsterij">
+          <img src="assets/images/restauratie/restauratie-zwaar-beschadigde-lijst-na.jpg" alt="Gerestaureerde beschadigde lijst">
+        </a>
         <div class="portfolio-work-copy">
-          <h3>Restauratie</h3>
-          <p>Herstel van een zwaar beschadigde lijst met behoud van karakter en uitstraling.</p>
+          <h3>Restauraties</h3>
+          <p>Voorbeelden van herstelwerk met “voor en na”.</p>
+          <p><a href="restauraties.html" class="btn-outline">Bekijk restauraties</a></p>
         </div>
       </article>
+    </div>
+  </section>
+
+  <section class="portfolio-showcase portfolio-showcase--certs">
+    <div class="section-header">
+      <div class="section-eyebrow">Diploma's & certificaten</div>
+      <h2>Documenten en certificaten<br>die veilig en stijlvol <em>bewaard blijven</em></h2>
+      <p class="section-sub">Deze voorbeelden laten zien hoe diploma's en certificaten met een rustige, nette afwerking goed beschermd en mooi gepresenteerd kunnen worden.</p>
+    </div>
+    <div class="portfolio-gallery-grid portfolio-gallery-grid--three">
+      <article class="portfolio-work-card">
+        <img src="assets/images/portfolio/cambodja.jpg" alt="Cambodja certificaat ingelijst">
+        <div class="portfolio-work-copy">
+          <h3>Cambodja</h3>
+          <p>Een strakke presentatie waarin document en lijst mooi in balans blijven.</p>
+        </div>
+      </article>
+      <article class="portfolio-work-card">
+        <img src="assets/images/portfolio/marinier-1.jpg" alt="Marinier certificaat ingelijst">
+        <div class="portfolio-work-copy">
+          <h3>Marinier</h3>
+          <p>Een klassieke uitstraling met duidelijke focus op document en afwerking.</p>
+        </div>
+      </article>
+      <article class="portfolio-work-card">
+        <img src="assets/images/portfolio/northwood-diploma.png" alt="Northwood diploma ingelijst">
+        <div class="portfolio-work-copy">
+          <h3>Northwood diploma</h3>
+          <p>Beschermd ingelijst met behoud van leesbaarheid en een verzorgde uitstraling.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="portfolio-archive" id="meer-voorbeelden">
+    <div class="section-header">
+      <div class="section-eyebrow">Meer voorbeelden</div>
+      <h2>Meer werk om te<br>kijken, vergelijken en <em>aanvoelen</em></h2>
+      <p class="section-sub">Een bredere greep uit inlijstingen en handgemaakte lijsten. Klikken is niet nodig: deze sectie is bedoeld om snel te scannen.</p>
+    </div>
+    <div class="portfolio-archive-grid portfolio-archive-grid--grouped">
+      <div class="portfolio-archive-band portfolio-archive-band--portrait" aria-label="Staande voorbeelden">
+        <figure class="portfolio-archive-item"><img src="assets/images/portfolio/jozef-israels-staaflijst.png" alt="Karolien Kooiman naar Jozef Israels in staaflijst"></figure>
+        <figure class="portfolio-archive-item"><img src="assets/images/original-import/Foto's/karolien-kooiman-dromend-meisje-olieverf-op-paneel-staaflijst-bronskleurig-de-lijsterij.jpg" alt="Dromend meisje in bronkleurige staaflijst"></figure>
+        <figure class="portfolio-archive-item"><img src="assets/images/original-import/Foto's/yvonne-heemskerk-aisha-staaflijst-zwart-champagne-de-lijsterij.jpg" alt="Aisha in zwarte lijst met champagnekleur"></figure>
+        <figure class="portfolio-archive-item"><img src="assets/images/original-import/Foto's/karolien-kooiman-portret-van-een-jonge-vrouw-klassieke-zwarte-staaflijst-met-barok-lip-de-lijsterij.jpg" alt="Portret van een jonge vrouw in klassieke zwarte lijst"></figure>
+        <figure class="portfolio-archive-item"><img src="assets/images/original-import/Foto's/madonna-with-child-yvonne-heemskerk-tabernakellijst-de-lijsterij.jpg" alt="Madonna with Child in tabernakellijst"></figure>
+        <figure class="portfolio-archive-item"><img src="assets/images/original-import/Foto's/potloodtekening-handgemaakte-zwart-gepolitoerde-spaanse-lijst-verguld-de-lijsterij.jpg" alt="Potloodtekening in zwart gepolitoerde Spaanse lijst"></figure>
+      </div>
+      <div class="portfolio-archive-band portfolio-archive-band--square" aria-label="Vierkante voorbeelden">
+        <figure class="portfolio-archive-item"><img src="assets/images/original-import/Foto's/erik-van-elven-blue-topaz-staaflijst-de-lijsterij.jpg" alt="Blue Topaz in staaflijst"></figure>
+        <figure class="portfolio-archive-item"><img src="assets/images/original-import/Foto's/bob-stroek-tekening-vergulde-staaflijst-de-lijsterij.jpg" alt="Tekening in vergulde staaflijst"></figure>
+        <figure class="portfolio-archive-item"><img src="assets/images/original-import/Foto's/erik-van-elven-eend-handgemaakte-lijst-ebbenhout-vergulde-lip-de-lisjterij.jpg" alt="Eend in handgemaakte lijst met vergulde lip"></figure>
+      </div>
+      <div class="portfolio-archive-band portfolio-archive-band--landscape" aria-label="Liggende voorbeelden">
+        <figure class="portfolio-archive-item"><img src="assets/images/original-import/Foto's/erik-van-elven-two-flowers-dubbele-staaflijst-de-lijsterij.jpg" alt="Two Flowers in dubbele staaflijst"></figure>
+        <figure class="portfolio-archive-item"><img src="assets/images/original-import/Foto's/karolien-kooiman-hortensias-klassieke-eiken-lijst-met-passe-partout-de-lijsterij.jpg" alt="Hortensias in klassieke eiken lijst met passe-partout"></figure>
+        <figure class="portfolio-archive-item"><img src="assets/images/portfolio/golf.jpg" alt="Golf in lijst"></figure>
+      </div>
+    </div>
+    <div class="section-actions">
+      <a href="index.html#contact" class="btn-primary">Vraag advies</a>
     </div>
   </section>
 

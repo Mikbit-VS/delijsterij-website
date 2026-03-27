@@ -102,9 +102,13 @@ nav {
 .hero {
   min-height: 100vh;
   padding-top: 64px;
+  position: relative;
+}
+
+/* Full-bleed foto-hero alleen zonder split-layout (homepage gebruikt hero--split) */
+.hero:not(.hero--split) {
   display: flex;
   align-items: flex-end;
-  position: relative;
   background:
     linear-gradient(90deg, rgba(28,24,18,0.78) 0%, rgba(28,24,18,0.56) 32%, rgba(28,24,18,0.22) 66%, rgba(28,24,18,0.14) 100%),
     linear-gradient(180deg, rgba(28,24,18,0.08) 0%, rgba(28,24,18,0.24) 100%),
@@ -263,6 +267,120 @@ h1 em { font-style: italic; color: var(--gold); }
 
 .hero .pillar-val {
   color: var(--white);
+}
+
+/* Home: split hero (tekst + portret, zoals oude homepage) */
+.hero.hero--split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.78fr);
+  align-items: stretch;
+  min-height: 100vh;
+  padding-top: 64px;
+  background: var(--cream);
+}
+
+.hero.hero--split .hero-left {
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4.5rem 3rem 4.5rem 3rem;
+  max-width: none;
+  background: var(--cream);
+}
+
+.hero.hero--split .hero-sub--secondary {
+  margin-top: -0.5rem;
+  margin-bottom: 2rem;
+  max-width: 520px;
+  color: var(--ink-soft);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.hero.hero--split .eyebrow {
+  color: var(--gold);
+}
+
+.hero.hero--split .eyebrow::before {
+  background: var(--gold);
+  opacity: 0.5;
+}
+
+.hero.hero--split h1 {
+  color: var(--ink);
+  text-shadow: none;
+}
+
+.hero.hero--split h1 em {
+  color: var(--gold);
+}
+
+.hero.hero--split .hero-sub {
+  color: var(--ink-soft);
+  text-shadow: none;
+}
+
+.hero.hero--split .hero-pillars {
+  border-top-color: var(--border);
+}
+
+.hero.hero--split .pillar-label {
+  color: var(--muted);
+}
+
+.hero.hero--split .pillar-val {
+  color: var(--ink);
+}
+
+.hero.hero--split .btn-primary {
+  background: var(--ink);
+  color: var(--white);
+}
+
+.hero.hero--split .btn-primary:hover {
+  background: var(--gold);
+}
+
+.hero.hero--split .btn-outline {
+  border-color: rgba(28, 24, 18, 0.3);
+  color: var(--ink-soft);
+  background: transparent;
+}
+
+.hero.hero--split .btn-outline:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+  background: var(--cream-dark);
+}
+
+.hero.hero--split .hero-right--photo {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  min-height: 380px;
+  margin: 0;
+  background: var(--ink);
+}
+
+/* Portret in rechterkolom (niet de Vermeer-banner) */
+.hero.hero--split .hero-right--photo:not(.hero-right--vermeer-banner) img {
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  object-fit: cover;
+  object-position: 50% 22%;
+  display: block;
+}
+
+.hero.hero--split:has(.hero-right--vermeer-banner) {
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 1.05fr);
+}
+
+.hero.hero--split:not(:has(.hero-right)) {
+  grid-template-columns: 1fr;
+}
+
+.page-hero:not(:has(.page-hero-visual)) {
+  grid-template-columns: 1fr;
 }
 
 .hero-right {
@@ -856,11 +974,12 @@ footer {
 .hero-left > *:nth-child(3) { animation-delay: 0.4s; }
 .hero-left > *:nth-child(4) { animation-delay: 0.5s; }
 .hero-left > *:nth-child(5) { animation-delay: 0.6s; }
+.hero-left > *:nth-child(6) { animation-delay: 0.68s; }
 
 
 
 /* -- REAL IMAGES -- */
-.hero-right {
+.hero-right:not(.hero-right--photo) {
   background:
     linear-gradient(rgba(28,24,18,0.28), rgba(28,24,18,0.18)),
     url('../images/algemeen/hero-atelier-karolien.jpg') center/cover no-repeat;
@@ -906,6 +1025,93 @@ footer {
 .portfolio-inner--objectlijst {
   background-image: url('../images/portfolio/objectlijst-3d-medaillon.jpg');
 }
+
+.vermeer-prose-gap {
+  margin-bottom: 2rem;
+}
+
+/* Klassieke schilderijlijst (donker hout + vergulde lip) — alleen figuren in tekst / vergulden-foto */
+.vermeer-figure {
+  box-sizing: border-box;
+  margin: 0;
+  border: none;
+  padding: 14px;
+  background: linear-gradient(
+    145deg,
+    #5c4a3c 0%,
+    #3d2f24 20%,
+    #261e18 45%,
+    #3a2e24 72%,
+    #4d3f34 100%
+  );
+  box-shadow:
+    inset 0 0 0 1px rgba(230, 210, 170, 0.42),
+    inset 0 0 0 3px #14110d,
+    inset 0 0 0 4px rgba(168, 115, 42, 0.38),
+    inset 0 0 0 7px rgba(45, 36, 28, 0.65),
+    0 12px 32px rgba(12, 10, 8, 0.22),
+    0 3px 10px rgba(12, 10, 8, 0.12);
+}
+
+.vermeer-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: top;
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Zelfde lijst als in tekst; vult de kolom zodat zwart uit de PNG binnen de lijst valt (geen losse zwarte band buiten het kader) */
+.vermeer-figure--hero-banner {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  flex: 1 1 auto;
+  min-height: 0;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero.hero--split .hero-right--vermeer-banner .vermeer-figure--hero-banner img,
+.page-hero-visual--vermeer-banner .vermeer-figure--hero-banner img {
+  flex: 1 1 auto;
+  width: 100%;
+  min-height: 0;
+  height: 100%;
+  max-width: 100%;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+  background: #000;
+  vertical-align: top;
+}
+
+@media (max-width: 900px) {
+  .vermeer-figure--hero-banner {
+    padding: 10px;
+  }
+}
+
+/* Vermeer-banner: lijst vult kolom; beeld + zwarte rand uit PNG binnen het kader */
+.hero.hero--split .hero-right--vermeer-banner,
+.page-hero-visual--vermeer-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  background: #000;
+  padding: 0;
+  overflow: hidden;
+  align-self: stretch;
+  height: 100%;
+  min-height: 100%;
+  box-shadow: none;
+}
+
 .portfolio-item.has-image .portfolio-inner::before {
   content: '';
   position: absolute;
@@ -950,6 +1156,18 @@ footer {
   .nav-links li:not(:last-child) { display: none; }
   .hero { grid-template-columns: 1fr; }
   .hero-right { min-height: 320px; }
+  .hero.hero--split {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .hero.hero--split .hero-right--photo img {
+    min-height: 240px;
+    max-height: 46vh;
+  }
+  .hero.hero--split .hero-right--vermeer-banner .vermeer-figure--hero-banner img {
+    min-height: 0;
+    max-height: none;
+  }
   .hero-left { padding: 3rem 1.5rem; }
   .hero-left::after { display: none; }
   section { padding: 4rem 1.5rem; }
@@ -1006,6 +1224,10 @@ footer {
   overflow: hidden;
 }
 
+.page-hero-visual.page-hero-visual--vermeer-banner {
+  background: #000;
+}
+
 .page-hero--compact .page-hero-visual {
   min-height: 420px;
 }
@@ -1022,6 +1244,15 @@ footer {
   position: absolute;
   inset: 0;
   background: linear-gradient(to top, rgba(28,24,18,0.28), rgba(28,24,18,0.06));
+}
+
+.page-hero-visual--vermeer-banner::after {
+  display: none;
+}
+
+.vermeer-figure--in-prose {
+  max-width: 720px;
+  margin: 0 0 2rem;
 }
 
 .page-intro {
@@ -1087,6 +1318,24 @@ footer {
   grid-template-columns: minmax(0, 1.15fr) minmax(340px, 520px);
   gap: 3rem;
   align-items: stretch;
+}
+
+/* Foto links, lopende tekst rechts (o.a. De Nieuwe Vermeer — Het programma) */
+.story-grid--programma {
+  grid-template-columns: minmax(240px, 400px) minmax(0, 1fr);
+  gap: 2.5rem 3rem;
+  align-items: start;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.story-grid--programma .vermeer-figure--in-prose {
+  max-width: none;
+  margin: 0;
+}
+
+.story-grid--programma .story-copy--beside-photo p {
+  max-width: 52rem;
 }
 
 .story-main {
@@ -1245,10 +1494,61 @@ footer {
   background: var(--cream);
 }
 
+/* De Nieuwe Vermeer — Vermeer ingelijst: grid; bovenkant foto = bovenkant eyebrow (zelfde grid-rij) */
+.vermeer-ingelijst-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) min(360px, 100%);
+  grid-template-rows: auto auto 1fr;
+  column-gap: 2.5rem;
+  row-gap: 0;
+  align-items: start;
+  width: 100%;
+  max-width: 1100px;
+  box-sizing: border-box;
+}
+
+.vermeer-ingelijst-layout .section-eyebrow {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.vermeer-ingelijst-layout .vermeer-ingelijst-headline {
+  grid-column: 1;
+  grid-row: 2;
+  margin: 0 0 2.5rem;
+  max-width: 760px;
+  text-align: left;
+}
+
+.vermeer-ingelijst-layout .story-copy {
+  grid-column: 1;
+  grid-row: 3;
+  min-width: 0;
+}
+
+.vermeer-ingelijst-layout .vermeer-figure--vermeer-ingelijst-photo {
+  grid-column: 2;
+  grid-row: 1 / -1;
+  align-self: start;
+  justify-self: end;
+  width: 360px;
+  max-width: 100%;
+  margin: 0;
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+.vermeer-ingelijst-layout .vermeer-figure--vermeer-ingelijst-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: top;
+}
+
 .portfolio-feature {
   display: grid;
   grid-template-columns: minmax(320px, 0.95fr) minmax(0, 1.05fr);
-  gap: 2rem;
+  gap: 4rem;
   align-items: stretch;
   margin-top: 3rem;
 }
@@ -1265,6 +1565,25 @@ footer {
   min-height: 520px;
   object-fit: cover;
   display: block;
+}
+
+.portfolio-feature-image--duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.75rem;
+  padding: 1.15rem;
+  background: var(--cream);
+}
+
+.portfolio-feature-image--duo img {
+  min-height: 520px;
+}
+
+.portfolio-feature-image-rembrandt {
+  background: #fff;
+  object-fit: cover;
+  object-position: 54% 49%;
+  padding: 6px;
 }
 
 .portfolio-feature-copy {
@@ -1291,6 +1610,27 @@ footer {
   margin-top: 2rem;
 }
 
+.portfolio-gallery-grid--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.portfolio-gallery-grid--three .portfolio-work-card img {
+  aspect-ratio: 1 / 1;
+}
+
+.portfolio-gallery-grid--three .portfolio-work-copy {
+  padding: 1.25rem;
+}
+
+.portfolio-gallery-grid--three .portfolio-work-copy h3 {
+  font-size: 22px;
+}
+
+.portfolio-gallery-grid--three .portfolio-work-copy p {
+  font-size: 14px;
+}
+
 .portfolio-work-card {
   background: var(--white);
   border: 1px solid var(--border);
@@ -1302,6 +1642,20 @@ footer {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   display: block;
+}
+
+.portfolio-work-card--objectlijst img {
+  object-fit: contain;
+  background: var(--cream);
+  padding: 10px;
+}
+
+.portfolio-showcase--certs .portfolio-work-card img {
+  aspect-ratio: auto;
+  height: auto;
+  object-fit: contain;
+  background: var(--cream);
+  padding: 8px;
 }
 
 .portfolio-work-copy {
@@ -1322,8 +1676,163 @@ footer {
   line-height: 1.75;
 }
 
+.portfolio-archive {
+  padding: 5rem 3rem;
+  background: var(--white);
+}
+
+.portfolio-archive--dark {
+  background: var(--cream-dark);
+}
+
+.portfolio-archive-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.portfolio-archive-item {
+  margin: 0;
+  border: 1px solid var(--border);
+  background: var(--cream);
+  overflow: hidden;
+}
+
+.portfolio-archive-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  padding: 14px;
+}
+
+.portfolio-archive-item.is-portrait {
+  aspect-ratio: 4 / 5;
+}
+
+.portfolio-archive-item.is-square {
+  aspect-ratio: 1 / 1;
+}
+
+.portfolio-archive-item.is-landscape {
+  aspect-ratio: 4 / 3;
+}
+
+/* Meer voorbeelden (portfolio): gegroepeerd staand / vierkant / liggend, gelijkmatige cellen */
+#meer-voorbeelden .portfolio-archive-grid--grouped {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+#meer-voorbeelden .portfolio-archive-band {
+  display: grid;
+  gap: 1rem;
+}
+
+#meer-voorbeelden .portfolio-archive-band .portfolio-archive-item {
+  min-height: 0;
+}
+
+#meer-voorbeelden .portfolio-archive-band--portrait {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+#meer-voorbeelden .portfolio-archive-band--square,
+#meer-voorbeelden .portfolio-archive-band--landscape {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+#meer-voorbeelden .portfolio-archive-band--portrait .portfolio-archive-item {
+  aspect-ratio: 4 / 5;
+}
+
+#meer-voorbeelden .portfolio-archive-band--square .portfolio-archive-item {
+  aspect-ratio: 1 / 1;
+}
+
+#meer-voorbeelden .portfolio-archive-band--landscape .portfolio-archive-item {
+  aspect-ratio: 4 / 3;
+}
+
+#meer-voorbeelden .portfolio-archive-item img {
+  object-fit: contain;
+  padding: 10px;
+}
+
+.portfolio-restoration {
+  padding: 5rem 3rem;
+  background: var(--white);
+}
+
+.restoration-case {
+  display: grid;
+  grid-template-columns: minmax(320px, 1fr) minmax(280px, 0.8fr);
+  gap: 2rem;
+  align-items: start;
+  margin-top: 3rem;
+}
+
+.restoration-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.restoration-pair img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: contain;
+  display: block;
+  border: 1px solid var(--border);
+  background: var(--cream);
+  padding: 14px;
+}
+
+.portfolio-compare-page .page-hero-visual img {
+  object-fit: contain;
+  object-position: center;
+  padding: 18px;
+  background: var(--cream-dark);
+}
+
+.restoration-copy {
+  padding: 2rem;
+  border: 1px solid var(--border);
+  background: var(--cream);
+}
+
+.restoration-copy h3 {
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.restoration-copy p {
+  color: var(--ink-soft);
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
 .cta-panel-wrap {
   padding: 4rem 3rem 6rem;
+  background: linear-gradient(180deg, var(--white), var(--cream-dark));
+}
+
+/* Portfolio-pagina: afwisselende wit / crème banden in main (body.page-portfolio) */
+body.page-portfolio main > section:nth-child(odd) {
+  background: var(--white);
+}
+
+body.page-portfolio main > section:nth-child(even) {
+  background: var(--cream);
+}
+
+body.page-portfolio main > section.cta-panel-wrap {
   background: linear-gradient(180deg, var(--white), var(--cream-dark));
 }
 
@@ -1349,10 +1858,56 @@ footer {
   .principles-grid,
   .portfolio-feature,
   .portfolio-gallery-grid,
+  .portfolio-archive-grid,
+  .restoration-case,
+  .restoration-pair,
   .atelier-strip,
   .cta-panel {
     grid-template-columns: 1fr;
     display: grid;
+  }
+
+  .portfolio-gallery-grid--three {
+    grid-template-columns: 1fr;
+  }
+
+  .vermeer-ingelijst-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+
+  .vermeer-ingelijst-layout .section-eyebrow {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .vermeer-ingelijst-layout .vermeer-ingelijst-headline {
+    grid-column: 1;
+    grid-row: 2;
+    margin-bottom: 1.25rem;
+  }
+
+  .vermeer-ingelijst-layout .story-copy {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .vermeer-ingelijst-layout .vermeer-figure--vermeer-ingelijst-photo {
+    grid-column: 1;
+    grid-row: 4;
+    justify-self: center;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 1.75rem;
+  }
+
+  #meer-voorbeelden .portfolio-archive-band--portrait {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #meer-voorbeelden .portfolio-archive-band--square,
+  #meer-voorbeelden .portfolio-archive-band--landscape {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .page-hero-copy,
@@ -1387,6 +1942,10 @@ footer {
     min-height: 320px;
   }
 
+  .portfolio-feature-image--duo {
+    grid-template-columns: 1fr;
+  }
+
   .inlijsten-gallery {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -1411,6 +1970,14 @@ footer {
 
   .cta-panel {
     padding: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #meer-voorbeelden .portfolio-archive-band--portrait,
+  #meer-voorbeelden .portfolio-archive-band--square,
+  #meer-voorbeelden .portfolio-archive-band--landscape {
+    grid-template-columns: 1fr;
   }
 }
 
