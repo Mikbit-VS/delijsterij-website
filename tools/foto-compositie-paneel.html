@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foto-compositie-paneel</title>
+    <style>
+      :root {
+        --bg: #efe7da;
+        --panel: rgba(253, 250, 246, 0.88);
+        --panel-strong: #fdfaf6;
+        --ink: #1c1812;
+        --muted: #736757;
+        --line: rgba(28, 24, 18, 0.12);
+        --gold: #a8732a;
+        --shadow: 0 20px 40px rgba(28, 24, 18, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, rgba(255, 255, 255, 0.55), transparent 28%),
+          linear-gradient(180deg, #f6f0e6 0%, var(--bg) 100%);
+      }
+
+      .app {
+        display: grid;
+        grid-template-columns: minmax(320px, 420px) minmax(0, 1fr);
+        min-height: 100vh;
+      }
+
+      .sidebar {
+        padding: 2rem;
+        background: rgba(247, 243, 236, 0.9);
+        border-right: 1px solid var(--line);
+        backdrop-filter: blur(10px);
+      }
+
+      .eyebrow {
+        margin: 0 0 0.85rem;
+        font-size: 0.8rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--gold);
+      }
+
+      h1 {
+        margin: 0 0 0.85rem;
+        font-size: clamp(2rem, 4vw, 2.7rem);
+        font-weight: 400;
+        line-height: 1.05;
+      }
+
+      .intro {
+        margin: 0 0 1.5rem;
+        font-family: Arial, sans-serif;
+        font-size: 0.95rem;
+        line-height: 1.7;
+        color: var(--muted);
+      }
+
+      .controls {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .panel {
+        padding: 1rem;
+        background: var(--panel);
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+      }
+
+      .panel h2 {
+        margin: 0 0 0.9rem;
+        font-size: 1.15rem;
+        font-weight: 400;
+      }
+
+      .field {
+        display: grid;
+        gap: 0.45rem;
+        margin-bottom: 0.95rem;
+      }
+
+      .field:last-child {
+        margin-bottom: 0;
+      }
+
+      .field-head {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
+      .field label {
+        font-family: Arial, sans-serif;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .value {
+        font-family: Arial, sans-serif;
+        font-size: 0.8rem;
+        color: var(--gold);
+      }
+
+      input[type="range"] {
+        width: 100%;
+        accent-color: var(--gold);
+      }
+
+      .output {
+        display: grid;
+        gap: 0.75rem;
+      }
+
+      textarea {
+        width: 100%;
+        min-height: 7.5rem;
+        padding: 0.85rem;
+        border: 1px solid var(--line);
+        background: var(--panel-strong);
+        color: var(--ink);
+        font-family: Consolas, "Courier New", monospace;
+        font-size: 0.86rem;
+        line-height: 1.55;
+        resize: vertical;
+      }
+
+      .actions {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+      }
+
+      button {
+        border: 1px solid rgba(168, 115, 42, 0.3);
+        background: var(--ink);
+        color: #fdfaf6;
+        padding: 0.8rem 1rem;
+        font-size: 0.82rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+
+      button.secondary {
+        background: transparent;
+        color: var(--ink);
+      }
+
+      .status {
+        min-height: 1.2rem;
+        font-family: Arial, sans-serif;
+        font-size: 0.82rem;
+        color: var(--muted);
+      }
+
+      .stage-wrap {
+        padding: 2rem;
+        display: grid;
+        align-items: center;
+      }
+
+      .stage-panel {
+        padding: clamp(1rem, 3vw, 2rem);
+        background: rgba(255, 252, 247, 0.68);
+        border: 1px solid rgba(28, 24, 18, 0.08);
+        box-shadow: var(--shadow);
+      }
+
+      .stage-title {
+        margin: 0 0 1rem;
+        font-family: Arial, sans-serif;
+        font-size: 0.82rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .vermeer-result-gallery {
+        --gallery-height: min(54vw, 760px);
+        position: relative;
+        width: min(100%, 1100px);
+        aspect-ratio: 11 / 7;
+        min-height: 420px;
+        margin: 0 auto;
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.4), rgba(237, 232, 223, 0.55)),
+          repeating-linear-gradient(
+            90deg,
+            rgba(168, 115, 42, 0.03) 0,
+            rgba(168, 115, 42, 0.03) 1px,
+            transparent 1px,
+            transparent 84px
+          );
+        border: 1px solid rgba(28, 24, 18, 0.08);
+        overflow: hidden;
+      }
+
+      .vermeer-result-gallery::before {
+        content: "";
+        position: absolute;
+        inset: 1rem;
+        border: 1px solid rgba(168, 115, 42, 0.14);
+        pointer-events: none;
+      }
+
+      .vermeer-result-photo {
+        position: absolute;
+        top: var(--photo-top, auto);
+        right: var(--photo-right, auto);
+        bottom: var(--photo-bottom, auto);
+        left: var(--photo-left, auto);
+        width: var(--photo-width, 320px);
+        margin: 0;
+        transform: rotate(var(--photo-rotate, 0deg));
+        transform-origin: center center;
+        box-shadow: 0 22px 40px rgba(28, 24, 18, 0.14);
+        overflow: hidden;
+        background: #fdfaf6;
+        border: 1px solid rgba(28, 24, 18, 0.08);
+      }
+
+      .vermeer-result-photo img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .vermeer-result-photo--winners {
+        z-index: 2;
+      }
+
+      .vermeer-result-photo--marias {
+        z-index: 1;
+      }
+
+      @media (max-width: 980px) {
+        .app {
+          grid-template-columns: 1fr;
+        }
+
+        .sidebar {
+          border-right: 0;
+          border-bottom: 1px solid var(--line);
+        }
+
+        .stage-wrap {
+          padding-top: 1.25rem;
+        }
+
+        .vermeer-result-gallery {
+          min-height: 320px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <p class="eyebrow">Tools</p>
+        <h1>Foto-compositie-paneel</h1>
+        <p class="intro">
+          Sleep aan de sliders om de echte foto's live te positioneren. Onderaan kun je de huidige
+          waardes direct als `style`-attributen kopieren voor de twee `<figure>`-elementen.
+        </p>
+
+        <div class="controls">
+          <section class="panel">
+            <h2>Winnaarstegel</h2>
+            <div class="field">
+              <div class="field-head">
+                <label for="winners-width">--photo-width</label>
+                <span class="value" data-value="winners-width"></span>
+              </div>
+              <input id="winners-width" type="range" min="120" max="520" step="1" value="320" />
+            </div>
+            <div class="field">
+              <div class="field-head">
+                <label for="winners-top">--photo-top</label>
+                <span class="value" data-value="winners-top"></span>
+              </div>
+              <input id="winners-top" type="range" min="-40" max="420" step="1" value="24" />
+            </div>
+            <div class="field">
+              <div class="field-head">
+                <label for="winners-left">--photo-left</label>
+                <span class="value" data-value="winners-left"></span>
+              </div>
+              <input id="winners-left" type="range" min="-40" max="520" step="1" value="24" />
+            </div>
+            <div class="field">
+              <div class="field-head">
+                <label for="winners-rotate">--photo-rotate</label>
+                <span class="value" data-value="winners-rotate"></span>
+              </div>
+              <input id="winners-rotate" type="range" min="-20" max="20" step="0.1" value="-4" />
+            </div>
+          </section>
+
+          <section class="panel">
+            <h2>Drie Maria's + Yvonne</h2>
+            <div class="field">
+              <div class="field-head">
+                <label for="marias-width">--photo-width</label>
+                <span class="value" data-value="marias-width"></span>
+              </div>
+              <input id="marias-width" type="range" min="180" max="840" step="1" value="560" />
+            </div>
+            <div class="field">
+              <div class="field-head">
+                <label for="marias-top">--photo-top</label>
+                <span class="value" data-value="marias-top"></span>
+              </div>
+              <input id="marias-top" type="range" min="-40" max="420" step="1" value="92" />
+            </div>
+            <div class="field">
+              <div class="field-head">
+                <label for="marias-right">--photo-right</label>
+                <span class="value" data-value="marias-right"></span>
+              </div>
+              <input id="marias-right" type="range" min="-40" max="520" step="1" value="0" />
+            </div>
+            <div class="field">
+              <div class="field-head">
+                <label for="marias-rotate">--photo-rotate</label>
+                <span class="value" data-value="marias-rotate"></span>
+              </div>
+              <input id="marias-rotate" type="range" min="-20" max="20" step="0.1" value="2.5" />
+            </div>
+          </section>
+
+          <section class="panel output">
+            <h2>Style-output</h2>
+            <textarea id="output" readonly></textarea>
+            <div class="actions">
+              <button id="copy-button" type="button">Kopieer style-attributen</button>
+              <button id="copy-figures-button" class="secondary" type="button">
+                Kopieer volledige figure-blokken
+              </button>
+              <button id="reset-button" class="secondary" type="button">Reset waarden</button>
+            </div>
+            <div class="status" id="status"></div>
+          </section>
+        </div>
+      </aside>
+
+      <main class="stage-wrap">
+        <section class="stage-panel">
+          <p class="stage-title">Live preview van .vermeer-result-gallery</p>
+          <div class="vermeer-result-gallery">
+            <figure class="vermeer-result-photo vermeer-result-photo--winners" id="winners-figure">
+              <img
+                src="../site/assets/images/algemeen/winnaars-tegel-de-nieuwe-vermeer.jpg"
+                alt="Winnaarstegel van De Nieuwe Vermeer"
+              />
+            </figure>
+            <figure class="vermeer-result-photo vermeer-result-photo--marias" id="marias-figure">
+              <img
+                src="../site/assets/images/algemeen/3-marias-en-yvonne-heemskerk-de-nieuwe-vermeer.jpg"
+                alt="Yvonne Heemskerk met De Drie Maria's aan het graf"
+              />
+            </figure>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      const defaults = {
+        winners: {
+          width: 320,
+          top: 24,
+          left: 24,
+          rotate: -4,
+        },
+        marias: {
+          width: 560,
+          top: 92,
+          right: 0,
+          rotate: 2.5,
+        },
+      };
+
+      const units = {
+        width: "px",
+        top: "px",
+        left: "px",
+        right: "px",
+        rotate: "deg",
+      };
+
+      const controls = {
+        winners: {
+          width: document.getElementById("winners-width"),
+          top: document.getElementById("winners-top"),
+          left: document.getElementById("winners-left"),
+          rotate: document.getElementById("winners-rotate"),
+        },
+        marias: {
+          width: document.getElementById("marias-width"),
+          top: document.getElementById("marias-top"),
+          right: document.getElementById("marias-right"),
+          rotate: document.getElementById("marias-rotate"),
+        },
+      };
+
+      const figures = {
+        winners: document.getElementById("winners-figure"),
+        marias: document.getElementById("marias-figure"),
+      };
+
+      const output = document.getElementById("output");
+      const status = document.getElementById("status");
+      const copyButton = document.getElementById("copy-button");
+      const copyFiguresButton = document.getElementById("copy-figures-button");
+      const resetButton = document.getElementById("reset-button");
+
+      function formatValue(name, value) {
+        if (name === "rotate") {
+          return `${Number(value).toFixed(1)}${units[name]}`;
+        }
+        return `${Math.round(Number(value))}${units[name]}`;
+      }
+
+      function setFigureStyles() {
+        const winners = {
+          width: controls.winners.width.value,
+          top: controls.winners.top.value,
+          left: controls.winners.left.value,
+          rotate: controls.winners.rotate.value,
+        };
+
+        const marias = {
+          width: controls.marias.width.value,
+          top: controls.marias.top.value,
+          right: controls.marias.right.value,
+          rotate: controls.marias.rotate.value,
+        };
+
+        figures.winners.style.setProperty("--photo-width", formatValue("width", winners.width));
+        figures.winners.style.setProperty("--photo-top", formatValue("top", winners.top));
+        figures.winners.style.setProperty("--photo-left", formatValue("left", winners.left));
+        figures.winners.style.setProperty("--photo-rotate", formatValue("rotate", winners.rotate));
+
+        figures.marias.style.setProperty("--photo-width", formatValue("width", marias.width));
+        figures.marias.style.setProperty("--photo-top", formatValue("top", marias.top));
+        figures.marias.style.setProperty("--photo-right", formatValue("right", marias.right));
+        figures.marias.style.setProperty("--photo-rotate", formatValue("rotate", marias.rotate));
+
+        updateLabels(winners, marias);
+        updateOutput(winners, marias);
+      }
+
+      function updateLabels(winners, marias) {
+        document.querySelector('[data-value="winners-width"]').textContent = formatValue("width", winners.width);
+        document.querySelector('[data-value="winners-top"]').textContent = formatValue("top", winners.top);
+        document.querySelector('[data-value="winners-left"]').textContent = formatValue("left", winners.left);
+        document.querySelector('[data-value="winners-rotate"]').textContent = formatValue("rotate", winners.rotate);
+
+        document.querySelector('[data-value="marias-width"]').textContent = formatValue("width", marias.width);
+        document.querySelector('[data-value="marias-top"]').textContent = formatValue("top", marias.top);
+        document.querySelector('[data-value="marias-right"]').textContent = formatValue("right", marias.right);
+        document.querySelector('[data-value="marias-rotate"]').textContent = formatValue("rotate", marias.rotate);
+      }
+
+      function buildStyleBlock(lines) {
+        return ['style="', ...lines.map((line) => `  ${line}`), '"'].join("\n");
+      }
+
+      function updateOutput(winners, marias) {
+        const winnersStyle = buildStyleBlock([
+          `--photo-width: ${formatValue("width", winners.width)};`,
+          `--photo-top: ${formatValue("top", winners.top)};`,
+          `--photo-left: ${formatValue("left", winners.left)};`,
+          `--photo-rotate: ${formatValue("rotate", winners.rotate)};`,
+        ]);
+
+        const mariasStyle = buildStyleBlock([
+          `--photo-width: ${formatValue("width", marias.width)};`,
+          `--photo-top: ${formatValue("top", marias.top)};`,
+          `--photo-right: ${formatValue("right", marias.right)};`,
+          `--photo-rotate: ${formatValue("rotate", marias.rotate)};`,
+        ]);
+
+        output.value = [
+          "<figure class=\"vermeer-result-photo vermeer-result-photo--winners\"",
+          winnersStyle,
+          ">",
+          "",
+          "<figure class=\"vermeer-result-photo vermeer-result-photo--marias\"",
+          mariasStyle,
+          ">",
+        ].join("\n");
+      }
+
+      function buildFullFigureOutput() {
+        return [
+          "<figure",
+          '  class="vermeer-result-photo vermeer-result-photo--winners"',
+          '  style="',
+          `    --photo-width: ${formatValue("width", controls.winners.width.value)};`,
+          `    --photo-top: ${formatValue("top", controls.winners.top.value)};`,
+          `    --photo-left: ${formatValue("left", controls.winners.left.value)};`,
+          `    --photo-rotate: ${formatValue("rotate", controls.winners.rotate.value)};`,
+          '  "',
+          ">",
+          "  <img",
+          '    src="assets/images/algemeen/winnaars-tegel-de-nieuwe-vermeer.jpg"',
+          '    alt="Winnaarstegel van De Nieuwe Vermeer"',
+          "  />",
+          "</figure>",
+          "<figure",
+          '  class="vermeer-result-photo vermeer-result-photo--marias"',
+          '  style="',
+          `    --photo-width: ${formatValue("width", controls.marias.width.value)};`,
+          `    --photo-top: ${formatValue("top", controls.marias.top.value)};`,
+          `    --photo-right: ${formatValue("right", controls.marias.right.value)};`,
+          `    --photo-rotate: ${formatValue("rotate", controls.marias.rotate.value)};`,
+          '  "',
+          ">",
+          "  <img",
+          '    src="assets/images/algemeen/3-marias-en-yvonne-heemskerk-de-nieuwe-vermeer.jpg"',
+          '    alt="Yvonne Heemskerk met De Drie Maria\'s aan het graf"',
+          "  />",
+          "</figure>",
+        ].join("\n");
+      }
+
+      async function copyText(text, successMessage, fallbackMessage) {
+        try {
+          await navigator.clipboard.writeText(text);
+          status.textContent = successMessage;
+        } catch (error) {
+          output.focus();
+          output.select();
+          document.execCommand("copy");
+          status.textContent = fallbackMessage;
+        }
+      }
+
+      function copyOutput() {
+        return copyText(
+          output.value,
+          "Style-attributen gekopieerd naar het klembord.",
+          "Style-attributen gekopieerd via fallback-selectie."
+        );
+      }
+
+      function copyFullFigures() {
+        const figureOutput = buildFullFigureOutput();
+        output.value = figureOutput;
+        output.focus();
+        output.select();
+
+        return copyText(
+          figureOutput,
+          "Volledige figure-blokken gekopieerd naar het klembord.",
+          "Volledige figure-blokken gekopieerd via fallback-selectie."
+        ).finally(() => {
+          setFigureStyles();
+        });
+      }
+
+      function resetValues() {
+        controls.winners.width.value = defaults.winners.width;
+        controls.winners.top.value = defaults.winners.top;
+        controls.winners.left.value = defaults.winners.left;
+        controls.winners.rotate.value = defaults.winners.rotate;
+
+        controls.marias.width.value = defaults.marias.width;
+        controls.marias.top.value = defaults.marias.top;
+        controls.marias.right.value = defaults.marias.right;
+        controls.marias.rotate.value = defaults.marias.rotate;
+
+        status.textContent = "Waarden zijn teruggezet naar de beginstand.";
+        setFigureStyles();
+      }
+
+      Object.values(controls).forEach((group) => {
+        Object.values(group).forEach((input) => {
+          input.addEventListener("input", () => {
+            status.textContent = "";
+            setFigureStyles();
+          });
+        });
+      });
+
+      copyButton.addEventListener("click", copyOutput);
+      copyFiguresButton.addEventListener("click", copyFullFigures);
+      resetButton.addEventListener("click", resetValues);
+
+      resetValues();
+    </script>
+  </body>
+</html>

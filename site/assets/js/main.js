@@ -1,1 +1,64 @@
-console.log("De Lijsterij site workspace is klaar.");
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
+    var params = new URLSearchParams(window.location.search);
+    if (params.has('workshop')) {
+      var contact = document.getElementById('contact');
+      var ta = document.getElementById('bericht');
+      var cat = document.getElementById('categorie');
+
+      if (cat) {
+        cat.value = 'workshop';
+      }
+      if (ta && !ta.value.trim()) {
+        ta.value = 'Ik heb een vraag over de workshops bij De Lijsterij:\n\n';
+      }
+      if (contact) {
+        contact.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      if (ta) {
+        requestAnimationFrame(function () {
+          ta.focus({ preventScroll: true });
+        });
+      }
+    }
+
+    var form = document.querySelector('#contact form.form');
+    if (!form) return;
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.reportValidity()) return;
+
+      var naam = (document.getElementById('naam') && document.getElementById('naam').value.trim()) || '';
+      var telefoon =
+        (document.getElementById('telefoon') && document.getElementById('telefoon').value.trim()) || '';
+      var email = (document.getElementById('email') && document.getElementById('email').value.trim()) || '';
+      var bericht = (document.getElementById('bericht') && document.getElementById('bericht').value.trim()) || '';
+      var catEl = document.getElementById('categorie');
+      var categorie = '';
+      if (catEl && catEl.options[catEl.selectedIndex]) {
+        categorie = catEl.options[catEl.selectedIndex].text.trim();
+      }
+
+      var lines = [];
+      lines.push('Bericht via contactformulier op delijsterij.nl');
+      lines.push('');
+      lines.push('Naam: ' + naam);
+      lines.push('Telefoon: ' + telefoon);
+      lines.push('E-mail: ' + email);
+      lines.push('Categorie: ' + (categorie || '—'));
+      lines.push('');
+      lines.push(bericht);
+
+      var subject = 'Contact website — ' + (naam || 'De Lijsterij');
+      var body = lines.join('\n');
+      var mailto =
+        'mailto:info@delijsterij.nl?subject=' +
+        encodeURIComponent(subject) +
+        '&body=' +
+        encodeURIComponent(body);
+
+      window.location.href = mailto;
+    });
+  });
+})();

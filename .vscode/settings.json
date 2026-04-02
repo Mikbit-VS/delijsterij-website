@@ -10,6 +10,7 @@
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
 
-  "prettier.requireConfig": true
+  "prettier.requireConfig": true,
+  "liveServer.settings.port": 5501
 }
 
