@@ -388,6 +388,26 @@ h1 em {
   color: var(--gold);
 }
 
+.hero.hero--split .hero-title-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: clamp(0.75rem, 2.5vw, 1.35rem);
+  margin-bottom: 1.5rem;
+}
+
+.hero.hero--split .hero-title-row h1 {
+  margin-bottom: 0;
+}
+
+.hero.hero--split .hero-brand-mark {
+  display: block;
+  width: clamp(52px, 9vw, 76px);
+  height: auto;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
 .hero.hero--split .hero-sub {
   color: var(--ink-soft);
   text-shadow: none;
@@ -1380,14 +1400,16 @@ footer {
 .brand-mark {
   display: block;
   height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .brand-mark--nav {
-  width: 28px;
+  width: 40px;
 }
 
 .brand-mark--footer {
-  width: 24px;
+  width: 32px;
 }
 
 .footer-mid {
@@ -2600,6 +2622,24 @@ body.page-portfolio main > section:nth-child(even) {
 
 body.page-portfolio main > section.cta-panel-wrap {
   background: linear-gradient(180deg, var(--white), var(--cream-dark));
+}
+
+body.page-portfolio .portfolio-intro-image,
+body.page-portfolio .page-hero-visual,
+body.page-portfolio .portfolio-feature-image--duo,
+body.page-portfolio .portfolio-work-card--objectlijst img,
+body.page-portfolio .portfolio-showcase--certs .portfolio-work-card img,
+body.page-portfolio .portfolio-showcase--delicate .portfolio-work-card--delicate-panorama img,
+body.page-portfolio .portfolio-archive-item {
+  background: #fff;
+}
+
+body.page-portfolio .portfolio-work-card {
+  background: #fff;
+}
+
+body.page-portfolio .portfolio-showcase--delicate {
+  background: #fff;
 }
 
 body.page-over-ons .page-intro {
