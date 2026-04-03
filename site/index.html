@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/main.css?v=20260402hero" />
+    <link rel="stylesheet" href="assets/css/main.css?v=20260407formonder" />
   </head>
   <body>
     <header class="site-header site-header--home" id="top">
@@ -374,36 +374,22 @@
         </div>
       </section>
 
-      <!-- CTA -->
-      <section class="cta-panel-wrap">
-        <div class="cta-panel">
-          <div>
-            <div class="section-eyebrow">Afspraak maken</div>
-            <h2>Samen kijken wat uw werk<br />nodig <em>heeft</em></h2>
-            <p>
-              Of het nu gaat om een schilderij, foto, tekening of bijzonder object: in het atelier
-              neem ik rustig de tijd om tot de juiste keuze te komen.
-            </p>
-          </div>
-          <div class="btn-row">
-            <a href="#contact" class="btn-primary">Neem contact op</a>
-            <a href="inlijsten.html" class="btn-outline">Lees meer over inlijsten</a>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTACT -->
+      <!-- CONTACT / AFSPRAAK -->
       <section class="contact" id="contact">
         <div class="contact-layout">
           <div class="contact-info">
-            <div class="section-eyebrow section-eyebrow-accent">
-              <span class="section-eyebrow-line"></span>Neem contact op
-            </div>
-            <h2>Bel of stuur een <em>bericht</em></h2>
-            <p>
-              Vrijblijvend advies, een offerte of gewoon even overleggen &mdash; alles is welkom. Ik
-              neem graag de tijd voor u en uw werk.
-            </p>
+            <header class="section-header contact__intro">
+              <div class="section-eyebrow">Afspraak maken</div>
+              <h2>Samen kijken wat uw werk<br />nodig <em>heeft</em></h2>
+              <p class="section-sub">
+                Of het nu gaat om een schilderij, foto, tekening of bijzonder object:<br />
+                in het atelier neem ik rustig de tijd om tot de juiste keuze te komen.
+              </p>
+              <p class="section-sub">
+                Vrijblijvend advies, een offerte of gewoon even overleggen &mdash;<br />
+                alles is welkom. Ik neem graag de tijd voor u en uw werk.
+              </p>
+            </header>
             <div class="contact-details">
               <div class="contact-row">
                 <span class="contact-row-label">Adres</span>
@@ -430,8 +416,9 @@
               </div>
             </div>
           </div>
-          <div>
-            <form class="form">
+          <div class="contact-form-wrap">
+            <h3 class="contact-form-title" id="contact-form-heading">Stuur een bericht</h3>
+            <form class="form" aria-labelledby="contact-form-heading">
               <div class="form-row">
                 <div class="form-field">
                   <label for="naam">Uw naam</label>
@@ -456,14 +443,7 @@
               <div class="form-field">
                 <label for="categorie">Wat wilt u laten inlijsten?</label>
                 <select id="categorie" name="categorie">
-                  <option value="">Kies een categorie</option>
-                  <option>Schilderij / kunstwerk</option>
-                  <option>Foto of print</option>
-                  <option>Tekening of aquarel</option>
-                  <option>Canvas of poster</option>
-                  <option>Bijzonder object</option>
-                  <option value="workshop">Workshop</option>
-                  <option>Anders / weet ik nog niet</option>
+                  <option value=""></option>
                 </select>
               </div>
               <div class="form-field">

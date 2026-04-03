@@ -1263,11 +1263,79 @@ h2 em {
   background: var(--white);
 }
 
+.contact__intro {
+  max-width: 720px;
+}
+
+.contact .section-header.contact__intro {
+  margin-bottom: 2rem;
+}
+
+#contact .contact-info > .contact__intro {
+  max-width: none;
+}
+
+#contact .contact__intro .section-sub {
+  max-width: none;
+}
+
+.contact-form-wrap {
+  min-width: 0;
+}
+
+.contact-form-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(24px, 2.4vw, 32px);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--ink);
+  margin: 0 0 1.25rem;
+}
+
 .contact-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
   align-items: start;
+}
+
+@media (min-width: 901px) {
+  #contact .contact-layout {
+    align-items: stretch;
+  }
+
+  #contact .contact-info {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  #contact .contact-info > .contact__intro {
+    margin-bottom: 0;
+  }
+
+  #contact .contact-details {
+    margin-top: auto;
+  }
+
+  #contact .contact-form-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 0;
+  }
+
+  #contact .contact-form-title {
+    margin-bottom: 1rem;
+  }
+
+  #contact .form {
+    gap: 0.85rem;
+  }
+
+  #contact .form-field textarea {
+    min-height: 92px;
+  }
 }
 
 .contact-info p {
