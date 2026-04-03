@@ -65,14 +65,15 @@ nav {
 }
 
 .site-header--home .nav-cta {
-  background: rgba(247, 243, 236, 0.14);
-  border: 1px solid rgba(247, 243, 236, 0.25);
+  background: var(--ink);
+  border: 1px solid var(--ink);
   color: var(--white) !important;
 }
 
 .site-header--home .nav-cta:hover {
   background: var(--gold) !important;
   border-color: var(--gold);
+  color: var(--white) !important;
 }
 
 .nav-logo {
@@ -123,7 +124,7 @@ nav {
   display: inline-block;
   padding: 8px 20px;
   background: var(--ink);
-  color: var(--cream) !important;
+  color: var(--white) !important;
   border-radius: 2px;
   font-size: 12px !important;
   letter-spacing: 0.1em !important;
@@ -262,48 +263,51 @@ h1 em {
 
 .btn-primary:hover {
   background: var(--gold);
+  color: var(--white);
 }
 
 .btn-outline {
   display: inline-block;
-  padding: 13px 32px;
-  border: 1px solid rgba(28, 24, 18, 0.3);
-  color: var(--ink-soft);
+  padding: 14px 32px;
+  border: 1px solid var(--ink);
+  color: var(--white);
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 2px;
-  transition: all 0.2s;
-  background: transparent;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  background: var(--ink);
+  cursor: pointer;
 }
 
 .btn-outline:hover {
-  border-color: var(--ink);
-  color: var(--ink);
-  background: var(--cream-dark);
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--white);
 }
 
 .hero .btn-primary {
-  background: var(--gold);
+  background: var(--ink);
   color: var(--white);
 }
 
 .hero .btn-primary:hover {
-  background: var(--gold-light);
+  background: var(--gold);
+  color: var(--white);
 }
 
 .hero .btn-outline {
-  border-color: rgba(247, 243, 236, 0.38);
+  border-color: var(--ink);
   color: var(--white);
-  background: rgba(247, 243, 236, 0.05);
+  background: var(--ink);
 }
 
 .hero .btn-outline:hover {
-  border-color: rgba(247, 243, 236, 0.65);
+  border-color: var(--gold);
   color: var(--white);
-  background: rgba(247, 243, 236, 0.12);
+  background: var(--gold);
 }
 
 .hero-pillars {
@@ -432,18 +436,19 @@ h1 em {
 
 .hero.hero--split .btn-primary:hover {
   background: var(--gold);
+  color: var(--white);
 }
 
 .hero.hero--split .btn-outline {
-  border-color: rgba(28, 24, 18, 0.3);
-  color: var(--ink-soft);
-  background: transparent;
+  border: 1px solid var(--ink);
+  color: var(--white);
+  background: var(--ink);
 }
 
 .hero.hero--split .btn-outline:hover {
-  border-color: var(--ink);
-  color: var(--ink);
-  background: var(--cream-dark);
+  border-color: var(--gold);
+  color: var(--white);
+  background: var(--gold);
 }
 
 .hero.hero--split .hero-right--photo {
@@ -1919,6 +1924,31 @@ footer {
   display: none;
 }
 
+/* Restauraties-hero: voor/na naast elkaar */
+.page-hero-visual--duo .page-hero-visual-duo {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  min-height: 100%;
+}
+
+.page-hero-visual--duo .page-hero-visual-duo img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 900px) {
+  .page-hero-visual--duo .page-hero-visual-duo {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
 .vermeer-figure--in-prose {
   max-width: 720px;
   margin: 0 0 2rem;
@@ -2718,8 +2748,46 @@ body.page-over-ons .principles {
   background: var(--white);
 }
 
+/* Als page-intro/principles: volle breedte + zij-padding, niet gecentreerd in een smalle kolom */
 body.page-over-ons .atelier-strip {
+  max-width: none;
+  margin: 0;
+  padding: 5rem 3rem;
+  gap: 3rem;
+  grid-template-columns: minmax(419px, min(676px, 64%)) minmax(0, 1fr);
   background: var(--cream);
+  align-items: start;
+  box-sizing: border-box;
+}
+
+body.page-over-ons .atelier-strip-image {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-height: 0;
+  padding: 14px;
+  background: var(--white);
+  border: 10px solid #2a1f17;
+  box-shadow:
+    inset 0 0 0 2px rgba(188, 147, 86, 0.42),
+    inset 0 0 0 5px rgba(24, 17, 12, 0.72),
+    0 8px 18px rgba(22, 16, 11, 0.16);
+  box-sizing: border-box;
+}
+
+/* Geen cover-besnijding: volledige foto zichtbaar */
+body.page-over-ons .atelier-strip-image img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  min-height: 0;
+  object-fit: contain;
+  object-position: left top;
+}
+
+body.page-over-ons .atelier-strip-content {
+  padding: 0.25rem 0 0;
+  max-width: none;
 }
 
 body.page-over-ons .cta-panel-wrap {
@@ -3010,6 +3078,26 @@ body.page-kunstenaars
 
   .atelier-strip-image {
     min-height: 380px;
+  }
+
+  /* Hogere specificiteit dan .atelier-strip hierboven: anders blijven 2 kolommen op mobiel */
+  body.page-over-ons .atelier-strip {
+    grid-template-columns: 1fr;
+    padding: 4rem 1.5rem;
+    gap: 2.5rem;
+  }
+
+  body.page-over-ons .atelier-strip-image {
+    border-width: 6px;
+    padding: 10px;
+    box-shadow:
+      inset 0 0 0 1px rgba(188, 147, 86, 0.38),
+      inset 0 0 0 3px rgba(24, 17, 12, 0.7),
+      0 4px 14px rgba(22, 16, 11, 0.12);
+  }
+
+  body.page-over-ons .atelier-strip-image img {
+    object-position: center top;
   }
 
   .cta-panel {
