@@ -1154,6 +1154,7 @@ h2 em {
 
 .over-content {
   padding-top: 1rem;
+  max-width: min(720px, 100%);
 }
 
 .over-content h2 {
@@ -1187,39 +1188,6 @@ h2 em {
   height: 1px;
   background: var(--gold);
   opacity: 0.5;
-}
-
-.vermeer-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 16px;
-  background: var(--gold-pale);
-  border: 1px solid rgba(168, 115, 42, 0.25);
-  border-radius: 2px;
-  margin-top: 0.5rem;
-}
-
-.vermeer-badge-icon {
-  width: 32px;
-  height: 32px;
-  border: 1px solid rgba(168, 115, 42, 0.4);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.vermeer-badge-text {
-  font-size: 12px;
-  line-height: 1.4;
-  color: var(--gold);
-}
-
-.vermeer-badge-text strong {
-  display: block;
-  font-weight: 500;
 }
 
 /* -- REVIEWS -- */
@@ -2556,17 +2524,166 @@ body.page-kunstenaars
   padding: 8px;
 }
 
-.portfolio-gallery-grid--delicate {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 2rem;
-  max-width: 1400px;
+/* Delicate: intro en duo naast elkaar — bovenkant beide frames gelijk met eyebrow.
+   Smalle tekstkolom = max. ruimte voor de twee vierkante frames. */
+.portfolio-delicate-lead {
+  display: grid;
+  grid-template-columns: minmax(0, min(24rem, 100%)) minmax(0, 1fr);
+  column-gap: clamp(1.25rem, 3.5vw, 2.75rem);
+  row-gap: 2rem;
+  align-items: start;
+  width: 100%;
+  max-width: min(1760px, 100%);
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 2rem;
 }
 
-.portfolio-showcase--delicate .portfolio-work-card img {
+.portfolio-showcase--delicate .portfolio-delicate-lead .section-header {
+  margin-bottom: 0;
+}
+
+.portfolio-delicate-lead__copy {
+  min-width: 0;
+  max-width: 24rem;
+}
+
+/* Rechterkolom: duo + panorama — zelfde linker- en rechterrand als het duo-blok (geen extra versmallening) */
+.portfolio-delicate-lead__frames {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  min-width: 0;
+}
+
+.portfolio-gallery-grid--delicate {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: min(1760px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  overflow: visible;
+  align-items: start;
+}
+
+.portfolio-delicate-lead__frames .portfolio-gallery-grid--delicate-in-lead {
+  max-width: none;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Twee kaarten: gelijke kolombreedte → identieke vierkante frames; kaarten strekken op één rij */
+.portfolio-delicate-duo {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.75rem);
+  align-items: stretch;
+  min-width: 0;
+}
+
+.portfolio-delicate-duo .portfolio-work-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.portfolio-delicate-duo .portfolio-work-frame--delicate-fullframe {
+  flex-shrink: 0;
+}
+
+.portfolio-delicate-duo .portfolio-work-copy {
+  flex-grow: 1;
+}
+
+/* Alleen kaarten in de delicate gallery (niet de duo in .portfolio-delicate-lead): anders 1:1 op img zelf, botsend met frame-wrapper */
+.portfolio-showcase--delicate
+  .portfolio-gallery-grid--delicate
+  .portfolio-work-card:not(.portfolio-work-card--delicate-panorama):not(.portfolio-work-card--delicate-fullframe)
+  img {
   aspect-ratio: 1 / 1;
   object-fit: cover;
+}
+
+.portfolio-gallery-grid--delicate .portfolio-work-card--delicate-fullframe {
+  overflow: visible;
+}
+
+/* Wrapper + intrinsieke schaal: volledige lijst zichtbaar (geen width:100% op img) */
+.portfolio-showcase--delicate .portfolio-work-frame--delicate-fullframe {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 14px;
+  background: var(--cream);
+  box-sizing: border-box;
+}
+
+.portfolio-showcase--delicate
+  .portfolio-work-card--delicate-fullframe
+  .portfolio-work-frame--delicate-fullframe
+  img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  max-height: none;
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: top center;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+/* Duo: gelijk hoogte fotovak (vierkant); mutsjes contain, tweede foto cover (verbeterde blouse2) */
+.portfolio-showcase--delicate .portfolio-delicate-duo .portfolio-work-frame--delicate-fullframe {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  margin: 0;
+  padding: 14px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr);
+  align-items: stretch;
+  justify-items: stretch;
+  overflow: hidden;
+}
+
+.portfolio-showcase--delicate
+  .portfolio-delicate-duo
+  .portfolio-work-card--delicate-fullframe
+  .portfolio-work-frame--delicate-fullframe
+  img {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  min-width: 0;
+  min-height: 0;
+  object-fit: contain;
+  object-position: center;
+  aspect-ratio: auto;
+}
+
+.portfolio-showcase--delicate
+  .portfolio-delicate-duo
+  .portfolio-work-card:not(.portfolio-work-card--delicate-fullframe)
+  .portfolio-work-frame--delicate-fullframe
+  img {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  min-width: 0;
+  min-height: 0;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: auto;
+  background-color: var(--cream);
 }
 
 .portfolio-showcase--delicate .portfolio-gallery-grid--delicate .portfolio-work-copy h3 {
@@ -2579,16 +2696,49 @@ body.page-kunstenaars
 
 .portfolio-gallery-grid--delicate .portfolio-work-card--delicate-panorama {
   grid-column: 1 / -1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+}
+
+/* Geen max-height hier: anders verdween de onderkant van het borduurwerk. Witruimte komt uit het PNG. */
+.portfolio-showcase--delicate .portfolio-panorama-crop {
+  line-height: 0;
+  flex-shrink: 0;
+  align-self: stretch;
+  min-height: 0;
 }
 
 .portfolio-showcase--delicate .portfolio-work-card--delicate-panorama img {
   aspect-ratio: auto;
   width: 100%;
   height: auto;
-  max-height: min(72vw, 520px);
+  display: block;
+  /* 15% kleiner dan voorheen (88vw / 680px) */
+  max-height: min(calc(88vw * 0.85), 578px);
   object-fit: contain;
-  object-position: center;
+  object-position: top center;
   background: var(--cream);
+}
+
+.portfolio-showcase--delicate .portfolio-work-card--delicate-panorama .portfolio-work-copy {
+  padding: 0.65rem 1.25rem 0.85rem;
+  flex-shrink: 0;
+  margin-top: 0;
+}
+
+.portfolio-showcase--delicate
+  .portfolio-work-card--delicate-panorama
+  .portfolio-work-copy
+  h3 {
+  margin-bottom: 0.3rem;
+  margin-top: 0;
+}
+
+.portfolio-showcase--delicate .portfolio-work-card--delicate-panorama .portfolio-work-copy p {
+  margin-bottom: 0;
 }
 
 .portfolio-work-copy {
@@ -2723,6 +2873,22 @@ body.page-kunstenaars
   padding: 14px;
 }
 
+.restoration-figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.restoration-figure figcaption {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+}
+
 .portfolio-compare-page .page-hero-visual img {
   object-fit: contain;
   object-position: center;
@@ -2785,6 +2951,7 @@ body.page-portfolio .portfolio-work-card {
 
 body.page-portfolio .portfolio-showcase--delicate {
   background: #fff;
+  overflow: visible;
 }
 
 body.page-over-ons .page-intro {
@@ -3098,7 +3265,20 @@ body.page-kunstenaars
   }
 
   .portfolio-gallery-grid--delicate {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-delicate-lead {
+    grid-template-columns: 1fr;
+    margin-bottom: 0;
+  }
+
+  .portfolio-delicate-lead__copy {
+    max-width: none;
+  }
+
+  .portfolio-showcase--delicate .portfolio-delicate-lead .section-header {
+    margin-bottom: 2rem;
   }
 
   .vermeer-ingelijst-layout {
@@ -3300,6 +3480,10 @@ body.page-kunstenaars
   }
 
   .portfolio-gallery-grid--delicate {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-delicate-duo {
     grid-template-columns: 1fr;
   }
 }
