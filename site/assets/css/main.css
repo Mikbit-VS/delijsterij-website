@@ -2959,7 +2959,7 @@ body.page-over-ons .page-intro {
 }
 
 body.page-over-ons .principles {
-  background: var(--white);
+  background: var(--cream);
   border-top: 1px solid var(--border);
 }
 
@@ -3068,7 +3068,8 @@ body.page-over-ons .atelier-strip {
   padding: 5rem 3rem;
   gap: 3rem;
   grid-template-columns: minmax(419px, min(676px, 64%)) minmax(0, 1fr);
-  background: var(--cream);
+  background: var(--white);
+  border-top: 1px solid var(--border);
   align-items: start;
   box-sizing: border-box;
 }
