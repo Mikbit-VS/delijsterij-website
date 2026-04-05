@@ -663,6 +663,21 @@ h1 em {
   object-position: left top;
 }
 
+.image-mosaic-item img.image-mosaic-image--contain {
+  aspect-ratio: auto;
+  height: 100%;
+  object-fit: contain;
+  background: var(--cream);
+}
+
+.image-mosaic-item--natural img.image-mosaic-image--natural {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  background: var(--cream);
+}
+
 /* -- SECTIONS -- */
 section {
   padding: 6rem 3rem;
@@ -2935,6 +2950,10 @@ body.page-portfolio main > section.cta-panel-wrap {
   background: linear-gradient(180deg, var(--white), var(--cream-dark));
 }
 
+body.page-portfolio .cta-panel h2 {
+  margin-bottom: 1.35rem;
+}
+
 body.page-portfolio .portfolio-intro-image,
 body.page-portfolio .page-hero-visual,
 body.page-portfolio .portfolio-feature-image--duo,
@@ -3243,6 +3262,10 @@ body.page-kunstenaars
 .cta-panel p {
   max-width: 620px;
   color: var(--ink-soft);
+}
+
+.cta-panel h2 {
+  margin-bottom: 1.25rem;
 }
 
 @media (max-width: 900px) {
