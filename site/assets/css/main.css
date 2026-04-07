@@ -3281,21 +3281,22 @@ body.page-over-ons .over-wat-ik-doe .story-copy {
 
 body.page-over-ons .over-wat-ik-doe-showcase {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 1.35rem 1.75rem;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1.1rem;
   margin: 0;
   justify-self: end;
   transform: translateX(6rem);
   min-width: 0;
-  max-width: none;
+  width: min(470px, 68vw);
+  max-width: 100%;
 }
 
 body.page-over-ons .over-wat-ik-doe-photo-frame {
   margin: 0;
   flex-shrink: 0;
-  width: fit-content;
-  max-width: min(470px, 68vw);
+  width: 100%;
+  max-width: none;
   border: 1px solid var(--border);
   padding: 10px;
   background: var(--cream);
@@ -3311,13 +3312,13 @@ body.page-over-ons .over-wat-ik-doe-photo-frame img {
 }
 
 body.page-over-ons .over-wat-ik-doe-caption {
-  flex: 0 0 38ch;
-  width: 38ch;
+  width: 100%;
   min-width: 0;
-  max-width: 38ch;
+  max-width: none;
   margin: 0;
-  padding: 0.35rem 0 0.35rem 1.15rem;
-  border-left: 3px solid var(--gold);
+  padding: 1rem 0 0;
+  border-left: none;
+  border-top: 1px solid rgba(168, 115, 42, 0.35);
   text-align: left;
 }
 
@@ -3337,7 +3338,7 @@ body.page-over-ons .over-wat-ik-doe-caption p {
   line-height: 1.75;
   color: var(--ink-soft);
   margin: 0 0 0.95rem;
-  max-width: 38ch;
+  max-width: none;
 }
 
 body.page-over-ons .over-wat-ik-doe-caption p:last-child {
