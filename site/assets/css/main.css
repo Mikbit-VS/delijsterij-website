@@ -205,7 +205,7 @@ nav.is-open .nav-menu-toggle-bars span:nth-child(3) {
       rgba(28, 24, 18, 0.14) 100%
     ),
     linear-gradient(180deg, rgba(28, 24, 18, 0.08) 0%, rgba(28, 24, 18, 0.24) 100%),
-    url('../images-test/algemeen/banner-over-karolien-de-lijsterij.jpg') center center/cover no-repeat;
+    url('../images/algemeen/banner-over-karolien-de-lijsterij.jpg') center center/cover no-repeat;
 }
 
 .hero-left {
@@ -1567,18 +1567,12 @@ footer {
 
 .footer-links {
   display: flex;
-  gap: 2rem;
   justify-content: flex-end;
-  list-style: none;
-}
-.footer-links a {
+  align-items: center;
   font-size: 12px;
   color: rgba(247, 243, 236, 0.35);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-.footer-links a:hover {
-  color: var(--gold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 /* -- ANIMATIONS -- */
@@ -1620,7 +1614,7 @@ footer {
 .hero-right:not(.hero-right--photo) {
   background:
     linear-gradient(rgba(28, 24, 18, 0.28), rgba(28, 24, 18, 0.18)),
-    url('../images-test/algemeen/hero-atelier-karolien.jpg') center/cover no-repeat;
+    url('../images/algemeen/hero-atelier-karolien.jpg') center/cover no-repeat;
 }
 
 .frame-scene {
@@ -1647,28 +1641,28 @@ footer {
 }
 
 .portfolio-inner--bekroond {
-  background-image: url('../images-test/portfolio/bekroond-tabernakellijst.jpg');
+  background-image: url('../images/portfolio/bekroond-tabernakellijst.jpg');
   background-size: contain !important;
   background-position: center;
   background-color: var(--cream-dark);
 }
 
 .portfolio-inner--bloemwerk {
-  background-image: url('../images-test/portfolio/bloemwerk-klassieke-eiken-lijst.jpg');
+  background-image: url('../images/portfolio/bloemwerk-klassieke-eiken-lijst.jpg');
   background-size: contain !important;
   background-position: center;
   background-color: var(--cream-dark);
 }
 
 .portfolio-inner--restauratie {
-  background-image: url('../images-test/restauratie/restauratie-zwaar-beschadigde-lijst-na.jpg');
+  background-image: url('../images/restauratie/restauratie-zwaar-beschadigde-lijst-na.jpg');
   background-size: contain !important;
   background-position: center;
   background-color: var(--cream-dark);
 }
 
 .portfolio-inner--objectlijst {
-  background-image: url('../images-test/portfolio/objectlijst-3d-medaillon.jpg');
+  background-image: url('../images/portfolio/objectlijst-3d-medaillon.png');
 }
 
 .vermeer-prose-gap {
@@ -1808,7 +1802,7 @@ footer {
 }
 
 .over-image {
-  background: url('../images-test/algemeen/hero-atelier-karolien.jpg') center/cover no-repeat;
+  background: url('../images/algemeen/hero-atelier-karolien.jpg') center/cover no-repeat;
   min-height: 465px;
   width: 75%;
   margin: 0 auto;
