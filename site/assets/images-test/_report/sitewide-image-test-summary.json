@@ -1,0 +1,112 @@
+{
+    "ImageCount":  66,
+    "TestImageCount":  66,
+    "TotalOldBytes":  67984437,
+    "TotalNewBytes":  14355402,
+    "Unsupported":  [
+                        {
+                            "OriginalSitePath":  "assets/images/diensten/advies-aan-huis.png",
+                            "TestSitePath":  "assets/images-test/diensten/advies-aan-huis.png",
+                            "Note":  "copied-unsupported-webp"
+                        },
+                        {
+                            "OriginalSitePath":  "assets/images/diensten/restauratie.png",
+                            "TestSitePath":  "assets/images-test/diensten/restauratie.png",
+                            "Note":  "copied-unsupported-webp"
+                        }
+                    ],
+    "ManualCheck":  [
+                        {
+                            "OriginalSitePath":  "assets/images/diensten/advies-aan-huis.png",
+                            "TestSitePath":  "assets/images-test/diensten/advies-aan-huis.png",
+                            "Note":  "copied-unsupported-webp"
+                        },
+                        {
+                            "OriginalSitePath":  "assets/images/diensten/restauratie.png",
+                            "TestSitePath":  "assets/images-test/diensten/restauratie.png",
+                            "Note":  "copied-unsupported-webp"
+                        }
+                    ],
+    "TopSavings":  [
+                       {
+                           "OriginalSitePath":  "assets/images/portfolio/dame-in-rood.jpg",
+                           "TestSitePath":  "assets/images-test/portfolio/dame-in-rood.jpg",
+                           "OldBytes":  4876294,
+                           "NewBytes":  717281,
+                           "SavedBytes":  4159013,
+                           "Note":  ""
+                       },
+                       {
+                           "OriginalSitePath":  "assets/images/workshops/workshop-12.jpg",
+                           "TestSitePath":  "assets/images-test/workshops/workshop-12.jpg",
+                           "OldBytes":  3681725,
+                           "NewBytes":  374092,
+                           "SavedBytes":  3307633,
+                           "Note":  ""
+                       },
+                       {
+                           "OriginalSitePath":  "assets/images/workshops/workshop-04.jpg",
+                           "TestSitePath":  "assets/images-test/workshops/workshop-04.jpg",
+                           "OldBytes":  3489306,
+                           "NewBytes":  271497,
+                           "SavedBytes":  3217809,
+                           "Note":  ""
+                       },
+                       {
+                           "OriginalSitePath":  "assets/images/workshops/workshop-02.jpg",
+                           "TestSitePath":  "assets/images-test/workshops/workshop-02.jpg",
+                           "OldBytes":  3456596,
+                           "NewBytes":  320218,
+                           "SavedBytes":  3136378,
+                           "Note":  ""
+                       },
+                       {
+                           "OriginalSitePath":  "assets/images/workshops/workshop-08.jpg",
+                           "TestSitePath":  "assets/images-test/workshops/workshop-08.jpg",
+                           "OldBytes":  3454821,
+                           "NewBytes":  329034,
+                           "SavedBytes":  3125787,
+                           "Note":  ""
+                       },
+                       {
+                           "OriginalSitePath":  "assets/images/workshops/workshop-03.jpg",
+                           "TestSitePath":  "assets/images-test/workshops/workshop-03.jpg",
+                           "OldBytes":  3342482,
+                           "NewBytes":  279043,
+                           "SavedBytes":  3063439,
+                           "Note":  ""
+                       },
+                       {
+                           "OriginalSitePath":  "assets/images/workshops/workshop-01.jpg",
+                           "TestSitePath":  "assets/images-test/workshops/workshop-01.jpg",
+                           "OldBytes":  3392409,
+                           "NewBytes":  333291,
+                           "SavedBytes":  3059118,
+                           "Note":  ""
+                       },
+                       {
+                           "OriginalSitePath":  "assets/images/workshops/workshop-10.jpg",
+                           "TestSitePath":  "assets/images-test/workshops/workshop-10.jpg",
+                           "OldBytes":  3348356,
+                           "NewBytes":  299627,
+                           "SavedBytes":  3048729,
+                           "Note":  ""
+                       },
+                       {
+                           "OriginalSitePath":  "assets/images/workshops/workshop-06.jpg",
+                           "TestSitePath":  "assets/images-test/workshops/workshop-06.jpg",
+                           "OldBytes":  3308501,
+                           "NewBytes":  291212,
+                           "SavedBytes":  3017289,
+                           "Note":  ""
+                       },
+                       {
+                           "OriginalSitePath":  "assets/images/workshops/workshop-11.jpg",
+                           "TestSitePath":  "assets/images-test/workshops/workshop-11.jpg",
+                           "OldBytes":  3223754,
+                           "NewBytes":  250067,
+                           "SavedBytes":  2973687,
+                           "Note":  ""
+                       }
+                   ]
+}

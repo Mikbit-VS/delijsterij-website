@@ -1,5 +1,44 @@
 (function () {
   document.addEventListener('DOMContentLoaded', function () {
+    var navs = document.querySelectorAll('nav[aria-label="Hoofdnavigatie"]');
+
+    navs.forEach(function (nav) {
+      var toggle = nav.querySelector('.nav-menu-toggle');
+      if (!toggle) return;
+
+      var closeMenu = function () {
+        nav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
+      };
+
+      toggle.addEventListener('click', function () {
+        var isOpen = nav.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', String(isOpen));
+        toggle.setAttribute('aria-label', isOpen ? 'Sluit menu' : 'Open menu');
+      });
+
+      nav.querySelectorAll('.nav-links a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          if (window.innerWidth <= 1100) {
+            closeMenu();
+          }
+        });
+      });
+
+      document.addEventListener('click', function (event) {
+        if (!nav.contains(event.target) && window.innerWidth <= 1100) {
+          closeMenu();
+        }
+      });
+
+      window.addEventListener('resize', function () {
+        if (window.innerWidth > 1100) {
+          closeMenu();
+        }
+      });
+    });
+
     var params = new URLSearchParams(window.location.search);
     if (params.has('workshop')) {
       var contact = document.getElementById('contact');

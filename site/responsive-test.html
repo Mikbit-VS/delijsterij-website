@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Test | De Lijsterij</title>
+    <style>
+      :root {
+        --cream: #f5f0e8;
+        --cream-dark: #ece4d7;
+        --ink: #1c1812;
+        --ink-soft: #5c544a;
+        --gold: #a8732a;
+        --border: rgba(28, 24, 18, 0.12);
+        --white: #fffdf9;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "DM Sans", Arial, sans-serif;
+        color: var(--ink);
+        background:
+          linear-gradient(180deg, rgba(245, 240, 232, 0.98), rgba(236, 228, 215, 0.98));
+      }
+
+      .tester {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: auto 1fr;
+      }
+
+      .tester-bar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        display: grid;
+        gap: 1rem;
+        padding: 1rem 1.25rem;
+        border-bottom: 1px solid var(--border);
+        background: rgba(255, 253, 249, 0.96);
+        backdrop-filter: blur(10px);
+      }
+
+      .tester-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 1rem;
+      }
+
+      .tester-title h1 {
+        margin: 0;
+        font-family: "Georgia", serif;
+        font-size: 1.5rem;
+        font-weight: 400;
+      }
+
+      .tester-title p {
+        margin: 0.2rem 0 0;
+        color: var(--ink-soft);
+      }
+
+      .tester-controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        align-items: center;
+      }
+
+      .tester-field {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.65rem 0.8rem;
+        border: 1px solid var(--border);
+        background: var(--white);
+      }
+
+      .tester-field label {
+        font-size: 0.9rem;
+        color: var(--ink-soft);
+      }
+
+      .tester-field select,
+      .tester-field input {
+        border: 0;
+        outline: 0;
+        background: transparent;
+        color: var(--ink);
+        font: inherit;
+      }
+
+      .tester-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .tester-buttons button,
+      .tester-action {
+        border: 1px solid var(--ink);
+        background: var(--ink);
+        color: var(--white);
+        padding: 0.7rem 0.95rem;
+        font: inherit;
+        cursor: pointer;
+      }
+
+      .tester-buttons button.is-secondary,
+      .tester-action.is-secondary {
+        background: transparent;
+        color: var(--ink);
+      }
+
+      .tester-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        font-size: 0.95rem;
+        color: var(--ink-soft);
+      }
+
+      .tester-stage {
+        padding: 1.5rem;
+        overflow: auto;
+      }
+
+      .tester-frame-wrap {
+        width: min(100%, 1600px);
+        margin: 0 auto;
+        overflow: auto;
+      }
+
+      .tester-frame-shell {
+        width: var(--frame-width, 1440px);
+        min-width: var(--frame-width, 1440px);
+        margin: 0 auto 2rem;
+        border: 1px solid var(--border);
+        background: var(--white);
+        box-shadow: 0 18px 60px rgba(28, 24, 18, 0.12);
+        transform: scale(var(--frame-scale, 1));
+        transform-origin: top center;
+        transition:
+          width 0.2s ease,
+          transform 0.2s ease;
+      }
+
+      .tester-frame-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.7rem 0.9rem;
+        border-bottom: 1px solid var(--border);
+        background: var(--cream);
+        color: var(--ink-soft);
+        font-size: 0.9rem;
+      }
+
+      .tester-dots {
+        display: flex;
+        gap: 0.35rem;
+      }
+
+      .tester-dots span {
+        width: 10px;
+        height: 10px;
+        border-radius: 999px;
+        background: rgba(28, 24, 18, 0.18);
+      }
+
+      .tester-frame {
+        display: block;
+        width: var(--frame-width, 1440px);
+        height: 78vh;
+        border: 0;
+        background: var(--white);
+      }
+
+      @media (max-width: 900px) {
+        .tester-stage {
+          padding: 1rem;
+        }
+
+        .tester-frame {
+          height: 72vh;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tester">
+      <div class="tester-bar">
+        <div class="tester-title">
+          <div>
+            <h1>Responsive Test</h1>
+            <p>Bekijk elke pagina op vaste breedtes zonder handmatig te schalen.</p>
+          </div>
+          <a class="tester-action is-secondary" href="index.html">Terug naar site</a>
+        </div>
+
+        <div class="tester-controls">
+          <div class="tester-field">
+            <label for="page-select">Pagina</label>
+            <select id="page-select">
+              <option value="index.html">Home</option>
+              <option value="inlijsten.html">Inlijsten</option>
+              <option value="portfolio.html">Portfolio</option>
+              <option value="kunstenaars.html">Kunstenaars</option>
+              <option value="de-nieuwe-vermeer.html">De Nieuwe Vermeer</option>
+              <option value="restauraties.html">Restauraties</option>
+              <option value="workshop.html" selected>Workshop</option>
+              <option value="over-ons.html">Over Karolien</option>
+            </select>
+          </div>
+
+          <div class="tester-field">
+            <label for="width-input">Breedte</label>
+            <input id="width-input" type="number" min="320" max="1800" step="1" value="390" />
+            <span>px</span>
+          </div>
+
+          <button class="tester-action" id="apply-width" type="button">Toepassen</button>
+
+          <div class="tester-buttons">
+            <button type="button" data-width="1440">Desktop 1440</button>
+            <button type="button" data-width="1280">Laptop 1280</button>
+            <button type="button" data-width="1024">Tablet 1024</button>
+            <button type="button" data-width="768">Tablet 768</button>
+            <button type="button" data-width="430">Mobiel 430</button>
+            <button type="button" data-width="390">Mobiel 390</button>
+          </div>
+        </div>
+
+        <div class="tester-meta">
+          <span id="current-page">Pagina: workshop.html</span>
+          <span id="current-width">Breedte: 390px</span>
+        </div>
+      </div>
+
+      <div class="tester-stage">
+        <div class="tester-frame-wrap">
+          <div class="tester-frame-shell" id="frame-shell">
+            <div class="tester-frame-top">
+              <div class="tester-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <span id="frame-label">workshop.html • 390px</span>
+            </div>
+            <iframe
+              id="preview-frame"
+              class="tester-frame"
+              title="Responsive preview"
+              src="workshop.html"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const frame = document.getElementById("preview-frame");
+      const shell = document.getElementById("frame-shell");
+      const pageSelect = document.getElementById("page-select");
+      const widthInput = document.getElementById("width-input");
+      const applyWidthButton = document.getElementById("apply-width");
+      const currentPage = document.getElementById("current-page");
+      const currentWidth = document.getElementById("current-width");
+      const frameLabel = document.getElementById("frame-label");
+      const frameWrap = document.querySelector(".tester-frame-wrap");
+      const presetButtons = document.querySelectorAll("[data-width]");
+
+      function fitFrame(width) {
+        const available = frameWrap.clientWidth;
+        const scale = available > 0 ? Math.min(1, available / width) : 1;
+        shell.style.setProperty("--frame-scale", scale.toString());
+        shell.style.marginBottom = `${Math.max(0, (1 - scale) * 78 * window.innerHeight / 100)}px`;
+      }
+
+      function getFramePage() {
+        try {
+          const url = new URL(frame.contentWindow.location.href);
+          const page = url.pathname.split("/").pop() || "index.html";
+          return page;
+        } catch (error) {
+          return frame.getAttribute("src") || pageSelect.value;
+        }
+      }
+
+      function updateMeta(page, width) {
+        currentPage.textContent = `Pagina: ${page}`;
+        currentWidth.textContent = `Breedte: ${width}px`;
+        frameLabel.textContent = `${page} • ${width}px`;
+      }
+
+      function applyWidth() {
+        const width = Math.max(320, Math.min(1800, Number(widthInput.value) || 390));
+        const page = getFramePage();
+
+        widthInput.value = width;
+        shell.style.setProperty("--frame-width", `${width}px`);
+        frame.style.width = `${width}px`;
+        updateMeta(page, width);
+        fitFrame(width);
+      }
+
+      function applyPage() {
+        const page = pageSelect.value;
+        frame.src = page;
+        applyWidth();
+      }
+
+      presetButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          widthInput.value = button.dataset.width;
+          applyWidth();
+        });
+      });
+
+      frame.addEventListener("load", () => {
+        const page = getFramePage();
+        pageSelect.value = page;
+        applyWidth();
+      });
+
+      applyWidthButton.addEventListener("click", applyWidth);
+      pageSelect.addEventListener("change", applyPage);
+      window.addEventListener("resize", () => {
+        const width = Math.max(320, Math.min(1800, Number(widthInput.value) || 390));
+        fitFrame(width);
+        updateMeta(getFramePage(), width);
+      });
+      widthInput.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+          applyWidth();
+        }
+      });
+
+      applyWidth();
+    </script>
+  </body>
+</html>

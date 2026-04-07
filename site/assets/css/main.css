@@ -100,6 +100,55 @@ nav {
   align-items: center;
 }
 
+.nav-menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--border);
+  background: rgba(253, 250, 246, 0.94);
+  cursor: pointer;
+}
+
+.nav-menu-toggle-bars {
+  display: grid;
+  gap: 5px;
+}
+
+.nav-menu-toggle-bars span {
+  display: block;
+  width: 18px;
+  height: 1.5px;
+  background: var(--ink);
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    background 0.2s ease;
+}
+
+.site-header--home .nav-menu-toggle {
+  background: rgba(28, 24, 18, 0.72);
+  border-color: rgba(247, 243, 236, 0.2);
+}
+
+.site-header--home .nav-menu-toggle-bars span {
+  background: var(--white);
+}
+
+nav.is-open .nav-menu-toggle-bars span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+nav.is-open .nav-menu-toggle-bars span:nth-child(2) {
+  opacity: 0;
+}
+
+nav.is-open .nav-menu-toggle-bars span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
 .nav-links a {
   font-size: 13px;
   font-weight: 400;
@@ -156,7 +205,7 @@ nav {
       rgba(28, 24, 18, 0.14) 100%
     ),
     linear-gradient(180deg, rgba(28, 24, 18, 0.08) 0%, rgba(28, 24, 18, 0.24) 100%),
-    url('../images/algemeen/banner-over-karolien-de-lijsterij.jpg') center center/cover no-repeat;
+    url('../images-test/algemeen/banner-over-karolien-de-lijsterij.jpg') center center/cover no-repeat;
 }
 
 .hero-left {
@@ -483,6 +532,18 @@ h1 em {
   padding-bottom: 0;
 }
 
+@media (max-width: 1280px) {
+  .hero.hero--split:has(.hero-right--vermeer-banner) {
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.48fr);
+    column-gap: 2rem;
+  }
+
+  .hero.hero--split:has(.hero-right--vermeer-banner) .hero-left {
+    padding-right: 2rem;
+    padding-bottom: 2.75rem;
+  }
+}
+
 .hero.hero--split:not(:has(.hero-right)) {
   grid-template-columns: 1fr;
 }
@@ -591,7 +652,7 @@ h1 em {
   display: flex;
   align-items: center;
   gap: 4.5rem;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .proof-item {
@@ -615,6 +676,20 @@ h1 em {
   letter-spacing: 0.06em;
   color: var(--gold);
   font-weight: 500;
+}
+
+@media (max-width: 1500px) {
+  .proof-band {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 2rem;
+    padding: 1.2rem 1.5rem;
+  }
+
+  .proof-item {
+    flex-shrink: 1;
+    white-space: normal;
+  }
 }
 
 .section-actions {
@@ -717,6 +792,15 @@ h2 {
 h2 em {
   font-style: italic;
   color: var(--gold);
+}
+
+.section-header h2,
+.story-main h2,
+.portfolio-feature-copy h2,
+.vermeer-ingelijst-headline,
+.cta-panel h2,
+.atelier-strip-content h2 {
+  margin-bottom: 1rem;
 }
 
 .section-sub {
@@ -1233,7 +1317,7 @@ h2 em {
 .review-text {
   font-family: 'Playfair Display', serif;
   font-style: italic;
-  font-size: 30px;
+  font-size: clamp(22px, 2.2vw, 30px);
   line-height: 1.65;
   color: var(--ink);
   margin-bottom: 1.25rem;
@@ -1536,7 +1620,7 @@ footer {
 .hero-right:not(.hero-right--photo) {
   background:
     linear-gradient(rgba(28, 24, 18, 0.28), rgba(28, 24, 18, 0.18)),
-    url('../images/algemeen/hero-atelier-karolien.jpg') center/cover no-repeat;
+    url('../images-test/algemeen/hero-atelier-karolien.jpg') center/cover no-repeat;
 }
 
 .frame-scene {
@@ -1563,28 +1647,28 @@ footer {
 }
 
 .portfolio-inner--bekroond {
-  background-image: url('../images/portfolio/bekroond-tabernakellijst.jpg');
+  background-image: url('../images-test/portfolio/bekroond-tabernakellijst.jpg');
   background-size: contain !important;
   background-position: center;
   background-color: var(--cream-dark);
 }
 
 .portfolio-inner--bloemwerk {
-  background-image: url('../images/portfolio/bloemwerk-klassieke-eiken-lijst.jpg');
+  background-image: url('../images-test/portfolio/bloemwerk-klassieke-eiken-lijst.jpg');
   background-size: contain !important;
   background-position: center;
   background-color: var(--cream-dark);
 }
 
 .portfolio-inner--restauratie {
-  background-image: url('../images/restauratie/restauratie-zwaar-beschadigde-lijst-na.jpg');
+  background-image: url('../images-test/restauratie/restauratie-zwaar-beschadigde-lijst-na.jpg');
   background-size: contain !important;
   background-position: center;
   background-color: var(--cream-dark);
 }
 
 .portfolio-inner--objectlijst {
-  background-image: url('../images/portfolio/objectlijst-3d-medaillon.png');
+  background-image: url('../images-test/portfolio/objectlijst-3d-medaillon.jpg');
 }
 
 .vermeer-prose-gap {
@@ -1724,7 +1808,7 @@ footer {
 }
 
 .over-image {
-  background: url('../images/algemeen/hero-atelier-karolien.jpg') center/cover no-repeat;
+  background: url('../images-test/algemeen/hero-atelier-karolien.jpg') center/cover no-repeat;
   min-height: 465px;
   width: 75%;
   margin: 0 auto;
@@ -1757,12 +1841,46 @@ footer {
 }
 
 /* -- RESPONSIVE -- */
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   nav {
     padding: 0 1.5rem;
   }
-  .nav-links li:not(:last-child) {
+  .nav-menu-toggle {
+    display: inline-flex;
+  }
+  .nav-links {
     display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0.75rem 1.5rem 1.25rem;
+    background: rgba(247, 243, 236, 0.98);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 18px 36px rgba(28, 24, 18, 0.08);
+  }
+  nav.is-open .nav-links {
+    display: flex;
+  }
+  .site-header--home nav.is-open .nav-links {
+    background: rgba(28, 24, 18, 0.94);
+    border-bottom-color: rgba(247, 243, 236, 0.14);
+  }
+  .nav-links li {
+    display: block !important;
+    width: 100%;
+  }
+  .nav-links a {
+    display: block;
+    padding: 0.9rem 0;
+    width: 100%;
+  }
+  .nav-links .nav-cta {
+    margin-top: 0.35rem;
+    text-align: center;
   }
   .hero {
     grid-template-columns: 1fr;
@@ -1774,13 +1892,31 @@ footer {
     grid-template-columns: 1fr;
     min-height: auto;
   }
+  .hero.hero--split .hero-left {
+    padding: 3.25rem 1.5rem 2.5rem;
+  }
+  .hero.hero--split .hero-right--vermeer-banner {
+    display: flex;
+    justify-content: center;
+    padding: 0 1.5rem 2.5rem;
+    min-height: auto;
+    background: var(--cream);
+  }
+  .hero.hero--split .hero-right--vermeer-banner .vermeer-figure--hero-banner {
+    width: min(100%, 360px);
+    margin: 0 auto;
+    align-self: center;
+  }
   .hero.hero--split .hero-right--photo img {
     min-height: 240px;
     max-height: 46vh;
   }
   .hero.hero--split .hero-right--vermeer-banner .vermeer-figure--hero-banner img {
+    width: 100%;
+    height: auto;
     min-height: 0;
     max-height: none;
+    object-fit: contain;
   }
   .hero-left {
     padding: 3rem 1.5rem;
@@ -2122,10 +2258,50 @@ footer {
   max-width: 480px;
 }
 
+@media (max-width: 1500px) {
+  .story-grid--about {
+    grid-template-columns: minmax(420px, 714px) minmax(0, 1fr);
+    column-gap: 2rem;
+    align-items: start;
+  }
+
+  .story-grid--about .story-main {
+    max-width: none;
+    margin-left: 0;
+  }
+
+  .story-grid--about .story-card {
+    grid-column: 2;
+    justify-self: start;
+    max-width: 520px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .story-grid--about {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .story-photo--about,
+  .story-grid--about .story-main,
+  .story-grid--about .story-card {
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .story-grid--about .story-card {
+    grid-column: auto;
+    justify-self: stretch;
+  }
+}
+
 .story-copy p {
   font-size: 16px;
   line-height: 1.9;
   color: var(--ink-soft);
+  margin-top: 0;
   margin-bottom: 1.4rem;
   max-width: 720px;
 }
@@ -2264,6 +2440,23 @@ footer {
   margin-left: 0;
 }
 
+@media (max-width: 1100px) {
+  .page-intro-layout--portfolio {
+    grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
+    align-items: start;
+  }
+
+  .page-intro-layout--portfolio .story-grid--portfolio {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .page-intro-layout--portfolio .story-card {
+    max-width: 440px;
+  }
+}
+
 .portfolio-showcase {
   padding: 5rem 3rem;
   background: var(--cream);
@@ -2338,6 +2531,56 @@ footer {
   object-fit: cover;
 }
 
+@media (max-width: 1500px) {
+  .vermeer-ingelijst-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+
+  .vermeer-ingelijst-layout .section-eyebrow {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .vermeer-ingelijst-layout .vermeer-ingelijst-headline {
+    grid-column: 1;
+    grid-row: 2;
+    margin-bottom: 1.25rem;
+  }
+
+  .vermeer-ingelijst-layout .story-copy {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .vermeer-ingelijst-layout .vermeer-ingelijst-photo-group {
+    grid-column: 1;
+    grid-row: 4;
+    justify-self: center;
+    width: 100%;
+    max-width: 760px;
+    margin-top: 1.75rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    position: static;
+  }
+
+  .vermeer-ingelijst-layout .vermeer-figure--vermeer-ingelijst-photo,
+  .vermeer-ingelijst-layout .vermeer-figure--vermeer-ingelijst-photo-2 {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    position: static;
+  }
+
+  .vermeer-ingelijst-layout .vermeer-figure--vermeer-ingelijst-photo img,
+  .vermeer-ingelijst-layout .vermeer-figure--vermeer-ingelijst-photo-2 img {
+    height: auto;
+    aspect-ratio: 4 / 5;
+  }
+}
+
 .vermeer-result-layout {
   position: relative;
   width: 100%;
@@ -2404,6 +2647,37 @@ footer {
   height: auto;
 }
 
+@media (max-width: 1500px) {
+  .vermeer-result-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .vermeer-result-image {
+    float: none;
+    width: 100%;
+    max-width: 180px;
+    margin: 0 0 1.5rem;
+  }
+
+  .vermeer-result-secondary-image {
+    position: static;
+    width: 100%;
+    max-width: 820px;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1101px) and (max-width: 1500px) {
+  .vermeer-result-image {
+    float: right;
+    width: 150px;
+    max-width: none;
+    margin: 0.5rem 0 1rem 2rem;
+  }
+}
+
 .portfolio-feature {
   display: grid;
   grid-template-columns: minmax(320px, 0.95fr) minmax(0, 1.05fr);
@@ -2458,6 +2732,7 @@ footer {
   color: var(--ink-soft);
   font-size: 15px;
   line-height: 1.85;
+  margin-top: 0;
   margin-bottom: 1.2rem;
   max-width: 560px;
 }
@@ -3080,6 +3355,41 @@ body.page-over-ons .over-wat-ik-doe-caption cite {
   color: var(--ink);
 }
 
+@media (max-width: 1500px) {
+  body.page-over-ons .over-wat-ik-doe-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 760px;
+  }
+
+  body.page-over-ons .over-wat-ik-doe-showcase {
+    flex-direction: column;
+    align-items: stretch;
+    justify-self: stretch;
+    transform: none;
+    gap: 1.25rem;
+    max-width: 100%;
+  }
+
+  body.page-over-ons .over-wat-ik-doe-photo-frame {
+    width: 100%;
+    max-width: min(520px, 100%);
+  }
+
+  body.page-over-ons .over-wat-ik-doe-caption {
+    width: 100%;
+    max-width: none;
+    padding: 1rem 0 0;
+    border-left: none;
+    border-top: 1px solid rgba(168, 115, 42, 0.35);
+  }
+
+  body.page-over-ons .over-wat-ik-doe-caption p {
+    max-width: none;
+  }
+}
+
 /* Als page-intro/principles: volle breedte + zij-padding, niet gecentreerd in een smalle kolom */
 body.page-over-ons .atelier-strip {
   max-width: none;
@@ -3249,6 +3559,39 @@ body.page-kunstenaars
   padding: 10px;
 }
 
+@media (max-width: 1100px) {
+  body.page-kunstenaars .portfolio-feature {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  body.page-kunstenaars .portfolio-feature-image {
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  body.page-kunstenaars .portfolio-feature-copy {
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  body.page-kunstenaars .portfolio-gallery-grid--erik {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  body.page-kunstenaars .portfolio-gallery-grid--erik .portfolio-work-card {
+    max-width: 520px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
 .cta-panel {
   display: flex;
   align-items: center;
@@ -3266,6 +3609,32 @@ body.page-kunstenaars
 
 .cta-panel h2 {
   margin-bottom: 1.25rem;
+}
+
+@media (max-width: 1500px) {
+  .page-intro-layout--inlijsten {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .page-intro-layout--inlijsten .intro-photo-grid--inlijsten {
+    max-width: 820px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .page-intro-layout--inlijsten .story-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 820px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .page-intro-layout--inlijsten .story-main,
+  .page-intro-layout--inlijsten .story-card {
+    max-width: none;
+  }
 }
 
 @media (max-width: 900px) {
@@ -3388,6 +3757,8 @@ body.page-kunstenaars
     flex-direction: column;
     align-items: stretch;
     max-width: 100%;
+    justify-self: stretch;
+    transform: none;
     gap: 1.5rem;
   }
 
@@ -3490,6 +3861,93 @@ body.page-kunstenaars
 }
 
 @media (max-width: 600px) {
+  .frame-quote,
+  .frame-attr,
+  .over-image-text,
+  .portfolio-icon {
+    display: none;
+  }
+
+  .proof-band {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.85rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .proof-item {
+    width: 100%;
+  }
+
+  .diensten-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dienst-card {
+    grid-template-columns: minmax(0, 1fr) 88px;
+    align-items: center;
+  }
+
+  .hero.hero--split {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero.hero--split .hero-left {
+    padding: 2.5rem 1.5rem 2rem;
+  }
+
+  .hero.hero--split .hero-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.65rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero.hero--split .hero-brand-mark {
+    width: 54px;
+  }
+
+  .hero.hero--split h1 {
+    font-size: clamp(40px, 13vw, 56px);
+    line-height: 1.04;
+  }
+
+  .hero.hero--split .hero-sub,
+  .hero.hero--split .hero-sub--secondary {
+    max-width: none;
+  }
+
+  .hero.hero--split .hero-pillars {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  .hero.hero--split .hero-right--vermeer-banner {
+    order: 2;
+    padding: 1rem 1.5rem 2.25rem;
+    min-height: auto;
+    background: var(--cream);
+    width: 100%;
+  }
+
+  .hero.hero--split .hero-right--vermeer-banner .vermeer-figure--hero-banner {
+    width: min(100%, 280px);
+    margin: 0 auto;
+    align-self: center;
+  }
+
+  .hero.hero--split .hero-right--vermeer-banner .vermeer-figure--hero-banner img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+  }
+
   .dienst-desc {
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -3509,6 +3967,94 @@ body.page-kunstenaars
 
   .portfolio-delicate-duo {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 430px) {
+  .vermeer-ingelijst-layout .vermeer-ingelijst-photo-group {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+  }
+
+  body.page-over-ons .over-wat-ik-doe {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  body.page-over-ons .over-wat-ik-doe-inner {
+    gap: 1.5rem;
+  }
+
+  body.page-over-ons .over-wat-ik-doe-showcase {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: none;
+    justify-self: stretch;
+    transform: none;
+    gap: 0.85rem;
+  }
+
+  body.page-over-ons .over-wat-ik-doe-photo-frame {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 5px;
+  }
+
+  body.page-over-ons .over-wat-ik-doe-caption {
+    width: 100%;
+    max-width: none;
+    padding: 0.7rem 0 0;
+    border-left: none;
+    border-top: 1px solid rgba(168, 115, 42, 0.35);
+  }
+
+  body.page-over-ons .over-wat-ik-doe-caption-label {
+    margin-bottom: 0.5rem;
+    font-size: 0.62rem;
+    letter-spacing: 0.22em;
+  }
+
+  body.page-over-ons .over-wat-ik-doe-caption p {
+    font-size: 0.72rem;
+    line-height: 1.48;
+  }
+}
+
+@media (max-width: 390px) {
+  body.page-over-ons .over-wat-ik-doe {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+
+  body.page-over-ons .over-wat-ik-doe-showcase {
+    width: 100%;
+    max-width: none;
+    justify-self: stretch;
+    transform: none;
+    gap: 0.75rem;
+  }
+
+  body.page-over-ons .over-wat-ik-doe-photo-frame {
+    width: 100%;
+    max-width: none;
+    padding: 4px;
+  }
+
+  body.page-over-ons .over-wat-ik-doe-caption {
+    padding-top: 0.6rem;
+  }
+
+  body.page-over-ons .over-wat-ik-doe-caption-label {
+    margin-bottom: 0.42rem;
+    font-size: 0.58rem;
+  }
+
+  body.page-over-ons .over-wat-ik-doe-caption p {
+    font-size: 0.69rem;
+    line-height: 1.42;
   }
 }
 
@@ -3540,60 +4086,55 @@ body.page-workshop .cta-panel-wrap {
   background: var(--white);
 }
 
-.workshop-columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  max-width: 900px;
-  margin: 2.5rem auto 0;
-}
-
-.workshop-column h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.35rem;
-  font-weight: 400;
-  margin-bottom: 0.75rem;
-  color: var(--ink);
-}
-
-.workshop-column p {
-  color: var(--ink-soft);
-  line-height: 1.65;
-}
-
 .workshop-planning {
   background: var(--cream);
   padding: 5rem 3rem;
 }
 
-.workshop-notice {
-  max-width: 560px;
+.workshop-section-inner {
+  max-width: 1180px;
   margin: 0 auto;
-  padding: 2rem 2.25rem;
-  text-align: center;
-  border: 1px solid var(--border);
-  background: var(--white);
 }
 
-.workshop-notice strong {
+.workshop-section-header {
+  max-width: 780px;
+  margin-bottom: 2rem;
+}
+
+.workshop-section-header .section-sub {
+  max-width: 760px;
+}
+
+.workshop-copy {
+  max-width: 780px;
+  padding: 2.35rem 2.5rem;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: 0 14px 36px rgba(28, 24, 18, 0.05);
+}
+
+.workshop-copy strong {
   display: block;
   font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--gold);
   font-weight: 500;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
 }
 
-.workshop-notice p {
+.workshop-copy p {
   color: var(--ink-soft);
   margin: 0;
   line-height: 1.65;
 }
 
-.workshop-notice__actions {
-  justify-content: center;
-  margin-top: 1.25rem;
+.workshop-copy p + p {
+  margin-top: 1rem;
+}
+
+.workshop-copy__actions {
+  margin-top: 1.75rem;
 }
 
 .workshop-sfeer {
@@ -3604,13 +4145,16 @@ body.page-workshop .cta-panel-wrap {
 .workshop-gallery {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-  max-width: 1100px;
-  margin: 2rem auto 0;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
 }
 
 .workshop-gallery figure {
   margin: 0;
+  border: 1px solid var(--border);
+  background: var(--cream);
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(28, 24, 18, 0.05);
 }
 
 .workshop-gallery img {
@@ -3627,9 +4171,15 @@ body.page-workshop .cta-panel-wrap {
 }
 
 @media (max-width: 700px) {
-  .workshop-columns {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  .workshop-planning,
+  .workshop-sfeer,
+  body.page-workshop .cta-panel-wrap {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .workshop-copy {
+    padding: 1.75rem 1.4rem;
   }
 
   .workshop-gallery {
