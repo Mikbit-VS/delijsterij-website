@@ -74,10 +74,7 @@
       var email = (document.getElementById('email') && document.getElementById('email').value.trim()) || '';
       var bericht = (document.getElementById('bericht') && document.getElementById('bericht').value.trim()) || '';
       var catEl = document.getElementById('categorie');
-      var categorie = '';
-      if (catEl && catEl.options[catEl.selectedIndex]) {
-        categorie = catEl.options[catEl.selectedIndex].text.trim();
-      }
+      var categorie = (catEl && catEl.value && catEl.value.trim()) || '';
 
       var lines = [];
       lines.push('Bericht via contactformulier op delijsterij.nl');
