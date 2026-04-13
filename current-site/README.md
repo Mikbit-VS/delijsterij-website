@@ -3,7 +3,7 @@
 In `current-site/` staat een **lokale snapshot** van de live WordPress-site van De Lijsterij, bedoeld als **referentie** voor migratie van teksten, SEO en beeldmateriaal.
 
 - Snapshot-map: `current-site/snapshot/`
-- Bron: `https://www.delijsterij.nl`
+- Bron: `https://delijsterij.nl`
 
 ## Updaten van de snapshot
 

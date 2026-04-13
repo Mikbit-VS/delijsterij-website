@@ -1,13 +1,8 @@
 import { mkdir, writeFile, stat } from 'node:fs/promises';
 import path from 'node:path';
 
-const ORIGIN = 'https://www.delijsterij.nl';
-const ALLOWED_ORIGINS = new Set([
-  'https://www.delijsterij.nl',
-  'https://delijsterij.nl',
-  'http://www.delijsterij.nl',
-  'http://delijsterij.nl',
-]);
+const ORIGIN = 'https://delijsterij.nl';
+const ALLOWED_ORIGINS = new Set(['https://delijsterij.nl', 'http://delijsterij.nl']);
 const OUT_DIR = path.resolve('current-site', 'snapshot');
 
 const MAX_PAGES = 5000;
@@ -138,9 +133,6 @@ function rewriteInternalLinks(html, pageUrl) {
 
 async function getSitemapUrls() {
   const candidates = [
-    'https://www.delijsterij.nl/sitemap_index.xml',
-    'https://www.delijsterij.nl/sitemap.xml',
-    'https://www.delijsterij.nl/sitemap.xml.gz',
     'https://delijsterij.nl/sitemap_index.xml',
     'https://delijsterij.nl/sitemap.xml',
     'https://delijsterij.nl/sitemap.xml.gz',
