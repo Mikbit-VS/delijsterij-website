@@ -57,7 +57,7 @@ if (empty($_SESSION['cms_authenticated'])) {
 }
 
 $absoluteTarget = '/home/delijsterij.nl/httpdocs/content/content.json';
-$localDir = realpath(__DIR__ . '/../../content');
+$localDir = realpath(__DIR__ . '/../content');
 $localFallback = $localDir ? ($localDir . DIRECTORY_SEPARATOR . 'content.json') : '';
 
 $target = $absoluteTarget;

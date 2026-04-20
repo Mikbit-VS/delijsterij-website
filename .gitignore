@@ -21,7 +21,7 @@ current-site/snapshot/
 !.vscode/tasks.json
 !.vscode/extensions.json
 
-# Lokale FTP-kopie van site/ (niet in repo dupliceren)
+# Lokale FTP-kopie voor handmatige upload (niet in repo dupliceren)
 site-upload/
 
 # Live CMS content wordt op server beheerd

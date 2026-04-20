@@ -6,32 +6,32 @@ Deze map is de werkbasis voor de nieuwe website van De Lijsterij.
 
 - `concept/`
   Hier staat het oorspronkelijke HTML-concept. Dit is de creatieve en inhoudelijke basis.
-- `site/`
-  Hier bouwen we de uiteindelijke website die we verder opschonen, opdelen en publiceren. **Dit is de bron:** alle bewerkingen en commits gebeuren hier.
+- `./` (repo-root)
+  Hier staat de uiteindelijke website (HTML, `assets/`, `beheer/`, `favicon/`). **Dit is de bron:** alle bewerkingen en commits gebeuren in de root.
 - `site-upload/`
-  Kopie van `site/` om te uploaden naar **YourHosting** (FTP / bestandsbeheer). Geen aparte “waarheid”: vóór elke upload eerst `site/` hierheen kopiëren (zie hieronder).
+  Kopie van de livebestanden uit de repo-root om handmatig te uploaden naar **YourHosting** (FTP / bestandsbeheer). Geen aparte “waarheid”.
 - `current-site/`
   Hier bewaren we materiaal uit de huidige WordPress-site als referentie.
 - `content/`
-  Hier verzamelen we teksten, pagina-inhoud en SEO-notities los van de code.
+  CMS-content en contentnotities. `content/content.json` wordt live op server beheerd; `content/content.json.example` staat in Git als template.
 - `docs/`
   Hier houden we planning, sitemap en migratienotities bij.
 
 ## Huidige status
 
 - Het originele concept staat in `concept/original/`.
-- De bestaande fotomap staat in `site/assets/images/original-import/`.
-- De `site/` map is de plek waar we verder gaan bouwen.
+- De bestaande fotomap staat in `assets/images/original-import/`.
+- De website staat in de repo-root (`index.html`, `assets/`, `beheer/`, `favicon/`).
 
 ## YourHosting-upload
 
-- **Bron = `site/`** — altijd hier wijzigen en committen.
-- **`site-upload/`** alleen vullen vlak vóór je naar de server uploadt.
+- **Bron = repo-root** — altijd daar wijzigen en committen.
+- **`site-upload/`** alleen vullen vlak vóór je naar de server uploadt (optioneel als handmatige fallback naast Git deploy).
 
 PowerShell (vanuit de projectmap `De Lijsterij - website`):
 
 ```powershell
-Copy-Item -Path "site\*" -Destination "site-upload\" -Recurse -Force
+Copy-Item -Path "assets","beheer","favicon","content","*.html","robots.txt","sitemap.xml" -Destination "site-upload\" -Recurse -Force
 ```
 
 Daarna upload je de **inhoud** van `site-upload/` naar de webroot bij YourHosting (bijv. `public_html`).
@@ -66,10 +66,11 @@ Praktische afspraak:
    - zet `content/content.json.example` om naar `content/content.json`.
 4. `content/content.json` staat in `.gitignore` en wordt niet naar GitHub gepusht.
    - Daardoor worden CMS-wijzigingen van de eigenaar op de live server niet overschreven door deploys.
+5. Deploy pad in Plesk staat op `/httpdocs` (geen extra submap), zodat pushes direct live gaan.
 
 ## Eerstvolgende logische stap
 
-1. Het concept omzetten naar een schone `site/index.html`.
-2. Inline CSS loshalen naar `site/assets/css/main.css`.
+1. Content schrijven en onderhouden via `beheer/` met server-side `content/content.json`.
+2. Visuele finetuning in `assets/css/main.css`.
 3. Afbeeldingen structureren en koppelen zonder embedded data.
 4. Content uit WordPress vergelijken en aanvullen.
