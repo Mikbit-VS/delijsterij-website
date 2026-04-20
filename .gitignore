@@ -5,6 +5,13 @@ Thumbs.db
 # Cursor (lokaal)
 .cursor/
 
+# Lokale/developer mappen (niet deployen)
+concept/
+current-site/
+docs/
+tools/
+tmp-shots/
+
 # WordPress snapshot (alleen README in repo; snapshot lokaal opnieuw ophalen)
 current-site/snapshot/
 
@@ -16,6 +23,9 @@ current-site/snapshot/
 
 # Lokale FTP-kopie van site/ (niet in repo dupliceren)
 site-upload/
+
+# Live CMS content wordt op server beheerd
+content/content.json
 
 # Build / temp
 dist/

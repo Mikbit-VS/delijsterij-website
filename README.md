@@ -58,6 +58,15 @@ Praktische afspraak:
 - Daarna pas committen.
 - Pas pushen naar GitHub als de stap logisch afgerond is.
 
+## Automatische deploy naar YourHosting (Plesk Git)
+
+1. Koppel de GitHub-repository in Plesk via **Git** aan deze site en laat deployen naar `httpdocs`.
+2. Elke `git push` naar de gekoppelde branch (bijv. `main`) wordt daarna automatisch gedeployed.
+3. Bij de eerste setup op server:
+   - zet `content/content.json.example` om naar `content/content.json`.
+4. `content/content.json` staat in `.gitignore` en wordt niet naar GitHub gepusht.
+   - Daardoor worden CMS-wijzigingen van de eigenaar op de live server niet overschreven door deploys.
+
 ## Eerstvolgende logische stap
 
 1. Het concept omzetten naar een schone `site/index.html`.
