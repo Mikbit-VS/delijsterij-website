@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>De Lijsterij Beheer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,500&family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #f9f7f4;
+        --card: #ffffff;
+        --border: #e0dbd4;
+        --ink: #1c1812;
+        --muted: #766d61;
+        --accent: #4f7e5b;
+        --accent-dark: #3f6849;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: 'DM Sans', sans-serif;
+        background: var(--bg);
+        color: var(--ink);
+      }
+
+      .hidden {
+        display: none !important;
+      }
+
+      .auth-wrap {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 1.25rem;
+      }
+
+      .auth-card {
+        width: min(420px, 100%);
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 2rem 1.75rem;
+        text-align: center;
+      }
+
+      .auth-logo {
+        width: 74px;
+        height: 74px;
+        object-fit: contain;
+        margin-bottom: 0.8rem;
+      }
+
+      .auth-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem;
+        margin: 0 0 1rem;
+      }
+
+      .auth-field {
+        width: 100%;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 0.75rem 0.85rem;
+        font: inherit;
+        margin-bottom: 0.9rem;
+      }
+
+      .btn {
+        border: none;
+        border-radius: 8px;
+        padding: 0.74rem 1.1rem;
+        font: inherit;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .btn-green {
+        background: var(--accent);
+        color: #fff;
+      }
+
+      .btn-green:hover {
+        background: var(--accent-dark);
+      }
+
+      .auth-error {
+        margin-top: 0.75rem;
+        color: #9a2d2d;
+        font-size: 0.92rem;
+      }
+
+      .dashboard {
+        min-height: 100vh;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: rgba(249, 247, 244, 0.95);
+        border-bottom: 1px solid var(--border);
+        backdrop-filter: blur(4px);
+      }
+
+      .topbar-inner {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 0.85rem 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .topbar-brand {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        font-weight: 700;
+      }
+
+      .topbar-brand img {
+        width: 38px;
+        height: 38px;
+      }
+
+      .logout-link {
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 0.95rem;
+      }
+
+      .logout-link:hover {
+        color: var(--ink);
+      }
+
+      .content {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 1.2rem 1.25rem 2.2rem;
+      }
+
+      .backup-tools {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 0.85rem 0.95rem;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        flex-wrap: wrap;
+      }
+
+      .backup-tools-label {
+        font-size: 0.72rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .backup-select {
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 0.5rem 0.6rem;
+        font: inherit;
+        min-width: 220px;
+      }
+
+      .backup-status {
+        font-size: 0.88rem;
+        color: var(--accent);
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        margin-bottom: 1rem;
+      }
+
+      .card-head {
+        width: 100%;
+        border: 0;
+        background: transparent;
+        padding: 0.95rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        font: inherit;
+      }
+
+      .card-title {
+        font-weight: 700;
+      }
+
+      .card-arrow {
+        color: var(--muted);
+        transition: transform 0.2s ease;
+      }
+
+      .card[aria-expanded='true'] .card-arrow {
+        transform: rotate(180deg);
+      }
+
+      .card-body {
+        border-top: 1px solid var(--border);
+        padding: 0.95rem 1rem 1rem;
+      }
+
+      .card[aria-expanded='false'] .card-body {
+        display: none;
+      }
+
+      .field {
+        margin-bottom: 0.8rem;
+      }
+
+      .field label {
+        display: block;
+        margin-bottom: 0.33rem;
+        font-size: 0.72rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .field input,
+      .field textarea {
+        width: 100%;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 0.65rem 0.75rem;
+        font: inherit;
+        color: var(--ink);
+        background: #fff;
+      }
+
+      .field textarea {
+        min-height: 84px;
+        resize: vertical;
+      }
+
+      .card-actions {
+        margin-top: 0.8rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 0.65rem;
+      }
+
+      .save-status {
+        font-size: 0.85rem;
+        color: var(--accent);
+        opacity: 0;
+        transition: opacity 0.2s ease;
+      }
+
+      .save-status.show {
+        opacity: 1;
+      }
+
+      @media (max-width: 768px) {
+        .topbar-inner,
+        .content {
+          padding-left: 0.9rem;
+          padding-right: 0.9rem;
+        }
+
+        .auth-card {
+          padding: 1.4rem 1.1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main id="loginView" class="auth-wrap">
+      <section class="auth-card">
+        <img
+          class="auth-logo"
+          src="../assets/images/algemeen/logo-de-lijsterij.png"
+          alt="Logo De Lijsterij"
+        />
+        <h1 class="auth-title">Beheeromgeving</h1>
+        <form id="loginForm">
+          <input
+            id="password"
+            class="auth-field"
+            type="password"
+            name="password"
+            autocomplete="current-password"
+            placeholder="Wachtwoord"
+            required
+          />
+          <button class="btn btn-green" type="submit">Inloggen</button>
+          <div id="loginError" class="auth-error hidden"></div>
+        </form>
+      </section>
+    </main>
+
+    <section id="dashboardView" class="dashboard hidden">
+      <header class="topbar">
+        <div class="topbar-inner">
+          <div class="topbar-brand">
+            <img src="../assets/images/algemeen/logo-de-lijsterij.png" alt="" aria-hidden="true" />
+            <span>De Lijsterij Beheer</span>
+          </div>
+          <a href="#" id="logoutLink" class="logout-link">Uitloggen</a>
+        </div>
+      </header>
+      <div class="content">
+        <div id="backupTools" class="backup-tools hidden">
+          <span class="backup-tools-label">Backups</span>
+          <select id="backupSelect" class="backup-select"></select>
+          <button id="restoreButton" class="btn btn-green" type="button">Herstel backup</button>
+          <span id="backupStatus" class="backup-status"></span>
+        </div>
+        <div id="cardsContainer"></div>
+      </div>
+    </section>
+
+    <script>
+      const CONTENT_URLS = ['../../content/content.json', '/content/content.json'];
+      let contentState = null;
+      let csrfToken = '';
+
+      const loginView = document.getElementById('loginView');
+      const dashboardView = document.getElementById('dashboardView');
+      const loginForm = document.getElementById('loginForm');
+      const loginError = document.getElementById('loginError');
+      const cardsContainer = document.getElementById('cardsContainer');
+      const logoutLink = document.getElementById('logoutLink');
+      const backupTools = document.getElementById('backupTools');
+      const backupSelect = document.getElementById('backupSelect');
+      const restoreButton = document.getElementById('restoreButton');
+      const backupStatus = document.getElementById('backupStatus');
+
+      async function fetchFirst(urls) {
+        for (const url of urls) {
+          try {
+            const res = await fetch(url, { cache: 'no-store' });
+            if (res.ok) return res.json();
+          } catch (_) {}
+        }
+        return null;
+      }
+
+      async function sessionStatus() {
+        const res = await fetch('login.php?action=status', {
+          headers: { Accept: 'application/json' },
+        });
+        if (!res.ok) return { authenticated: false, csrfToken: '' };
+        const data = await res.json();
+        return {
+          authenticated: !!data.authenticated,
+          csrfToken: data.csrfToken || '',
+        };
+      }
+
+      function friendlyLabel(key) {
+        const tail = key.split('.').slice(1).join(' ');
+        return tail
+          .replace(/\./g, ' ')
+          .replace(/\b(\d+)\b/g, ' #$1')
+          .replace(/-/g, ' ')
+          .trim();
+      }
+
+      function autosize(textarea) {
+        textarea.style.height = 'auto';
+        textarea.style.height = `${textarea.scrollHeight}px`;
+      }
+
+      function cleanEditorValue(value, multiline) {
+        const normalized = String(value ?? '')
+          .replace(/\r\n/g, '\n')
+          .replace(/\n[ \t]+/g, '\n')
+          .replace(/[ \t]+\n/g, '\n')
+          .replace(/\n{3,}/g, '\n\n')
+          .trim();
+
+        if (multiline) {
+          return normalized
+            .replace(/\n\n/g, '___PARA___')
+            .replace(/\n/g, ' ')
+            .replace(/\s{2,}/g, ' ')
+            .replace(/___PARA___/g, '\n\n')
+            .trim();
+        }
+        return normalized.replace(/\s+/g, ' ').trim();
+      }
+
+      async function loadBackups() {
+        const res = await fetch('save.php?action=backups', {
+          headers: { Accept: 'application/json' },
+        });
+        if (!res.ok) return;
+        const data = await res.json();
+        if (!data.success || !Array.isArray(data.backups)) return;
+
+        backupSelect.innerHTML = '';
+        const available = data.backups.filter((item) => item.exists);
+
+        if (available.length === 0) {
+          backupSelect.innerHTML = '<option value="">Geen backups beschikbaar</option>';
+          restoreButton.disabled = true;
+        } else {
+          available.forEach((item) => {
+            const option = document.createElement('option');
+            const when = item.modifiedAt ? new Date(item.modifiedAt).toLocaleString('nl-NL') : '';
+            option.value = item.name;
+            option.textContent = `${item.name.toUpperCase()}${when ? ` — ${when}` : ''}`;
+            backupSelect.appendChild(option);
+          });
+          restoreButton.disabled = false;
+        }
+
+        backupTools.classList.remove('hidden');
+      }
+
+      function buildDashboard() {
+        cardsContainer.innerHTML = '';
+        if (!contentState || !contentState.pages) return;
+
+        Object.entries(contentState.pages).forEach(([pageSlug, pageData], index) => {
+          const card = document.createElement('article');
+          card.className = 'card';
+          card.setAttribute('aria-expanded', index === 0 ? 'true' : 'false');
+
+          const title = pageData.path || pageSlug;
+          card.innerHTML = `
+            <button class="card-head" type="button">
+              <span class="card-title">${title}</span>
+              <span class="card-arrow">▾</span>
+            </button>
+            <div class="card-body"></div>
+          `;
+
+          const body = card.querySelector('.card-body');
+          const fields = pageData.fields || {};
+
+          Object.entries(fields).forEach(([key, value]) => {
+            const field = document.createElement('div');
+            field.className = 'field';
+            const isLong = value.length > 110 || /<br|\\n/i.test(value);
+
+            const input = isLong ? document.createElement('textarea') : document.createElement('input');
+            input.type = isLong ? undefined : 'text';
+            input.value = cleanEditorValue(value, isLong);
+            input.dataset.page = pageSlug;
+            input.dataset.key = key;
+
+            if (isLong) {
+              setTimeout(() => autosize(input), 0);
+              input.addEventListener('input', () => autosize(input));
+            }
+
+            const label = document.createElement('label');
+            label.textContent = friendlyLabel(key);
+
+            field.appendChild(label);
+            field.appendChild(input);
+            body.appendChild(field);
+          });
+
+          const actions = document.createElement('div');
+          actions.className = 'card-actions';
+          actions.innerHTML = `
+            <span class="save-status">Opgeslagen ✓</span>
+            <button class="btn btn-green" type="button">Opslaan</button>
+          `;
+          body.appendChild(actions);
+
+          const saveButton = actions.querySelector('button');
+          const saveStatus = actions.querySelector('.save-status');
+          saveButton.addEventListener('click', async () => {
+            const payload = { page: pageSlug, csrfToken, fields: {} };
+            body.querySelectorAll('[data-key]').forEach((input) => {
+              payload.fields[input.dataset.key] = input.value;
+            });
+
+            const res = await fetch('save.php', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                Accept: 'application/json',
+                'X-CSRF-Token': csrfToken,
+              },
+              body: JSON.stringify(payload),
+            });
+
+            const data = await res.json();
+            if (!res.ok || !data.success) {
+              alert(data.message || 'Opslaan is mislukt.');
+              return;
+            }
+
+            Object.assign(contentState.pages[pageSlug].fields, payload.fields);
+            saveStatus.classList.add('show');
+            setTimeout(() => saveStatus.classList.remove('show'), 1800);
+          });
+
+          card.querySelector('.card-head').addEventListener('click', () => {
+            const expanded = card.getAttribute('aria-expanded') === 'true';
+            card.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+          });
+
+          cardsContainer.appendChild(card);
+        });
+      }
+
+      async function showDashboard() {
+        contentState = await fetchFirst(CONTENT_URLS);
+        if (!contentState) {
+          alert('content.json kon niet worden geladen.');
+          return;
+        }
+        buildDashboard();
+        await loadBackups();
+        loginView.classList.add('hidden');
+        dashboardView.classList.remove('hidden');
+      }
+
+      loginForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        loginError.classList.add('hidden');
+
+        const body = new URLSearchParams();
+        body.set('password', document.getElementById('password').value);
+
+        const res = await fetch('login.php', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            Accept: 'application/json',
+          },
+          body: body.toString(),
+        });
+
+        const data = await res.json();
+        if (!res.ok || !data.success) {
+          loginError.textContent = data.message || 'Inloggen mislukt.';
+          loginError.classList.remove('hidden');
+          return;
+        }
+
+        csrfToken = data.csrfToken || '';
+        await showDashboard();
+      });
+
+      logoutLink.addEventListener('click', async (event) => {
+        event.preventDefault();
+        await fetch('login.php?action=logout', { headers: { Accept: 'application/json' } });
+        window.location.reload();
+      });
+
+      restoreButton.addEventListener('click', async () => {
+        const selected = backupSelect.value;
+        if (!selected) return;
+
+        const ok = window.confirm(
+          `Weet je zeker dat je ${selected.toUpperCase()} wilt herstellen? De huidige content wordt eerst als nieuwe backup bewaard.`
+        );
+        if (!ok) return;
+
+        const res = await fetch('save.php?action=restore', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+            'X-CSRF-Token': csrfToken,
+          },
+          body: JSON.stringify({ csrfToken, backup: selected }),
+        });
+
+        const data = await res.json();
+        if (!res.ok || !data.success) {
+          backupStatus.textContent = data.message || 'Herstellen mislukt.';
+          return;
+        }
+
+        backupStatus.textContent = 'Backup hersteld ✓';
+        await showDashboard();
+      });
+
+      (async () => {
+        const session = await sessionStatus();
+        if (session.authenticated) {
+          csrfToken = session.csrfToken || '';
+          await showDashboard();
+        }
+      })();
+    </script>
+  </body>
+</html>
