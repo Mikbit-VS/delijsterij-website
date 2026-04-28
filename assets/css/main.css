@@ -32,6 +32,11 @@ body {
   overflow-x: hidden;
 }
 
+/* CLS guard: preserve intrinsic image ratio while staying responsive */
+img[width][height] {
+  height: auto;
+}
+
 /* -- NAV -- */
 nav {
   position: fixed;
