@@ -701,7 +701,21 @@ h1 em {
   opacity: 0.5;
 }
 
-.proof-text {
+
+/* Center location and repeat proof bands */
+.proof-band--locations {
+  justify-content: center;
+  gap: 5.625rem;
+}
+
+.proof-band--locations .proof-item {
+  justify-content: center;
+  text-align: center;
+  white-space: normal;
+  flex-shrink: 1;
+}
+
+.proof-band--locations .proof-text {
   font-size: 13px;
   letter-spacing: 0.06em;
   color: var(--gold);
@@ -710,16 +724,23 @@ h1 em {
 
 @media (max-width: 1500px) {
   .proof-band {
+
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem 2rem;
     padding: 1.2rem 1.5rem;
+    }
+
+  .proof-band--locations {
+    gap: 1.25rem 2.5rem;
   }
 
   .proof-item {
+
     flex-shrink: 1;
     white-space: normal;
-  }
+    }
+}
 }
 
 .section-actions {
@@ -3955,9 +3976,13 @@ body.page-kunstenaars
     gap: 0.85rem;
     padding: 1rem 1.5rem;
   }
+  .proof-band--locations {
+    align-items: center;
+    gap: 1.0625rem;
+  }
 
-  .proof-item {
-    width: 100%;
+  .proof-band--locations .proof-item {
+    width: auto;
   }
 
   .diensten-grid {
@@ -4280,4 +4305,11 @@ body.page-workshop .cta-panel-wrap {
   .workshop-gallery {
     grid-template-columns: 1fr;
   }
+}
+
+
+
+/* Slightly wider spacing between words in top Werkgebied sentence */
+.proof-band--locations[aria-label="Werkgebied"] .proof-text {
+  word-spacing: 0.14em;
 }
