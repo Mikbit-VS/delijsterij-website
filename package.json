@@ -1,0 +1,27 @@
+{
+  "name": "de-lijsterij---website",
+  "version": "1.0.0",
+  "description": "Deze map is de werkbasis voor de nieuwe website van De Lijsterij.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mikbit-VS/delijsterij-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mikbit-VS/delijsterij-website/issues"
+  },
+  "homepage": "https://github.com/Mikbit-VS/delijsterij-website#readme",
+  "devDependencies": {
+    "cheerio": "^1.2.0",
+    "sharp": "^0.34.5"
+  }
+}

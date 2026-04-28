@@ -28,13 +28,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&amp;family=DM+Sans:wght@300;400;500&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/main.css?v=20260428proofwordspace">
+    <link rel="preload" href="assets/css/main.css?v=20260428proofwordspace" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="assets/css/main.css?v=20260428proofwordspace"></noscript>
   </head>
   <body class="page-portfolio">
     <header class="site-header">
       <nav aria-label="Hoofdnavigatie">
         <a class="nav-logo" href="index.html" aria-label="Ga naar home">
-          <img class="brand-mark brand-mark--nav" src="assets/images/algemeen/logo-de-lijsterij-transparent.png?v=20260402g" alt="" aria-hidden="true">
+          <img class="brand-mark brand-mark--nav" src="assets/images/algemeen/logo-de-lijsterij-transparent.png?v=20260402g" alt="" aria-hidden="true" decoding="async">
           <span>De <em>Lijsterij</em></span>
         </a>
         <ul class="nav-links">
@@ -72,7 +73,10 @@
           </div>
         </div>
         <div class="page-hero-visual">
-          <img src="assets/images/portfolio/bekroond-tabernakellijst.jpg" alt="Bekroonde tabernakellijst van De Lijsterij">
+          <picture>
+  <source type="image/webp" srcset="./assets/images/portfolio/bekroond-tabernakellijst-480.webp 480w, ./assets/images/portfolio/bekroond-tabernakellijst-768.webp 768w, ./assets/images/portfolio/bekroond-tabernakellijst-1024.webp 1024w, ./assets/images/portfolio/bekroond-tabernakellijst-1280.webp 1280w, ./assets/images/portfolio/bekroond-tabernakellijst-1296.webp 1296w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+  <img src="assets/images/portfolio/bekroond-tabernakellijst.jpg" alt="Bekroonde tabernakellijst van De Lijsterij" decoding="async" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+</picture>
         </div>
       </section>
     </header>
@@ -87,7 +91,10 @@
       <section class="page-intro portfolio-intro">
         <div class="page-intro-layout page-intro-layout--portfolio">
           <div class="portfolio-intro-image">
-            <img src="assets/images/portfolio/objectlijst-3d-medaillon.png" alt="Objectlijst met medaillon in 3D-inlijsting">
+            <picture>
+  <source type="image/webp" srcset="./assets/images/portfolio/objectlijst-3d-medaillon-480.webp 480w, ./assets/images/portfolio/objectlijst-3d-medaillon-768.webp 768w, ./assets/images/portfolio/objectlijst-3d-medaillon-904.webp 904w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+  <img src="assets/images/portfolio/objectlijst-3d-medaillon.png" alt="Objectlijst met medaillon in 3D-inlijsting" decoding="async" loading="lazy" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+</picture>
           </div>
           <div class="story-grid story-grid--portfolio">
             <div class="story-main">
@@ -136,8 +143,14 @@
 
         <div class="portfolio-feature">
           <div class="portfolio-feature-image portfolio-feature-image--duo">
-            <img src="assets/images/portfolio/bekroond-tabernakellijst.jpg" alt="Bekroonde tabernakellijst met vrouw in blauw gewaad">
-            <img class="portfolio-feature-image-rembrandt" src="assets/images/portfolio/rembrandt-tabernakellijst.png" alt="Rembrandt in tabernakellijst">
+            <picture>
+  <source type="image/webp" srcset="./assets/images/portfolio/bekroond-tabernakellijst-480.webp 480w, ./assets/images/portfolio/bekroond-tabernakellijst-768.webp 768w, ./assets/images/portfolio/bekroond-tabernakellijst-1024.webp 1024w, ./assets/images/portfolio/bekroond-tabernakellijst-1280.webp 1280w, ./assets/images/portfolio/bekroond-tabernakellijst-1296.webp 1296w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+  <img src="assets/images/portfolio/bekroond-tabernakellijst.jpg" alt="Bekroonde tabernakellijst met vrouw in blauw gewaad" decoding="async" loading="lazy" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+</picture>
+            <picture>
+  <source type="image/webp" srcset="./assets/images/portfolio/rembrandt-tabernakellijst-480.webp 480w, ./assets/images/portfolio/rembrandt-tabernakellijst-768.webp 768w, ./assets/images/portfolio/rembrandt-tabernakellijst-816.webp 816w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+  <img class="portfolio-feature-image-rembrandt" src="assets/images/portfolio/rembrandt-tabernakellijst.png" alt="Rembrandt in tabernakellijst" decoding="async" loading="lazy" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+</picture>
           </div>
           <div class="portfolio-feature-copy">
             <div class="section-eyebrow section-eyebrow-accent" data-content-key="portfolio.section-eyebrow.3">
@@ -171,14 +184,20 @@
         </div>
         <div class="portfolio-gallery-grid portfolio-gallery-grid--three">
           <article class="portfolio-work-card">
-            <img src="assets/images/portfolio/persoonlijk-werk-lukas-handgemaakte-lijst.png" alt="Geboortekaartje Lukas in handgemaakte dubbel zwevende lijst">
+            <picture>
+  <source type="image/webp" srcset="./assets/images/portfolio/persoonlijk-werk-lukas-handgemaakte-lijst-480.webp 480w, ./assets/images/portfolio/persoonlijk-werk-lukas-handgemaakte-lijst-768.webp 768w, ./assets/images/portfolio/persoonlijk-werk-lukas-handgemaakte-lijst-1016.webp 1016w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+  <img src="assets/images/portfolio/persoonlijk-werk-lukas-handgemaakte-lijst.png" alt="Geboortekaartje Lukas in handgemaakte dubbel zwevende lijst" decoding="async" loading="lazy" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+</picture>
             <div class="portfolio-work-copy">
               <h3 data-content-key="portfolio.h3.1">Persoonlijk werk</h3>
               <p data-content-key="portfolio.p.5">Dubbel zwevende presentatie die een klein object meer lucht en betekenis geeft.</p>
             </div>
           </article>
           <article class="portfolio-work-card portfolio-work-card--objectlijst">
-            <img src="assets/images/portfolio/objectlijst-3d-medaillon.png" alt="Objectlijst met medaillon in 3D-inlijsting">
+            <picture>
+  <source type="image/webp" srcset="./assets/images/portfolio/objectlijst-3d-medaillon-480.webp 480w, ./assets/images/portfolio/objectlijst-3d-medaillon-768.webp 768w, ./assets/images/portfolio/objectlijst-3d-medaillon-904.webp 904w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+  <img src="assets/images/portfolio/objectlijst-3d-medaillon.png" alt="Objectlijst met medaillon in 3D-inlijsting" decoding="async" loading="lazy" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+</picture>
             <div class="portfolio-work-copy">
               <h3 data-content-key="portfolio.h3.2">Objectlijst in 3D</h3>
               <p data-content-key="portfolio.p.6">
@@ -189,7 +208,10 @@
           </article>
           <article class="portfolio-work-card">
             <a href="restauraties.html" aria-label="Bekijk restauraties door De Lijsterij">
-              <img src="assets/images/restauratie/restauratie-zwaar-beschadigde-lijst-na.jpg" alt="Gerestaureerde beschadigde lijst">
+              <picture>
+  <source type="image/webp" srcset="./assets/images/restauratie/restauratie-zwaar-beschadigde-lijst-na-480.webp 480w, ./assets/images/restauratie/restauratie-zwaar-beschadigde-lijst-na-768.webp 768w, ./assets/images/restauratie/restauratie-zwaar-beschadigde-lijst-na-1024.webp 1024w, ./assets/images/restauratie/restauratie-zwaar-beschadigde-lijst-na-1247.webp 1247w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+  <img src="assets/images/restauratie/restauratie-zwaar-beschadigde-lijst-na.jpg" alt="Gerestaureerde beschadigde lijst" decoding="async" loading="lazy" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+</picture>
             </a>
             <div class="portfolio-work-copy">
               <h3 data-content-key="portfolio.h3.3">Restauraties</h3>
@@ -211,21 +233,30 @@
         </div>
         <div class="portfolio-gallery-grid portfolio-gallery-grid--three">
           <article class="portfolio-work-card">
-            <img src="assets/images/portfolio/cambodja.jpg" alt="Cambodja certificaat ingelijst">
+            <picture>
+  <source type="image/webp" srcset="./assets/images/portfolio/cambodja-480.webp 480w, ./assets/images/portfolio/cambodja-768.webp 768w, ./assets/images/portfolio/cambodja-1024.webp 1024w, ./assets/images/portfolio/cambodja-1280.webp 1280w, ./assets/images/portfolio/cambodja-1600.webp 1600w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+  <img src="assets/images/portfolio/cambodja.jpg" alt="Cambodja certificaat ingelijst" decoding="async" loading="lazy" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+</picture>
             <div class="portfolio-work-copy">
               <h3 data-content-key="portfolio.h3.4">Cambodja</h3>
               <p data-content-key="portfolio.p.9">Een strakke presentatie waarin document en lijst mooi in balans blijven.</p>
             </div>
           </article>
           <article class="portfolio-work-card">
-            <img src="assets/images/portfolio/marinier-1.jpg" alt="Marinier certificaat ingelijst">
+            <picture>
+  <source type="image/webp" srcset="./assets/images/portfolio/marinier-1-480.webp 480w, ./assets/images/portfolio/marinier-1-768.webp 768w, ./assets/images/portfolio/marinier-1-1024.webp 1024w, ./assets/images/portfolio/marinier-1-1280.webp 1280w, ./assets/images/portfolio/marinier-1-1600.webp 1600w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+  <img src="assets/images/portfolio/marinier-1.jpg" alt="Marinier certificaat ingelijst" decoding="async" loading="lazy" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+</picture>
             <div class="portfolio-work-copy">
               <h3 data-content-key="portfolio.h3.5">Marinier</h3>
               <p data-content-key="portfolio.p.10">Een klassieke uitstraling met duidelijke focus op document en afwerking.</p>
             </div>
           </article>
           <article class="portfolio-work-card">
-            <img src="assets/images/portfolio/northwood-diploma.png" alt="Northwood diploma ingelijst">
+            <picture>
+  <source type="image/webp" srcset="./assets/images/portfolio/northwood-diploma-480.webp 480w, ./assets/images/portfolio/northwood-diploma-768.webp 768w, ./assets/images/portfolio/northwood-diploma-1024.webp 1024w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+  <img src="assets/images/portfolio/northwood-diploma.png" alt="Northwood diploma ingelijst" decoding="async" loading="lazy" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+</picture>
             <div class="portfolio-work-copy">
               <h3 data-content-key="portfolio.h3.6">Northwood diploma</h3>
               <p data-content-key="portfolio.p.11">Beschermd ingelijst met behoud van leesbaarheid en een verzorgde uitstraling.</p>
@@ -250,7 +281,10 @@
             <div class="portfolio-delicate-duo">
               <article class="portfolio-work-card portfolio-work-card--delicate-fullframe">
                 <div class="portfolio-work-frame portfolio-work-frame--delicate-fullframe">
-                  <img src="assets/images/portfolio/delicate-werken/mutsjes.jpg" alt="Ingelijst borduurwerk met mutsjes">
+                  <picture>
+  <source type="image/webp" srcset="./assets/images/portfolio/delicate-werken/mutsjes-480.webp 480w, ./assets/images/portfolio/delicate-werken/mutsjes-768.webp 768w, ./assets/images/portfolio/delicate-werken/mutsjes-1024.webp 1024w, ./assets/images/portfolio/delicate-werken/mutsjes-1280.webp 1280w, ./assets/images/portfolio/delicate-werken/mutsjes-1600.webp 1600w, ./assets/images/portfolio/delicate-werken/mutsjes-3000.webp 3000w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+  <img src="assets/images/portfolio/delicate-werken/mutsjes.jpg" alt="Ingelijst borduurwerk met mutsjes" decoding="async" loading="lazy" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+</picture>
                 </div>
                 <div class="portfolio-work-copy">
                   <h3 data-content-key="portfolio.h3.7">Speelse steek, rustig kader</h3>
@@ -263,7 +297,10 @@
               </article>
               <article class="portfolio-work-card">
                 <div class="portfolio-work-frame portfolio-work-frame--delicate-fullframe">
-                  <img src="assets/images/portfolio/delicate-werken/blouse2.JPG" alt="Ingelijst borduurwerk blouse">
+                  <picture>
+  <source type="image/webp" srcset="./assets/images/portfolio/delicate-werken/blouse2-480.webp 480w, ./assets/images/portfolio/delicate-werken/blouse2-768.webp 768w, ./assets/images/portfolio/delicate-werken/blouse2-1024.webp 1024w, ./assets/images/portfolio/delicate-werken/blouse2-1280.webp 1280w, ./assets/images/portfolio/delicate-werken/blouse2-1600.webp 1600w, ./assets/images/portfolio/delicate-werken/blouse2-2814.webp 2814w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+  <img src="assets/images/portfolio/delicate-werken/blouse2.JPG" alt="Ingelijst borduurwerk blouse" decoding="async" loading="lazy" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+</picture>
                 </div>
                 <div class="portfolio-work-copy">
                   <h3 data-content-key="portfolio.h3.8">Stof en steek</h3>
@@ -278,7 +315,10 @@
             <div class="portfolio-gallery-grid portfolio-gallery-grid--delicate portfolio-gallery-grid--delicate-in-lead">
               <article class="portfolio-work-card portfolio-work-card--delicate-panorama">
                 <div class="portfolio-panorama-crop">
-                  <img src="assets/images/portfolio/delicate-werken/borduurwerk-vogels-op-tak2.PNG" alt="Panoramisch ingelijst borduurwerk met vogels op een tak">
+                  <picture>
+  <source type="image/webp" srcset="./assets/images/portfolio/delicate-werken/borduurwerk-vogels-op-tak2-480.webp 480w, ./assets/images/portfolio/delicate-werken/borduurwerk-vogels-op-tak2-768.webp 768w, ./assets/images/portfolio/delicate-werken/borduurwerk-vogels-op-tak2-1024.webp 1024w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+  <img src="assets/images/portfolio/delicate-werken/borduurwerk-vogels-op-tak2.PNG" alt="Panoramisch ingelijst borduurwerk met vogels op een tak" decoding="async" loading="lazy" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+</picture>
                 </div>
                 <div class="portfolio-work-copy">
                   <h3 data-content-key="portfolio.h3.9">Vogels op een tak</h3>
@@ -305,44 +345,80 @@
         <div class="portfolio-archive-grid portfolio-archive-grid--grouped">
           <div class="portfolio-archive-band portfolio-archive-band--portrait" aria-label="Staande voorbeelden">
             <figure class="portfolio-archive-item">
-              <img src="assets/images/portfolio/jozef-israels-staaflijst.png" alt="Karolien Kooiman naar Jozef Israels in staaflijst">
+              <picture>
+  <source type="image/webp" srcset="./assets/images/portfolio/jozef-israels-staaflijst-480.webp 480w, ./assets/images/portfolio/jozef-israels-staaflijst-768.webp 768w, ./assets/images/portfolio/jozef-israels-staaflijst-1002.webp 1002w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+  <img src="assets/images/portfolio/jozef-israels-staaflijst.png" alt="Karolien Kooiman naar Jozef Israels in staaflijst" decoding="async" loading="lazy" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+</picture>
             </figure>
             <figure class="portfolio-archive-item">
-              <img src="assets/images/portfolio/dromend-meisje-olieverf-paneel-staaflijst-bronskleurig.png" alt="Dromend meisje, olieverf op paneel, in bronkleurige staaflijst">
+              <picture>
+  <source type="image/webp" srcset="./assets/images/portfolio/dromend-meisje-olieverf-paneel-staaflijst-bronskleurig-480.webp 480w, ./assets/images/portfolio/dromend-meisje-olieverf-paneel-staaflijst-bronskleurig-768.webp 768w, ./assets/images/portfolio/dromend-meisje-olieverf-paneel-staaflijst-bronskleurig-895.webp 895w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+  <img src="assets/images/portfolio/dromend-meisje-olieverf-paneel-staaflijst-bronskleurig.png" alt="Dromend meisje, olieverf op paneel, in bronkleurige staaflijst" decoding="async" loading="lazy" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+</picture>
             </figure>
             <figure class="portfolio-archive-item">
-              <img src="assets/images/portfolio/potloodtekening-spaanse-lijst-verguld.png" alt="Potloodtekening in handgemaakte zwart gepolitoerde Spaanse lijst met vergulde accenten">
+              <picture>
+  <source type="image/webp" srcset="./assets/images/portfolio/potloodtekening-spaanse-lijst-verguld-480.webp 480w, ./assets/images/portfolio/potloodtekening-spaanse-lijst-verguld-768.webp 768w, ./assets/images/portfolio/potloodtekening-spaanse-lijst-verguld-799.webp 799w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+  <img src="assets/images/portfolio/potloodtekening-spaanse-lijst-verguld.png" alt="Potloodtekening in handgemaakte zwart gepolitoerde Spaanse lijst met vergulde accenten" decoding="async" loading="lazy" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+</picture>
             </figure>
             <figure class="portfolio-archive-item">
-              <img src="assets/images/portfolio/karolien-kooiman-portret-van-een-jonge-vrouw-klassieke-zwarte-staaflijst.jpg" alt="Portret van een jonge vrouw in klassieke zwarte lijst">
+              <picture>
+  <source type="image/webp" srcset="./assets/images/portfolio/karolien-kooiman-portret-van-een-jonge-vrouw-klassieke-zwarte-staaflijst-480.webp 480w, ./assets/images/portfolio/karolien-kooiman-portret-van-een-jonge-vrouw-klassieke-zwarte-staaflijst-768.webp 768w, ./assets/images/portfolio/karolien-kooiman-portret-van-een-jonge-vrouw-klassieke-zwarte-staaflijst-1024.webp 1024w, ./assets/images/portfolio/karolien-kooiman-portret-van-een-jonge-vrouw-klassieke-zwarte-staaflijst-1280.webp 1280w, ./assets/images/portfolio/karolien-kooiman-portret-van-een-jonge-vrouw-klassieke-zwarte-staaflijst-1364.webp 1364w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+  <img src="assets/images/portfolio/karolien-kooiman-portret-van-een-jonge-vrouw-klassieke-zwarte-staaflijst.jpg" alt="Portret van een jonge vrouw in klassieke zwarte lijst" decoding="async" loading="lazy" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+</picture>
             </figure>
             <figure class="portfolio-archive-item">
-              <img src="assets/images/kunstenaars/madonna-with-child-yvonne-heemskerk-tabernakellijst.jpg" alt="Madonna with Child in tabernakellijst">
+              <picture>
+  <source type="image/webp" srcset="./assets/images/kunstenaars/madonna-with-child-yvonne-heemskerk-tabernakellijst-480.webp 480w, ./assets/images/kunstenaars/madonna-with-child-yvonne-heemskerk-tabernakellijst-768.webp 768w, ./assets/images/kunstenaars/madonna-with-child-yvonne-heemskerk-tabernakellijst-1024.webp 1024w, ./assets/images/kunstenaars/madonna-with-child-yvonne-heemskerk-tabernakellijst-1280.webp 1280w, ./assets/images/kunstenaars/madonna-with-child-yvonne-heemskerk-tabernakellijst-1296.webp 1296w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+  <img src="assets/images/kunstenaars/madonna-with-child-yvonne-heemskerk-tabernakellijst.jpg" alt="Madonna with Child in tabernakellijst" decoding="async" loading="lazy" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+</picture>
             </figure>
             <figure class="portfolio-archive-item">
-              <img src="assets/images/portfolio/aisha-staaflijst-zwart-champagne.png" alt="Yvonne Heemskerk, Aisha: geschilderd portret in zwarte staaflijst met champagnekleur en paarse passe-partout">
+              <picture>
+  <source type="image/webp" srcset="./assets/images/portfolio/aisha-staaflijst-zwart-champagne-480.webp 480w, ./assets/images/portfolio/aisha-staaflijst-zwart-champagne-768.webp 768w, ./assets/images/portfolio/aisha-staaflijst-zwart-champagne-870.webp 870w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+  <img src="assets/images/portfolio/aisha-staaflijst-zwart-champagne.png" alt="Yvonne Heemskerk, Aisha: geschilderd portret in zwarte staaflijst met champagnekleur en paarse passe-partout" decoding="async" loading="lazy" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+</picture>
             </figure>
           </div>
           <div class="portfolio-archive-band portfolio-archive-band--square" aria-label="Vierkante voorbeelden">
             <figure class="portfolio-archive-item">
-              <img src="assets/images/portfolio/erik-van-elven-blue-topaz-staaflijst.jpg" alt="Blue Topaz in staaflijst">
+              <picture>
+  <source type="image/webp" srcset="./assets/images/portfolio/erik-van-elven-blue-topaz-staaflijst-480.webp 480w, ./assets/images/portfolio/erik-van-elven-blue-topaz-staaflijst-768.webp 768w, ./assets/images/portfolio/erik-van-elven-blue-topaz-staaflijst-1024.webp 1024w, ./assets/images/portfolio/erik-van-elven-blue-topaz-staaflijst-1280.webp 1280w, ./assets/images/portfolio/erik-van-elven-blue-topaz-staaflijst-1600.webp 1600w, ./assets/images/portfolio/erik-van-elven-blue-topaz-staaflijst-2304.webp 2304w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+  <img src="assets/images/portfolio/erik-van-elven-blue-topaz-staaflijst.jpg" alt="Blue Topaz in staaflijst" decoding="async" loading="lazy" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+</picture>
             </figure>
             <figure class="portfolio-archive-item">
-              <img src="assets/images/portfolio/dame-in-rood.jpg" alt="Portret dame in rood, ingelijst">
+              <picture>
+  <source type="image/webp" srcset="./assets/images/portfolio/dame-in-rood-480.webp 480w, ./assets/images/portfolio/dame-in-rood-768.webp 768w, ./assets/images/portfolio/dame-in-rood-1024.webp 1024w, ./assets/images/portfolio/dame-in-rood-1280.webp 1280w, ./assets/images/portfolio/dame-in-rood-1600.webp 1600w, ./assets/images/portfolio/dame-in-rood-3000.webp 3000w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+  <img src="assets/images/portfolio/dame-in-rood.jpg" alt="Portret dame in rood, ingelijst" decoding="async" loading="lazy" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+</picture>
             </figure>
             <figure class="portfolio-archive-item">
-              <img src="assets/images/portfolio/erik-van-elven-eend-ebbenhout-vergulde-lip.png" alt="Erik van Elven, eendje in olieverf, handgemaakte eikenhouten lijst met vergulde lip">
+              <picture>
+  <source type="image/webp" srcset="./assets/images/portfolio/erik-van-elven-eend-ebbenhout-vergulde-lip-480.webp 480w, ./assets/images/portfolio/erik-van-elven-eend-ebbenhout-vergulde-lip-768.webp 768w, ./assets/images/portfolio/erik-van-elven-eend-ebbenhout-vergulde-lip-1019.webp 1019w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+  <img src="assets/images/portfolio/erik-van-elven-eend-ebbenhout-vergulde-lip.png" alt="Erik van Elven, eendje in olieverf, handgemaakte eikenhouten lijst met vergulde lip" decoding="async" loading="lazy" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+</picture>
             </figure>
           </div>
           <div class="portfolio-archive-band portfolio-archive-band--landscape" aria-label="Liggende voorbeelden">
             <figure class="portfolio-archive-item">
-              <img src="assets/images/portfolio/erik-van-elven-two-flowers-dubbele-staaflijst.jpg" alt="Two Flowers in dubbele staaflijst">
+              <picture>
+  <source type="image/webp" srcset="./assets/images/portfolio/erik-van-elven-two-flowers-dubbele-staaflijst-480.webp 480w, ./assets/images/portfolio/erik-van-elven-two-flowers-dubbele-staaflijst-768.webp 768w, ./assets/images/portfolio/erik-van-elven-two-flowers-dubbele-staaflijst-1024.webp 1024w, ./assets/images/portfolio/erik-van-elven-two-flowers-dubbele-staaflijst-1280.webp 1280w, ./assets/images/portfolio/erik-van-elven-two-flowers-dubbele-staaflijst-1395.webp 1395w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+  <img src="assets/images/portfolio/erik-van-elven-two-flowers-dubbele-staaflijst.jpg" alt="Two Flowers in dubbele staaflijst" decoding="async" loading="lazy" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+</picture>
             </figure>
             <figure class="portfolio-archive-item">
-              <img src="assets/images/portfolio/karolien-kooiman-hortensias-klassieke-eiken-lijst.jpg" alt="Hortensias in klassieke eiken lijst met passe-partout">
+              <picture>
+  <source type="image/webp" srcset="./assets/images/portfolio/karolien-kooiman-hortensias-klassieke-eiken-lijst-480.webp 480w, ./assets/images/portfolio/karolien-kooiman-hortensias-klassieke-eiken-lijst-768.webp 768w, ./assets/images/portfolio/karolien-kooiman-hortensias-klassieke-eiken-lijst-1024.webp 1024w, ./assets/images/portfolio/karolien-kooiman-hortensias-klassieke-eiken-lijst-1280.webp 1280w, ./assets/images/portfolio/karolien-kooiman-hortensias-klassieke-eiken-lijst-1600.webp 1600w, ./assets/images/portfolio/karolien-kooiman-hortensias-klassieke-eiken-lijst-1923.webp 1923w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+  <img src="assets/images/portfolio/karolien-kooiman-hortensias-klassieke-eiken-lijst.jpg" alt="Hortensias in klassieke eiken lijst met passe-partout" decoding="async" loading="lazy" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+</picture>
             </figure>
             <figure class="portfolio-archive-item">
-              <img src="assets/images/portfolio/golf-new.jpg" alt="Golf in lijst">
+              <picture>
+  <source type="image/webp" srcset="./assets/images/portfolio/golf-new-480.webp 480w, ./assets/images/portfolio/golf-new-768.webp 768w, ./assets/images/portfolio/golf-new-1024.webp 1024w, ./assets/images/portfolio/golf-new-1200.webp 1200w" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+  <img src="assets/images/portfolio/golf-new.jpg" alt="Golf in lijst" decoding="async" loading="lazy" sizes="(max-width: 768px) 92vw, (max-width: 1200px) 86vw, 1200px">
+</picture>
             </figure>
           </div>
         </div>
@@ -393,7 +469,7 @@
 
     <footer>
       <div class="footer-logo">
-        <img class="brand-mark brand-mark--footer" src="assets/images/algemeen/logo-de-lijsterij.png?v=20260402g" alt="" aria-hidden="true">
+        <img class="brand-mark brand-mark--footer" src="assets/images/algemeen/logo-de-lijsterij.png?v=20260402g" alt="" aria-hidden="true" decoding="async">
         <span>De <em>Lijsterij</em></span>
       </div>
       <div class="footer-mid">
@@ -401,9 +477,9 @@
       </div>
       <div class="footer-links">Design by Valknut</div>
     </footer>
-    <script src="assets/js/main.js?v=20260407navmenu"></script>
+    <script src="assets/js/main.js?v=20260407navmenu" defer=""></script>
   
 
 
-    <script src="assets/js/content-loader.js?v=20260414cms"></script>
+    <script src="assets/js/content-loader.js?v=20260414cms" defer=""></script>
 </body></html>
