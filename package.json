@@ -7,7 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "perf:lighthouse": "node tools/run-lighthouse.mjs"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,8 @@
   "homepage": "https://github.com/Mikbit-VS/delijsterij-website#readme",
   "devDependencies": {
     "cheerio": "^1.2.0",
+    "http-server": "^14.1.1",
+    "lighthouse": "^13.1.0",
     "sharp": "^0.34.5"
   }
 }
