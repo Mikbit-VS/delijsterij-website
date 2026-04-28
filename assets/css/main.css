@@ -3316,6 +3316,11 @@ body.page-portfolio main > section.cta-panel-wrap {
   background: linear-gradient(180deg, var(--white), var(--cream-dark));
 }
 
+/* Keep portfolio proof bands identical to other pages */
+body.page-portfolio main > section.proof-band {
+  background: var(--gold-pale);
+}
+
 body.page-portfolio .cta-panel h2 {
   margin-bottom: 1.35rem;
 }
