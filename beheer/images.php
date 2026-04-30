@@ -317,6 +317,74 @@ function pageHistory(string $root, string $pagePath): array
     return array_slice($filtered, 0, 20);
 }
 
+function versionlessBaseName(string $publicPath): string
+{
+    $normalized = normalizePublicPath($publicPath);
+    $filename = pathinfo($normalized, PATHINFO_FILENAME);
+    $filename = preg_replace('/-v\d{14}(?:-\d+)?$/', '', $filename) ?? $filename;
+    return strtolower((string) $filename);
+}
+
+function isSameImageFamily(string $candidateBase, string $oldBase): bool
+{
+    if ($candidateBase === $oldBase) {
+        return true;
+    }
+    return (bool) preg_match('/^' . preg_quote($oldBase, '/') . '-\d+$/', $candidateBase);
+}
+
+function replaceMatchingSrcsetUrls(string $html, string $oldPublic, string $newPublic, int &$count): string
+{
+    $oldBase = versionlessBaseName($oldPublic);
+    if ($oldBase === '') {
+        return $html;
+    }
+
+    $replacementUrl = str_replace('\\', '/', $newPublic);
+
+    return (string) preg_replace_callback(
+        '/\bsrcset\s*=\s*(["\'])(.*?)\1/si',
+        static function (array $match) use ($oldBase, $replacementUrl, &$count): string {
+            $quote = (string) ($match[1] ?? '"');
+            $value = (string) ($match[2] ?? '');
+            if ($value === '') {
+                return (string) $match[0];
+            }
+
+            $parts = array_map('trim', explode(',', $value));
+            $changed = false;
+
+            foreach ($parts as $index => $part) {
+                if ($part === '') {
+                    continue;
+                }
+                $segments = preg_split('/\s+/', $part, 2);
+                $url = (string) ($segments[0] ?? '');
+                $descriptor = (string) ($segments[1] ?? '');
+                if ($url === '' || preg_match('#^https?://#i', $url) || str_starts_with($url, 'data:')) {
+                    continue;
+                }
+
+                $candidateBase = versionlessBaseName($url);
+                if (!isSameImageFamily($candidateBase, $oldBase)) {
+                    continue;
+                }
+
+                $parts[$index] = trim($replacementUrl . ($descriptor !== '' ? ' ' . $descriptor : ''));
+                $changed = true;
+                $count++;
+            }
+
+            if (!$changed) {
+                return (string) $match[0];
+            }
+
+            return 'srcset=' . $quote . implode(', ', $parts) . $quote;
+        },
+        $html
+    ) ?? $html;
+}
+
 $root = siteRoot();
 $action = (string) ($_GET['action'] ?? '');
 
@@ -454,6 +522,7 @@ if ($html === false) {
 }
 
 $updatedHtml = str_replace($oldPublic, $newPublic, $html, $replaceCount);
+$updatedHtml = replaceMatchingSrcsetUrls($updatedHtml, $oldPublic, $newPublic, $replaceCount);
 if ($replaceCount < 1) {
     @unlink($newAbsolute);
     respond(['success' => false, 'message' => 'Geen verwijzingen gevonden om te vervangen.'], 400);
