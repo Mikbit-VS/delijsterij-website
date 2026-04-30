@@ -3671,6 +3671,65 @@ body.page-kunstenaars
   padding: 10px;
 }
 
+body.page-kunstenaars
+  .portfolio-gallery-grid--erik
+  .portfolio-work-card
+  img.portfolio-work-image--vuurgolf {
+  background: #ecebe7;
+  padding: 18px;
+  border: 1px solid #ddd9d0;
+  border-radius: 4px;
+}
+
+body.page-kunstenaars
+  .portfolio-gallery-grid--erik
+  .portfolio-work-card
+  img.portfolio-work-image--marco-portrait {
+  object-fit: contain;
+  background: #f1eee8;
+  padding: 10px;
+  border: 1px solid #ddd5c7;
+  border-radius: 4px;
+}
+
+body.page-kunstenaars .portfolio-gallery-grid--marco {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+body.page-kunstenaars
+  .portfolio-gallery-grid--three.portfolio-gallery-grid--marco
+  .portfolio-work-card
+  img.portfolio-work-image--marco-landscape {
+  height: 300px;
+  max-height: none;
+  aspect-ratio: auto;
+  object-fit: contain;
+  background: transparent;
+  padding: 0;
+}
+
+body.page-kunstenaars .portfolio-gallery-grid--marco .portfolio-work-image--vuurgolf {
+  background: #ecebe7;
+  padding: 18px;
+  border: 1px solid #ddd9d0;
+  border-radius: 4px;
+}
+
+body.page-kunstenaars
+  .portfolio-gallery-grid--three.portfolio-gallery-grid--marco
+  .portfolio-work-card
+  img.portfolio-work-image--marco-portrait {
+  height: 420px;
+  max-height: none;
+  aspect-ratio: auto;
+  object-fit: contain;
+  background: #f1eee8;
+  padding: 10px;
+  border: 1px solid #ddd5c7;
+  border-radius: 4px;
+}
+
 @media (max-width: 1100px) {
   body.page-kunstenaars .portfolio-feature {
     grid-template-columns: 1fr;
@@ -3698,6 +3757,17 @@ body.page-kunstenaars
   }
 
   body.page-kunstenaars .portfolio-gallery-grid--erik .portfolio-work-card {
+    max-width: 520px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  body.page-kunstenaars .portfolio-gallery-grid--marco {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  body.page-kunstenaars .portfolio-gallery-grid--marco .portfolio-work-card {
     max-width: 520px;
     width: 100%;
     margin: 0 auto;
