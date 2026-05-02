@@ -3564,6 +3564,31 @@ body.page-kunstenaars .portfolio-showcase:nth-of-type(even) {
   background: var(--white);
 }
 
+body.page-kunstenaars .artist-section {
+  background: var(--cream);
+}
+
+body.page-kunstenaars main > .artist-section:nth-of-type(odd) {
+  background: var(--cream);
+}
+
+body.page-kunstenaars main > .artist-section:nth-of-type(even) {
+  background: var(--white);
+}
+
+body.page-kunstenaars .artist-section .portfolio-showcase {
+  background: transparent;
+}
+
+body.page-kunstenaars .artist-section .portfolio-showcase:nth-of-type(even) {
+  background: transparent;
+}
+
+body.page-kunstenaars .artist-section .portfolio-feature-copy {
+  background: transparent;
+  border: 0;
+}
+
 body.page-kunstenaars .cta-panel-wrap {
   background: linear-gradient(180deg, var(--white), var(--cream-dark));
   padding-top: 3rem;
@@ -3728,6 +3753,53 @@ body.page-kunstenaars
   padding: 10px;
   border: 1px solid #ddd5c7;
   border-radius: 4px;
+}
+
+body.page-kunstenaars
+  .portfolio-showcase--marco-works
+  .portfolio-gallery-grid--marco
+  .portfolio-work-card
+  img.portfolio-work-image--marco-landscape {
+  height: 420px;
+}
+
+body.page-kunstenaars
+  .portfolio-showcase--mike-works
+  .portfolio-gallery-grid--marco
+  .portfolio-work-card
+  picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 420px;
+  padding: 10px;
+  background: #f1eee8;
+  border: 1px solid #ddd5c7;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+body.page-kunstenaars
+  .portfolio-showcase--mike-works
+  .portfolio-gallery-grid--marco
+  .portfolio-work-card
+  img {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: contain;
+  background: transparent;
+  padding: 0;
+  border: 0;
+}
+
+body.page-kunstenaars
+  .portfolio-showcase--mike-works
+  .portfolio-gallery-grid--marco
+  .portfolio-work-card
+  img.portfolio-work-image--marco-portrait {
+  max-width: 94%;
+  max-height: 94%;
 }
 
 @media (max-width: 1100px) {
