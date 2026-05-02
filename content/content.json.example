@@ -305,11 +305,11 @@
       "path": "kunstenaars.html",
       "label": "kunstenaars",
       "fields": {
-        "kunstenaars.h1.1": "Kunst die sterker wordt<br>door de juiste <em>lijst</em>",
+        "kunstenaars.h1.1": "Kunstenaars kiezen voor<br><em>De Lijsterij</em>",
         "kunstenaars.eyebrow.1": "Kunstenaars",
-        "kunstenaars.hero-sub.1": "Voor een kunstenaar is een lijst geen rand, maar een verlengstuk van het werk. De\n            omlijsting bepaalt hoe een schilderij wordt gezien: ze kan rust brengen of juist\n            spanning, diepte geven of het werk meer aanwezigheid geven.",
-        "kunstenaars.hero-sub.2": "Dat vraagt om kijken en voelen. Niet alleen technisch, maar vanuit begrip voor het\n            maakproces en de intentie van de kunstenaar.",
-        "kunstenaars.hero-sub.3": "Voor De Lijsterij zijn Yvonne Heemskerk en Erik van Elven daarin belangrijk geweest.\n            Voor beiden heb ik werk mogen inlijsten waarbij de lijst echt een rol speelde in de\n            uiteindelijke beleving.",
+        "kunstenaars.hero-sub.1": "Voor een kunstenaar is een lijst geen rand, maar een verlengstuk van het werk. De omlijsting bepaalt hoe een schilderij wordt gezien: ze kan rust brengen, spanning toevoegen, diepte geven of het werk meer aanwezigheid geven.",
+        "kunstenaars.hero-sub.2": "Kunstenaars kiezen voor De Lijsterij omdat er met aandacht wordt gekeken naar het werk zelf, de maker en de bedoeling achter het beeld. Niet vanuit een standaardoplossing, maar vanuit gevoel voor kleur, materiaal, verhouding en karakter.",
+        "kunstenaars.hero-sub.3": "Zo ontstaat een lijst die het kunstwerk versterkt zonder het te overheersen. Een omlijsting die klopt, omdat ze aansluit bij wat de kunstenaar wil laten zien.",
         "kunstenaars.hero-sub.4": "Meer voorbeelden: het <a href=\"portfolio.html\">portfolio</a> en de pagina\n            <a href=\"inlijsten.html\">Inlijsten</a> over maatwerk in het atelier.",
         "kunstenaars.btn-primary.1": "Ook samenwerken",
         "kunstenaars.btn-outline.1": "Lees verder",
@@ -375,3 +375,8 @@
     }
   }
 }
+
+
+
+
+
