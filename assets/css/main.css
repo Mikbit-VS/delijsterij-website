@@ -990,6 +990,22 @@ h2 em {
   margin-left: 0;
 }
 
+@media (max-width: 1360px) {
+  .diensten--compact-home {
+    display: block;
+  }
+
+  .diensten--compact-home .diensten-grid {
+    margin-top: 2.25rem;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .diensten-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 1024px) {
   .diensten--compact-home {
     display: block;
@@ -2530,14 +2546,18 @@ footer {
   border: 1px solid var(--border);
   background: var(--cream);
   overflow: hidden;
-  align-self: stretch;
+  align-self: start;
+}
+
+.portfolio-intro-image picture {
+  display: block;
 }
 
 .portfolio-intro-image img {
   width: 100%;
-  height: 100%;
-  min-height: 420px;
-  object-fit: cover;
+  height: auto;
+  min-height: 0;
+  object-fit: contain;
   display: block;
 }
 
@@ -3968,6 +3988,10 @@ body.page-kunstenaars
     grid-template-columns: 1fr;
   }
 
+  body.page-portfolio .page-hero {
+    grid-template-columns: 1fr;
+  }
+
   .portfolio-gallery-grid--delicate {
     grid-template-columns: 1fr;
   }
@@ -4491,6 +4515,7 @@ body.page-workshop .cta-panel-wrap {
   display: block;
   object-fit: cover;
   aspect-ratio: 4 / 3;
+  image-orientation: from-image;
 }
 
 @media (max-width: 900px) {
