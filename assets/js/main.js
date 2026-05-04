@@ -61,40 +61,6 @@
       }
     }
 
-    var form = document.querySelector('#contact form.form');
-    if (!form) return;
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      if (!form.reportValidity()) return;
-
-      var naam = (document.getElementById('naam') && document.getElementById('naam').value.trim()) || '';
-      var telefoon =
-        (document.getElementById('telefoon') && document.getElementById('telefoon').value.trim()) || '';
-      var email = (document.getElementById('email') && document.getElementById('email').value.trim()) || '';
-      var bericht = (document.getElementById('bericht') && document.getElementById('bericht').value.trim()) || '';
-      var catEl = document.getElementById('categorie');
-      var categorie = (catEl && catEl.value && catEl.value.trim()) || '';
-
-      var lines = [];
-      lines.push('Bericht via contactformulier op delijsterij.nl');
-      lines.push('');
-      lines.push('Naam: ' + naam);
-      lines.push('Telefoon: ' + telefoon);
-      lines.push('E-mail: ' + email);
-      lines.push('Categorie: ' + (categorie || '—'));
-      lines.push('');
-      lines.push(bericht);
-
-      var subject = 'Contact website — ' + (naam || 'De Lijsterij');
-      var body = lines.join('\n');
-      var mailto =
-        'mailto:info@delijsterij.nl?subject=' +
-        encodeURIComponent(subject) +
-        '&body=' +
-        encodeURIComponent(body);
-
-      window.location.href = mailto;
-    });
+    // Form submit verloopt server-side via action="contact-form.php" method="POST".
   });
 })();
