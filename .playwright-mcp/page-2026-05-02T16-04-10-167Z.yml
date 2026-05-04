@@ -1,0 +1,218 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation "Hoofdnavigatie" [ref=e3]:
+      - link "Ga naar home" [ref=e4] [cursor=pointer]:
+        - /url: index.html
+        - img [ref=e5]
+        - generic [ref=e6]:
+          - text: De
+          - emphasis [ref=e7]: Lijsterij
+      - button "Open menu" [ref=e8] [cursor=pointer]
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - paragraph [ref=e15]: Portfolio
+        - heading "Werk dat laat zien hoe een lijst een kunstwerk kan versterken" [level=1] [ref=e16]:
+          - text: Werk dat laat zien hoe
+          - text: een lijst een kunstwerk
+          - text: kan
+          - emphasis [ref=e17]: versterken
+        - paragraph [ref=e18]:
+          - text: Een selectie van recente opdrachten en bijzondere inlijstingen. Van klassiek en rijk tot rustig en modern, altijd gekozen in dienst van het werk. Werkwijze en materialen vindt u op de pagina
+          - link "Inlijsten" [ref=e19] [cursor=pointer]:
+            - /url: inlijsten.html
+          - text: .
+        - generic [ref=e20]:
+          - link "Bespreek uw werk" [ref=e21] [cursor=pointer]:
+            - /url: index.html#contact
+          - link "Bekijk selectie" [ref=e22] [cursor=pointer]:
+            - /url: "#portfolio-selectie"
+      - img "Bekroonde tabernakellijst van De Lijsterij" [ref=e25]
+  - main [ref=e26]:
+    - region "Werkgebied" [ref=e27]:
+      - generic [ref=e30]: Ambachtelijk inlijsten in Voorhout, ook voor klanten in de omgeving van Noordwijkerhout, Lisse, Noordwijk, Leiden, Katwijk, Sassenheim, Rijnsburg en Hillegom.
+    - generic [ref=e32]:
+      - img "Objectlijst met medaillon in 3D-inlijsting" [ref=e35]
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - generic [ref=e38]:
+            - generic [ref=e39]: Een eerste indruk
+            - 'heading "Van klassiek schilderij tot bijzonder object: elk werk vraagt om een eigen benadering" [level=2] [ref=e40]':
+              - text: Van klassiek schilderij
+              - text: "tot bijzonder object:"
+              - text: elk werk vraagt om een
+              - emphasis [ref=e41]: eigen benadering
+          - generic [ref=e42]:
+            - paragraph [ref=e43]: In het portfolio ziet u niet alleen verschillende stijlen, maar ook verschillende keuzes in materiaal, diepte, kleur en afwerking. Soms vraagt een werk om rust en soberheid, soms juist om een rijker kader dat de uitstraling versterkt.
+            - paragraph [ref=e44]: "Die variatie is precies waarom het portfolio zo belangrijk is: het laat zien hoe verschillend de oplossingen kunnen zijn wanneer de lijst echt in dienst staat van het werk."
+        - complementary [ref=e45]:
+          - generic [ref=e46]: Wat u hier ziet
+          - list [ref=e47]:
+            - listitem [ref=e48]: Klassieke en eigentijdse lijsten
+            - listitem [ref=e49]: Objectlijsten en diepere constructies
+            - listitem [ref=e50]: Voorbeelden van restauratie en herstel
+            - listitem [ref=e51]: Werk voor kunstenaars en particulieren
+    - generic [ref=e52]:
+      - generic [ref=e53]:
+        - generic [ref=e54]: Uitgelicht werk
+        - heading "Een selectie waarin vakmanschap en karakter samenkomen" [level=2] [ref=e55]:
+          - text: Een selectie waarin
+          - text: vakmanschap en
+          - emphasis [ref=e56]: karakter
+          - text: samenkomen
+        - paragraph [ref=e57]: Deze werken laten goed zien hoe materiaalkeuze, profiel, afwerking en context samen het verschil maken.
+      - generic [ref=e58]:
+        - generic [ref=e59]:
+          - img "Bekroonde tabernakellijst met vrouw in blauw gewaad" [ref=e61]
+          - img "Rembrandt in tabernakellijst" [ref=e63]
+        - generic [ref=e64]:
+          - generic [ref=e65]: Bekroond werk
+          - heading "Tabernakellijsten — traditie die blijft spreken" [level=2] [ref=e67]:
+            - text: Tabernakellijsten —
+            - emphasis [ref=e68]: traditie die blijft spreken
+          - paragraph [ref=e69]: De tabernakellijst vindt haar oorsprong in de renaissance en is voor mij meer dan een omlijsting. Door de architectonische opbouw — met zuilen, een bekroning en gelaagde diepte — wordt de lijst een verlengstuk van het kunstwerk. Ze brengt rust, nadruk en aanwezigheid, en maakt dat een werk echt tot zijn recht komt.
+          - paragraph [ref=e70]: Voor mij is dit geen stijl uit het verleden, maar een levende traditie. Vanuit mijn kennis van klassieke technieken en materialen werk ik aan lijsten die dezelfde zorg en opbouw dragen als vroeger. Niet als kopie, maar als voortzetting van een ambacht waarin de lijst opnieuw een wezenlijk onderdeel wordt van het werk.
+    - generic [ref=e71]:
+      - generic [ref=e72]:
+        - generic [ref=e73]: Waardevolle herinneringen
+        - heading "Persoonlijke stukken met emotionele of historische waarde" [level=2] [ref=e74]:
+          - text: Persoonlijke stukken
+          - text: met emotionele of historische
+          - emphasis [ref=e75]: waarde
+        - paragraph [ref=e76]: "Van een geboortekaartje tot een bijzonder object of restauratie: zorgvuldig ingelijst zodat het verhaal zichtbaar blijft."
+      - generic [ref=e77]:
+        - article [ref=e78]:
+          - img "Geboortekaartje Lukas in handgemaakte dubbel zwevende lijst" [ref=e80]
+          - generic [ref=e81]:
+            - heading "Persoonlijk werk" [level=3] [ref=e82]
+            - paragraph [ref=e83]: Dubbel zwevende presentatie die een klein object meer lucht en betekenis geeft.
+        - article [ref=e84]:
+          - img "Objectlijst met medaillon in 3D-inlijsting" [ref=e86]
+          - generic [ref=e87]:
+            - heading "Objectlijst in 3D" [level=3] [ref=e88]
+            - paragraph [ref=e89]: Een oplossing voor werk en objecten die diepte nodig hebben om goed tot hun recht te komen.
+        - article [ref=e90]:
+          - link "Bekijk restauraties door De Lijsterij" [ref=e91] [cursor=pointer]:
+            - /url: restauraties.html
+            - img "Gerestaureerde beschadigde lijst" [ref=e93]
+          - generic [ref=e94]:
+            - heading "Restauraties" [level=3] [ref=e95]
+            - paragraph [ref=e96]: Voorbeelden van herstelwerk met “voor en na”.
+            - paragraph [ref=e97]:
+              - link "Meer over restauratie" [ref=e98] [cursor=pointer]:
+                - /url: restauraties.html
+    - generic [ref=e99]:
+      - generic [ref=e100]:
+        - generic [ref=e101]: Diploma's & certificaten
+        - heading "Documenten en certificaten die veilig en stijlvol bewaard blijven" [level=2] [ref=e102]:
+          - text: Documenten en certificaten
+          - text: die veilig en stijlvol
+          - emphasis [ref=e103]: bewaard blijven
+        - paragraph [ref=e104]: Deze voorbeelden laten zien hoe diploma's en certificaten met een rustige, nette afwerking goed beschermd en mooi gepresenteerd kunnen worden.
+      - generic [ref=e105]:
+        - article [ref=e106]:
+          - img "Cambodja certificaat ingelijst" [ref=e108]
+          - generic [ref=e109]:
+            - heading "Cambodja" [level=3] [ref=e110]
+            - paragraph [ref=e111]: Een strakke presentatie waarin document en lijst mooi in balans blijven.
+        - article [ref=e112]:
+          - img "Marinier certificaat ingelijst" [ref=e114]
+          - generic [ref=e115]:
+            - heading "Marinier" [level=3] [ref=e116]
+            - paragraph [ref=e117]: Een klassieke uitstraling met duidelijke focus op document en afwerking.
+        - article [ref=e118]:
+          - img "Northwood diploma ingelijst" [ref=e120]
+          - generic [ref=e121]:
+            - heading "Northwood diploma" [level=3] [ref=e122]
+            - paragraph [ref=e123]: Beschermd ingelijst met behoud van leesbaarheid en een verzorgde uitstraling.
+    - generic [ref=e125]:
+      - generic [ref=e126]:
+        - generic [ref=e127]: Borduurwerk & textiel
+        - heading "Delicate werken" [level=2] [ref=e128]:
+          - text: Delicate
+          - emphasis [ref=e129]: werken
+        - paragraph [ref=e130]: "Borduurwerk en fijne stukken vragen om zachte montage en rust. Dunne draden, linnen en textiel vragen om andere keuzes dan een dik doek: zuurvrij materiaal, geen overdruk op het werk en een lijst die het stuk beschermt zonder het te domineren. Hieronder een paar voorbeelden uit het atelier."
+      - generic [ref=e131]:
+        - generic [ref=e132]:
+          - article [ref=e133]:
+            - img "Ingelijst borduurwerk met mutsjes" [ref=e136]
+            - generic [ref=e137]:
+              - heading "Speelse steek, rustig kader" [level=3] [ref=e138]
+              - paragraph [ref=e139]: Een fijn gestikt tafereeltje met mutsjes vraagt om een lijst die ruimte laat rond het motief en het linnen beschermt zonder het zachte karakter van het borduurwerk te overschaduwen.
+          - article [ref=e140]:
+            - img "Ingelijst borduurwerk blouse" [ref=e143]
+            - generic [ref=e144]:
+              - heading "Stof en steek" [level=3] [ref=e145]
+              - paragraph [ref=e146]: Geborduurd blousewerk vraagt om een lichte lijst die het textiel beschermt zonder het plat te drukken, zodat de kleur en het reliëf van de steek rustig zichtbaar blijven achter glas.
+        - article [ref=e148]:
+          - generic:
+            - generic:
+              - img "Panoramisch ingelijst borduurwerk met vogels op een tak"
+          - generic [ref=e149]:
+            - heading "Vogels op een tak" [level=3] [ref=e150]
+            - paragraph [ref=e151]: Een breed stuk kruissteek vraagt om een lijst die de rustige witruimte respecteert en het horizontale karakter versterkt.
+    - generic [ref=e152]:
+      - generic [ref=e153]:
+        - generic [ref=e154]: Meer voorbeelden
+        - heading "Meer werk om te kijken, vergelijken en aanvoelen" [level=2] [ref=e155]:
+          - text: Meer werk om te
+          - text: kijken, vergelijken en
+          - emphasis [ref=e156]: aanvoelen
+        - paragraph [ref=e157]: "Een bredere greep uit inlijstingen en handgemaakte lijsten. Klikken is niet nodig: deze sectie is bedoeld om snel te scannen."
+      - generic [ref=e158]:
+        - generic "Staande voorbeelden" [ref=e159]:
+          - figure [ref=e160]:
+            - img "Karolien Kooiman naar Jozef Israels in staaflijst" [ref=e162]
+          - figure [ref=e163]:
+            - img "Dromend meisje, olieverf op paneel, in bronkleurige staaflijst" [ref=e165]
+          - figure [ref=e166]:
+            - img "Potloodtekening in handgemaakte zwart gepolitoerde Spaanse lijst met vergulde accenten" [ref=e168]
+          - figure [ref=e169]:
+            - img "Portret van een jonge vrouw in klassieke zwarte lijst" [ref=e171]
+          - figure [ref=e172]:
+            - img "Madonna with Child in tabernakellijst" [ref=e174]
+          - figure [ref=e175]:
+            - 'img "Yvonne Heemskerk, Aisha: geschilderd portret in zwarte staaflijst met champagnekleur en paarse passe-partout" [ref=e177]'
+        - generic "Vierkante voorbeelden" [ref=e178]:
+          - figure [ref=e179]:
+            - img "Blue Topaz in staaflijst" [ref=e181]
+          - figure [ref=e182]:
+            - img "Portret dame in rood, ingelijst" [ref=e184]
+          - figure [ref=e185]:
+            - img "Erik van Elven, eendje in olieverf, handgemaakte eikenhouten lijst met vergulde lip" [ref=e187]
+        - generic "Liggende voorbeelden" [ref=e188]:
+          - figure [ref=e189]:
+            - img "Two Flowers in dubbele staaflijst" [ref=e191]
+          - figure [ref=e192]:
+            - img "Hortensias in klassieke eiken lijst met passe-partout" [ref=e194]
+          - figure [ref=e195]:
+            - img "Golf in lijst" [ref=e197]
+      - link "Vraag advies" [ref=e199] [cursor=pointer]:
+        - /url: index.html#contact
+    - region "Kwaliteiten" [ref=e200]:
+      - generic [ref=e203]: Erkend meesterinlijster
+      - generic [ref=e206]: Winnaar De Nieuwe Vermeer
+      - generic [ref=e209]: Museumkwaliteit materialen
+      - generic [ref=e212]: Vertrouwd door kunstenaars
+      - generic [ref=e215]: Persoonlijk advies zonder haast
+    - generic [ref=e217]:
+      - generic [ref=e218]:
+        - generic [ref=e219]: Volgende stap
+        - heading "Wilt u samen kijken wat voor uw werk het beste werkt?" [level=2] [ref=e220]:
+          - text: Wilt u samen kijken
+          - text: wat voor uw werk het beste
+          - emphasis [ref=e221]: werkt
+          - text: "?"
+        - paragraph [ref=e222]: Het portfolio geeft richting, maar elk werk vraagt uiteindelijk om een eigen keuze. In het atelier bekijken we rustig wat past.
+      - generic [ref=e223]:
+        - link "Contact met Karolien" [ref=e224] [cursor=pointer]:
+          - /url: index.html#contact
+        - link "Lees meer over inlijsten" [ref=e225] [cursor=pointer]:
+          - /url: inlijsten.html
+  - contentinfo [ref=e226]:
+    - generic [ref=e227]:
+      - img [ref=e228]
+      - generic [ref=e229]:
+        - text: De
+        - emphasis [ref=e230]: Lijsterij
+    - generic [ref=e232]: © 2026 De Lijsterij
+    - generic [ref=e233]: Design by Valknut

@@ -1,0 +1,131 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation "Hoofdnavigatie" [ref=e3]:
+      - link "Ga naar home" [ref=e4] [cursor=pointer]:
+        - /url: index.html
+        - img [ref=e5]
+        - generic [ref=e6]:
+          - text: De
+          - emphasis [ref=e7]: Lijsterij
+      - list [ref=e8]:
+        - listitem [ref=e9]:
+          - link "Home" [ref=e10] [cursor=pointer]:
+            - /url: index.html
+        - listitem [ref=e11]:
+          - link "Inlijsten" [ref=e12] [cursor=pointer]:
+            - /url: inlijsten.html
+        - listitem [ref=e13]:
+          - link "Portfolio" [ref=e14] [cursor=pointer]:
+            - /url: portfolio.html
+        - listitem [ref=e15]:
+          - link "De Nieuwe Vermeer" [ref=e16] [cursor=pointer]:
+            - /url: de-nieuwe-vermeer.html
+        - listitem [ref=e17]:
+          - link "Restauraties" [ref=e18] [cursor=pointer]:
+            - /url: restauraties.html
+        - listitem [ref=e19]:
+          - link "Workshop" [ref=e20] [cursor=pointer]:
+            - /url: workshop.html
+        - listitem [ref=e21]:
+          - link "Kunstenaars" [ref=e22] [cursor=pointer]:
+            - /url: kunstenaars.html
+        - listitem [ref=e23]:
+          - link "Over Karolien" [ref=e24] [cursor=pointer]:
+            - /url: over-ons.html
+        - listitem [ref=e25]:
+          - link "Afspraak maken" [ref=e26] [cursor=pointer]:
+            - /url: index.html?workshop=1#contact
+    - generic [ref=e27]:
+      - generic [ref=e28]:
+        - paragraph [ref=e29]: Workshops
+        - heading "In de praktijk leren wat een lijst met een werk doet" [level=1] [ref=e30]:
+          - text: In de praktijk leren
+          - text: wat een lijst met een werk
+          - emphasis [ref=e31]: doet
+        - paragraph [ref=e32]: In De Lijsterij organiseer ik af en toe workshops in het atelier, rond het ambacht van inlijsten en afwerken. Geen vast programma, maar momenten waarop materiaal, handwerk en ervaring centraal staan.
+        - generic [ref=e33]:
+          - link "Vraag over workshops" [ref=e34] [cursor=pointer]:
+            - /url: index.html?workshop=1#contact
+          - link "Bekijk de workshop" [ref=e35] [cursor=pointer]:
+            - /url: "#workshop-26-oktober-2025"
+      - img "Groepsworkshop inlijsten aan de werktafel in het atelier van De Lijsterij" [ref=e38]
+  - main [ref=e39]:
+    - region "Werkgebied" [ref=e40]:
+      - generic [ref=e43]: Workshop inlijsten in Voorhout. Deelnemers behalve uit Voorhout ook uit Leiden, Katwijk, Noordwijk, Lisse, Sassenheim, Hillegom, Rijnsburg en Noordwijkerhout.
+    - generic [ref=e45]:
+      - generic [ref=e46]:
+        - generic [ref=e47]: Workshop
+        - heading "Workshop — 26 oktober 2025" [level=2] [ref=e48]
+      - generic [ref=e49]:
+        - strong [ref=e50]: Afwerking en presentatie van het kunstwerk
+        - paragraph [ref=e51]:
+          - text: Op zaterdag 26 oktober 2025 vond in De Lijsterij een workshop plaats die volledig in het teken stond van de afwerking en presentatie van een kunstwerk. Algemene werkwijze en materialen vindt u op
+          - link "Inlijsten" [ref=e52] [cursor=pointer]:
+            - /url: inlijsten.html
+          - text: .
+        - paragraph [ref=e53]: Aan de werktafel gingen de deelnemers zelf aan de slag met het kleuren en vergulden van een baklijst. Met kwast, doek en verschillende middelen werd laag voor laag gewerkt aan het oppervlak van de lijst. Door te kleuren ontstaat warmte en diepte in het hout, terwijl vergulden zorgt voor een verfijnde, lichtreflecterende afwerking.
+        - paragraph [ref=e54]: Iedere deelnemer werkte aan een eigen lijst, waardoor er verschillende resultaten ontstonden en goed zichtbaar werd hoeveel invloed de afwerking heeft op de uitstraling van het geheel.
+        - paragraph [ref=e55]: Na het afwerken werd het werk zwevend gemonteerd in de baklijst. Ook het monteren van het ophangsysteem en de laatste afwerking kwamen aan bod. Juist in deze fase wordt duidelijk hoe belangrijk zorgvuldigheid en materiaalgevoel zijn voor het eindresultaat.
+        - paragraph [ref=e56]: Het was een praktische workshop waarin veel zelf gedaan werd — leren door te maken.
+        - link "Bekijk de sfeerbeelden" [ref=e58] [cursor=pointer]:
+          - /url: "#sfeer"
+    - region "Sfeerbeelden van de workshop van 26 oktober 2025" [ref=e59]:
+      - generic [ref=e60]:
+        - generic [ref=e61]:
+          - generic [ref=e62]: Sfeer
+          - heading "Sfeer" [level=2] [ref=e63]
+          - paragraph [ref=e64]: Een impressie van de workshop in het atelier.
+        - generic [ref=e65]:
+          - figure [ref=e66]:
+            - img "Workshop in het atelier De Lijsterij (1)" [ref=e68]
+          - figure [ref=e69]:
+            - img "Workshop in het atelier De Lijsterij (2)" [ref=e71]
+          - figure [ref=e72]:
+            - img "Workshop in het atelier De Lijsterij (3)" [ref=e74]
+          - figure [ref=e75]:
+            - img "Workshop in het atelier De Lijsterij (4)" [ref=e77]
+          - figure [ref=e78]:
+            - img "Workshop in het atelier De Lijsterij (5)" [ref=e80]
+          - figure [ref=e81]:
+            - img "Workshop in het atelier De Lijsterij (6)" [ref=e83]
+          - figure [ref=e84]:
+            - img "Workshop in het atelier De Lijsterij (7)" [ref=e86]
+          - figure [ref=e87]:
+            - img "Workshop in het atelier De Lijsterij (8)" [ref=e89]
+          - figure [ref=e90]:
+            - img "Workshop in het atelier De Lijsterij (9)" [ref=e92]
+          - figure [ref=e93]:
+            - img "Workshop in het atelier De Lijsterij (10)" [ref=e95]
+          - figure [ref=e96]:
+            - img "Workshop in het atelier De Lijsterij (11)" [ref=e98]
+          - figure [ref=e99]:
+            - img "Workshop in het atelier De Lijsterij (12)" [ref=e101]
+    - generic [ref=e103]:
+      - generic [ref=e104]:
+        - generic [ref=e105]: Vooruitblik
+        - heading "Vooruitblik" [level=2] [ref=e106]
+      - generic [ref=e107]:
+        - paragraph [ref=e108]: Er zullen in de toekomst meer workshops volgen, rond uiteenlopende onderwerpen binnen het ambacht. Deze zijn nog niet definitief gepland.
+        - paragraph [ref=e109]: Heeft u interesse, wilt u op de hoogte blijven of denkt u aan een workshop met een eigen groep? Stuur gerust een bericht — dan neem ik contact op zodra er iets op de agenda staat.
+        - link "Laat een bericht achter" [ref=e111] [cursor=pointer]:
+          - /url: index.html?workshop=1#contact
+    - region "Werkgebied" [ref=e112]:
+      - generic [ref=e115]: Workshop inlijsten in Voorhout. Deelnemers behalve uit Voorhout ook uit Leiden, Katwijk, Noordwijk, Lisse, Sassenheim, Hillegom, Rijnsburg en Noordwijkerhout.
+    - generic [ref=e117]:
+      - generic [ref=e118]:
+        - generic [ref=e119]: Contact
+        - heading "Contact" [level=2] [ref=e120]
+        - paragraph [ref=e121]: Vragen over toekomstige workshops of interesse in deelname? Via het contactformulier kunt u direct een bericht sturen.
+      - generic [ref=e122]:
+        - link "Naar het contactformulier" [ref=e123] [cursor=pointer]:
+          - /url: index.html?workshop=1#contact
+        - link "Terug naar home" [ref=e124] [cursor=pointer]:
+          - /url: index.html
+  - contentinfo [ref=e125]:
+    - generic [ref=e126]:
+      - img [ref=e127]
+      - generic [ref=e128]:
+        - text: De
+        - emphasis [ref=e129]: Lijsterij
+    - generic [ref=e131]: © 2026 De Lijsterij
+    - generic [ref=e132]: Design by Valknut

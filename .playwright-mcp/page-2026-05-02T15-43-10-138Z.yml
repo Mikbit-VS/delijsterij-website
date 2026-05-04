@@ -1,0 +1,223 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation "Hoofdnavigatie" [ref=e3]:
+      - link "Ga naar boven" [ref=e4] [cursor=pointer]:
+        - /url: "#top"
+        - img [ref=e5]
+        - generic [ref=e6]:
+          - text: De
+          - emphasis [ref=e7]: Lijsterij
+      - button "Open menu" [ref=e8] [cursor=pointer]
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - paragraph [ref=e15]: Welkom bij
+        - generic [ref=e16]:
+          - img [ref=e17]
+          - heading "De Lijsterij" [level=1] [ref=e18]:
+            - text: De
+            - emphasis [ref=e19]: Lijsterij
+        - generic "Kern van De Lijsterij" [ref=e20]:
+          - paragraph [ref=e21]:
+            - emphasis [ref=e22]: Ambachtelijk inlijsten van kunst en bijzondere objecten
+        - generic [ref=e23]:
+          - link "Plan een afspraak" [ref=e24] [cursor=pointer]:
+            - /url: "#contact"
+          - link "Bekijk portfolio" [ref=e25] [cursor=pointer]:
+            - /url: portfolio.html
+        - paragraph [ref=e26]: Vanuit mijn atelier in Voorhout combineer ik ambachtelijk vakmanschap met een scherp oog voor detail. Voor mij is een lijst niet zomaar een rand om een werk, maar de finishing touch die een kunstwerk echt tot leven wekt.
+        - paragraph [ref=e27]: "Of het nu gaat om een modern werk of een dierbare herinnering: ik zorg ervoor dat elk object de aandacht en bescherming krijgt die het verdient — uit liefde voor kunst en schoonheid is De Lijsterij ontstaan."
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - generic [ref=e30]: Advies
+            - generic [ref=e31]: Altijd persoonlijk
+          - generic [ref=e32]:
+            - generic [ref=e33]: Kwaliteit
+            - generic [ref=e34]: Museumstandaard
+          - generic [ref=e35]:
+            - generic [ref=e36]: Collectie
+            - generic [ref=e37]: Breed assortiment
+      - figure [ref=e39]:
+        - img "Karolien in een klassieke lijst met een schilderij op tafel" [ref=e41]
+  - main [ref=e42]:
+    - region "Werkgebied" [ref=e43]:
+      - generic [ref=e46]: Lijstenmakerij in Voorhout voor klanten uit Noordwijk, Sassenheim, Lisse, Katwijk, Noordwijkerhout, Hillegom, Rijnsburg, Leiden en omgeving.
+    - generic [ref=e47]:
+      - generic [ref=e48]:
+        - generic [ref=e49]: Inlijsten
+        - heading "Wat De Lijsterij voor u kan betekenen" [level=2] [ref=e50]:
+          - text: Wat De Lijsterij voor u kan
+          - emphasis [ref=e51]: betekenen
+        - paragraph [ref=e52]: "Van kunst en foto’s tot sporttrofeeën, borduurwerk, kledingstukken en bijzondere objecten: er is vaak veel meer mogelijk dan u denkt."
+        - paragraph [ref=e53]: Met maatwerk, passe-partout, museumglas en persoonlijk advies zoeken we samen naar een oplossing die recht doet aan het werk én aan uw interieur.
+      - generic [ref=e54]:
+        - generic [ref=e55]:
+          - generic [ref=e56]:
+            - generic [ref=e57]: Maatwerk inlijsten
+            - paragraph [ref=e58]: Elke lijst op maat gesneden en samengesteld. We kiezen samen de juiste combinatie van lijst, passe-partout en glas.
+          - img "Maatwerk inlijsten detail" [ref=e61]
+        - generic [ref=e62]:
+          - generic [ref=e63]:
+            - generic [ref=e64]: Passe-partout
+            - paragraph [ref=e65]: Van sober wit tot dubbele passe-partout in elke kleur. Altijd zuurvrij en op museumkwaliteit.
+          - img "Passe-partout lagen detail" [ref=e68]
+        - generic [ref=e69]:
+          - generic [ref=e70]:
+            - generic [ref=e71]: Museumglas
+            - paragraph [ref=e72]: Anti-reflecterend en UV-werend glas beschermt uw kunstwerk tegen licht, stof en vocht — onzichtbaar maar essentieel.
+          - img "Museumglas met minimale reflectie" [ref=e75]
+        - generic [ref=e76]:
+          - generic [ref=e77]:
+            - generic [ref=e78]: Foto & canvas
+            - paragraph [ref=e79]: Uw mooiste foto's, prints en canvasdoeken inlijsten op een manier die past bij uw interieur en persoonlijke smaak.
+          - img "Foto en canvas inlijsting" [ref=e82]
+        - generic [ref=e83]:
+          - generic [ref=e84]:
+            - generic [ref=e85]: Restauratie & herstel
+            - paragraph [ref=e86]: Oude, beschadigde of versleten lijsten krijgen een nieuw leven. Ik herstel wat nodig is en zorg dat de lijst weer klaar is voor de toekomst.
+          - img "Restauratie van ornamentlijst" [ref=e89]
+        - generic [ref=e90]:
+          - generic [ref=e91]:
+            - generic [ref=e92]: Advies aan huis
+            - paragraph [ref=e93]: Grote werken of een hele wand inrichten? Ik kom langs voor advies op maat.
+          - img "Advies aan huis bij ophangen van lijsten" [ref=e96]
+      - link "Meer over inlijsten" [ref=e98] [cursor=pointer]:
+        - /url: inlijsten.html
+    - generic [ref=e99]:
+      - generic [ref=e100]:
+        - generic [ref=e101]: Portfolio
+        - heading "Een eerste indruk van mijn recente werk" [level=2] [ref=e102]:
+          - text: Een eerste indruk van
+          - text: mijn
+          - emphasis [ref=e103]: recente werk
+        - paragraph [ref=e104]:
+          - text: Een preview van het volledige overzicht op de
+          - link "portfolio-pagina" [ref=e105] [cursor=pointer]:
+            - /url: portfolio.html
+          - text: .
+      - list [ref=e106]:
+        - listitem [ref=e107] [cursor=pointer]:
+          - generic [ref=e108]:
+            - generic [ref=e110]:
+              - text: Bekroond werk
+              - text: Tabernakellijst ï¿½ diepe kleurwerking
+            - generic [ref=e111]: Handgemaakte lijst
+        - listitem [ref=e112] [cursor=pointer]:
+          - generic [ref=e113]:
+            - generic [ref=e115]: Schilderij ï¿½ klassieke eiken lijst
+            - generic [ref=e116]: Bloemwerk
+        - listitem [ref=e117] [cursor=pointer]:
+          - generic [ref=e118]:
+            - generic [ref=e120]: Restauratie ï¿½ zwaar beschadigde lijst
+            - generic [ref=e121]: Restauratie
+        - listitem [ref=e122] [cursor=pointer]:
+          - generic [ref=e123]:
+            - generic [ref=e125]: Objectlijst ï¿½ 3D-inlijsting
+            - generic [ref=e126]: Bijzonder object
+      - link "Bekijk volledig portfolio" [ref=e128] [cursor=pointer]:
+        - /url: portfolio.html
+    - generic [ref=e129]:
+      - generic [ref=e130]:
+        - generic [ref=e131]: Referenties
+        - heading "Vertrouwen groeit door ervaringen van anderen" [level=2] [ref=e132]:
+          - text: Vertrouwen groeit
+          - text: door
+          - emphasis [ref=e133]: ervaringen van anderen
+        - paragraph [ref=e134]: Een paar korte reacties die laten zien hoe klanten en kunstenaars de samenwerking ervaren.
+      - generic [ref=e135]:
+        - generic [ref=e136]:
+          - generic [ref=e137]: "?????"
+          - paragraph [ref=e138]: "\"Karolien begrijpt als kunstenaar zelf wat een werk nodig heeft. Ze kijkt naar het stuk, niet alleen naar de maat. Dat maakt het verschil.\""
+          - generic [ref=e139]:
+            - strong [ref=e140]: Yvonne Heemskerk
+            - text: — winnaar De Nieuwe Vermeer
+        - generic [ref=e141]:
+          - generic [ref=e142]: "?????"
+          - paragraph [ref=e143]: "\"Karolien heeft echt de tijd genomen om naar mijn schilderij te kijken. Het resultaat overtreft mijn verwachtingen — de lijst lijkt altijd al bij het werk te hebben gehoord.\""
+          - generic [ref=e144]:
+            - strong [ref=e145]: Marjan V.
+            - text: — particuliere klant, Oegstgeest
+        - generic [ref=e146]:
+          - generic [ref=e147]: "?????"
+          - paragraph [ref=e148]: "\"Als fotograaf ben ik kieskeurig over hoe mijn werk gepresenteerd wordt. Bij De Lijsterij word ik echt gehoord. Prachtig vakmanschap, elke keer weer.\""
+          - generic [ref=e149]:
+            - strong [ref=e150]: Thomas B.
+            - text: — fotograaf, Leiden
+    - generic [ref=e154]:
+      - generic [ref=e155]: Over Karolien
+      - heading "Karolien Kooiman — kunstenaar & inlijster" [level=2] [ref=e157]:
+        - text: Karolien Kooiman —
+        - emphasis [ref=e158]: kunstenaar & inlijster
+      - paragraph [ref=e159]: Uit liefde voor kunst en schoonheid is De Lijsterij geboren. Als kunstenaar begrijp ik als geen ander dat een werk naast financiele waarde ook een diepe emotionele betekenis kan hebben.
+      - paragraph [ref=e160]: Daarom denk ik gepassioneerd met u mee over hoe uw kunstwerk het best tot zijn recht komt — en het beste beschermd kan worden voor de volgende generaties.
+      - paragraph [ref=e161]: Ik werk uitsluitend met hoogwaardige, zuurvrije en archiveerbare materialen. Want een goede inlijsting is een investering die even lang meegaat als het werk zelf.
+      - link "Lees meer over Karolien" [ref=e163] [cursor=pointer]:
+        - /url: over-ons.html
+    - region "Kwaliteiten" [ref=e164]:
+      - generic [ref=e167]: Winnaar De Nieuwe Vermeer
+      - generic [ref=e170]: Persoonlijk advies zonder haast
+      - generic [ref=e173]: Erkend meesterinlijster
+      - generic [ref=e176]: Museumkwaliteit materialen
+      - generic [ref=e179]: Vertrouwd door kunstenaars
+    - generic [ref=e181]:
+      - generic [ref=e182]:
+        - generic [ref=e183]:
+          - generic [ref=e184]: Afspraak maken
+          - heading "Samen kijken wat uw werk nodig heeft" [level=2] [ref=e185]:
+            - text: Samen kijken wat uw werk
+            - text: nodig
+            - emphasis [ref=e186]: heeft
+          - paragraph [ref=e187]:
+            - text: "Of het nu gaat om een schilderij, foto, tekening of bijzonder object:"
+            - text: in het atelier neem ik rustig de tijd om tot de juiste keuze te komen.
+          - paragraph [ref=e188]:
+            - text: Vrijblijvend advies, een offerte of gewoon even overleggen —
+            - text: alles is welkom. Ik neem graag de tijd voor u en uw werk.
+        - generic [ref=e189]:
+          - generic [ref=e190]:
+            - generic [ref=e191]: Adres
+            - generic [ref=e192]: Dinsdagse Wetering 8a, 2215 EP Voorhout
+          - generic [ref=e193]:
+            - generic [ref=e194]: Telefoon
+            - link "06 ï¿½ 29 510 590" [ref=e195] [cursor=pointer]:
+              - /url: tel:+31252123456
+          - generic [ref=e196]:
+            - generic [ref=e197]: E-mail
+            - link "info@delijsterij.nl" [ref=e198] [cursor=pointer]:
+              - /url: mailto:info@delijsterij.nl
+          - generic [ref=e199]:
+            - generic [ref=e200]: Open
+            - generic [ref=e201]: Op afspraak
+          - generic [ref=e202]:
+            - generic [ref=e203]: Regio
+            - generic [ref=e204]: Voorhout · Noordwijk · Katwijk · Sassenheim · Lisse · Noordwijkerhout · Hillegom
+      - generic [ref=e205]:
+        - heading "Stuur een bericht" [level=3] [ref=e206]
+        - form "Stuur een bericht" [ref=e207]:
+          - generic [ref=e208]:
+            - generic [ref=e209]:
+              - generic [ref=e210]: Uw naam
+              - textbox "Uw naam" [ref=e211]
+            - generic [ref=e212]:
+              - generic [ref=e213]: Telefoon
+              - textbox "Telefoon" [ref=e214]
+          - generic [ref=e215]:
+            - generic [ref=e216]: E-mailadres
+            - textbox "E-mailadres" [ref=e217]:
+              - /placeholder: jan@example.nl
+          - generic [ref=e218]:
+            - generic [ref=e219]: Wat wilt u laten inlijsten?
+            - textbox "Wat wilt u laten inlijsten?" [ref=e220]:
+              - /placeholder: "Bijvoorbeeld: schilderij, foto, borduurwerk of object"
+          - generic [ref=e221]:
+            - generic [ref=e222]: Bericht
+            - textbox "Bericht" [ref=e223]:
+              - /placeholder: Vertel iets over uw werk en uw wensen. Als u al een idee heeft van afmetingen of materiaal, vermeldt u dat gerust.
+          - button "Verstuur bericht" [ref=e224] [cursor=pointer]
+  - contentinfo [ref=e225]:
+    - generic [ref=e226]:
+      - img [ref=e227]
+      - generic [ref=e228]:
+        - text: De
+        - emphasis [ref=e229]: Lijsterij
+    - generic [ref=e231]: ï¿½ 2026 De Lijsterij
+    - generic [ref=e232]: Design by Valknut

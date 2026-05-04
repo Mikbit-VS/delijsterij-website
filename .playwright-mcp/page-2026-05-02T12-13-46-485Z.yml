@@ -1,0 +1,143 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation "Hoofdnavigatie" [ref=e3]:
+      - link "Ga naar home" [ref=e4] [cursor=pointer]:
+        - /url: index.html
+        - img [ref=e5]
+        - generic [ref=e6]:
+          - text: De
+          - emphasis [ref=e7]: Lijsterij
+      - list [ref=e8]:
+        - listitem [ref=e9]:
+          - link "Home" [ref=e10] [cursor=pointer]:
+            - /url: index.html
+        - listitem [ref=e11]:
+          - link "Inlijsten" [ref=e12] [cursor=pointer]:
+            - /url: inlijsten.html
+        - listitem [ref=e13]:
+          - link "Portfolio" [ref=e14] [cursor=pointer]:
+            - /url: portfolio.html
+        - listitem [ref=e15]:
+          - link "De Nieuwe Vermeer" [ref=e16] [cursor=pointer]:
+            - /url: de-nieuwe-vermeer.html
+        - listitem [ref=e17]:
+          - link "Restauraties" [ref=e18] [cursor=pointer]:
+            - /url: restauraties.html
+        - listitem [ref=e19]:
+          - link "Workshop" [ref=e20] [cursor=pointer]:
+            - /url: workshop.html
+        - listitem [ref=e21]:
+          - link "Kunstenaars" [ref=e22] [cursor=pointer]:
+            - /url: kunstenaars.html
+        - listitem [ref=e23]:
+          - link "Over Karolien" [ref=e24] [cursor=pointer]:
+            - /url: over-ons.html
+        - listitem [ref=e25]:
+          - link "Afspraak maken" [ref=e26] [cursor=pointer]:
+            - /url: index.html#contact
+    - generic [ref=e27]:
+      - generic [ref=e28]:
+        - paragraph [ref=e29]: Visie
+        - heading "Alles begint bij aandachtig kijken" [level=1] [ref=e30]:
+          - text: Alles begint bij
+          - emphasis [ref=e31]: aandachtig kijken
+        - paragraph [ref=e32]: "De Lijsterij is ontstaan vanuit een liefde voor kunst. Hier krijgt een werk de aandacht en bescherming die het verdient. Vakmanschap gaat verder dan een mooie omlijsting — het is de zoektocht naar balans: tussen het kunstwerk en de ruimte, tussen behoud en esthetiek, en tussen jouw persoonlijke smaak en mijn vaktechnisch advies."
+        - generic [ref=e33]:
+          - link "Maak een afspraak" [ref=e34] [cursor=pointer]:
+            - /url: index.html#contact
+          - link "Lees het verhaal" [ref=e35] [cursor=pointer]:
+            - /url: "#verhaal"
+      - img "Karolien Kooiman monteert een lijst aan de werkbank in het atelier" [ref=e38]
+  - main [ref=e39]:
+    - region "Werkgebied" [ref=e40]:
+      - generic [ref=e43]: Persoonlijk lijstadvies ook op locatie voor klanten uit Voorhout, Sassenheim, Noordwijk, Rijnsburg, Katwijk, Lisse, Leiden, Noordwijkerhout en Hillegom.
+    - generic [ref=e45]:
+      - figure [ref=e46]:
+        - img "Karolien Kooiman aan het werk in het atelier" [ref=e48]
+      - generic [ref=e49]:
+        - generic [ref=e50]:
+          - generic [ref=e51]: Wie ik ben
+          - heading "Kunstenaar, maker en meesterinlijster" [level=2] [ref=e52]:
+            - text: Kunstenaar, maker
+            - text: en
+            - emphasis [ref=e53]: meesterinlijster
+        - paragraph [ref=e54]: Mijn liefde voor het vak begon bij het zelf vasthouden van het penseel. Door jarenlang te schilderen en te experimenteren met technieken en compositie, leerde ik kijken naar wat een beeld nodig heeft om tot zijn recht te komen.
+        - paragraph [ref=e55]:
+          - text: "Juist die zoektocht naar de perfecte presentatie en bescherming van mijn eigen werk, bracht mij bij de opleiding tot lijstenmaker. Die achtergrond als kunstenaar is nog steeds mijn basis: ik kijk naar kleur, licht en balans voordat ik ook maar één lat zaag. Resultaten ziet u in het"
+          - link "portfolio" [ref=e56] [cursor=pointer]:
+            - /url: portfolio.html
+          - text: .
+      - complementary [ref=e57]:
+        - generic [ref=e58]: In het atelier
+        - list [ref=e59]:
+          - listitem [ref=e60]: Persoonlijk advies zonder haast
+          - listitem [ref=e61]: Maatwerk met oog voor verhoudingen
+          - listitem [ref=e62]: Museumkwaliteit materialen als basis
+          - listitem [ref=e63]: Brede collectie van sober tot klassiek
+    - generic [ref=e65]:
+      - generic [ref=e66]:
+        - generic [ref=e67]:
+          - generic [ref=e68]: Wat ik doe
+          - heading "De dialoog tussen kunst en lijst" [level=2] [ref=e69]:
+            - text: De dialoog tussen kunst
+            - text: en
+            - emphasis [ref=e70]: lijst
+        - generic [ref=e71]:
+          - paragraph [ref=e72]:
+            - text: Lijsten maken vraagt om inzicht in materiaal en aandacht voor detail. Of het nu gaat om een strakke, moderne presentatie of een handgemaakte
+            - strong [ref=e73]: tabernakellijst
+            - text: "— waarin mijn voorliefde voor historische technieken samenkomt — het doel blijft hetzelfde: het werk versterken zonder het te overstemmen."
+          - paragraph [ref=e74]: Ik zie het als mijn taak om een werk niet alleen tot zijn recht te laten komen, maar ook te beschermen voor de toekomst. In het atelier komen ambacht, kunstgeschiedenis en conservering samen.
+      - figure "Bij dit werk In dit werk komen mijn beide werelden letterlijk samen. De jongen die uit zijn kader stapt, is een door mij geschilderde trompe-l’oeil naar het beroemde werk Escapando de la crítica (1874) van Pere Borrell del Caso in een complexe, architecturale tabernakellijst." [ref=e75]:
+        - img "Trompe-l’oeil schilderij in handgemaakte tabernakellijst, door Karolien Kooiman" [ref=e78]
+        - generic [ref=e79]:
+          - generic [ref=e80]: Bij dit werk
+          - paragraph [ref=e81]: In dit werk komen mijn beide werelden letterlijk samen. De jongen die uit zijn kader stapt, is een door mij geschilderde trompe-l’oeil naar het beroemde werk Escapando de la crítica (1874) van Pere Borrell del Caso in een complexe, architecturale tabernakellijst.
+    - generic [ref=e82]:
+      - generic [ref=e83]:
+        - generic [ref=e84]: Waar ik voor sta
+        - heading "Drie principes die alles sturen" [level=2] [ref=e85]:
+          - text: Drie principes die
+          - text: alles
+          - emphasis [ref=e86]: sturen
+      - generic [ref=e87]:
+        - article [ref=e88]:
+          - heading "Kijken vóór kiezen" [level=3] [ref=e89]
+          - paragraph [ref=e90]: Geen snelle standaardkeuze, maar een inlijsting die past bij het werk, de plek waar het komt te hangen en de uitstraling die u zoekt.
+        - article [ref=e91]:
+          - heading "Beschermen voor later" [level=3] [ref=e92]
+          - paragraph [ref=e93]: Zuurvrije en archiveerbare materialen, passend glas en degelijke afwerking zorgen dat een werk niet alleen mooi oogt, maar ook goed bewaard blijft.
+        - article [ref=e94]:
+          - heading "Ruimte voor persoonlijkheid" [level=3] [ref=e95]
+          - paragraph [ref=e96]: "Van ingetogen en modern tot rijk en klassiek: de omlijsting moet het werk versterken en tegelijk passen bij wie u bent en waar u woont."
+    - region "Kwaliteiten" [ref=e97]:
+      - generic [ref=e100]: Museumkwaliteit materialen
+      - generic [ref=e103]: Persoonlijk advies zonder haast
+      - generic [ref=e106]: Vertrouwd door kunstenaars
+      - generic [ref=e109]: Erkend meesterinlijster
+      - generic [ref=e112]: Winnaar De Nieuwe Vermeer
+    - generic [ref=e113]:
+      - generic [ref=e114]:
+        - generic:
+          - img "Karolien Kooiman op bezoek bij Vermeer"
+      - generic [ref=e115]:
+        - generic [ref=e116]: Televisieprogramma De Nieuwe Vermeer
+        - heading "De Nieuwe Vermeer" [level=2] [ref=e118]:
+          - text: De
+          - emphasis [ref=e119]: Nieuwe
+          - text: Vermeer
+        - paragraph [ref=e120]: Voor het televisieprogramma De Nieuwe Vermeer verzorgde ik de inlijsting van een van de werken. Het betreffende schilderij werd uiteindelijk uitgeroepen tot winnaar.
+        - paragraph [ref=e121]: De omlijsting vormde het sluitstuk dat de uitstraling en de historische samenhang van het werk compleet maakte.
+        - generic [ref=e122]:
+          - link "Plan een afspraak" [ref=e123] [cursor=pointer]:
+            - /url: index.html#contact
+          - link "Terug naar home" [ref=e124] [cursor=pointer]:
+            - /url: index.html
+  - contentinfo [ref=e125]:
+    - generic [ref=e126]:
+      - img [ref=e127]
+      - generic [ref=e128]:
+        - text: De
+        - emphasis [ref=e129]: Lijsterij
+    - generic [ref=e131]: © 2026 De Lijsterij
+    - generic [ref=e132]: Design by Valknut

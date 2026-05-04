@@ -1,0 +1,246 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation "Hoofdnavigatie" [ref=e3]:
+      - link "Ga naar home" [ref=e4] [cursor=pointer]:
+        - /url: index.html
+        - img [ref=e5]
+        - generic [ref=e6]:
+          - text: De
+          - emphasis [ref=e7]: Lijsterij
+      - list [ref=e8]:
+        - listitem [ref=e9]:
+          - link "Home" [ref=e10] [cursor=pointer]:
+            - /url: index.html
+        - listitem [ref=e11]:
+          - link "Inlijsten" [ref=e12] [cursor=pointer]:
+            - /url: inlijsten.html
+        - listitem [ref=e13]:
+          - link "Portfolio" [ref=e14] [cursor=pointer]:
+            - /url: portfolio.html
+        - listitem [ref=e15]:
+          - link "De Nieuwe Vermeer" [ref=e16] [cursor=pointer]:
+            - /url: de-nieuwe-vermeer.html
+        - listitem [ref=e17]:
+          - link "Restauraties" [ref=e18] [cursor=pointer]:
+            - /url: restauraties.html
+        - listitem [ref=e19]:
+          - link "Workshop" [ref=e20] [cursor=pointer]:
+            - /url: workshop.html
+        - listitem [ref=e21]:
+          - link "Kunstenaars" [ref=e22] [cursor=pointer]:
+            - /url: kunstenaars.html
+        - listitem [ref=e23]:
+          - link "Over Karolien" [ref=e24] [cursor=pointer]:
+            - /url: over-ons.html
+        - listitem [ref=e25]:
+          - link "Afspraak maken" [ref=e26] [cursor=pointer]:
+            - /url: index.html#contact
+    - generic [ref=e27]:
+      - generic [ref=e28]:
+        - paragraph [ref=e29]: Inlijsten op maat
+        - 'heading "Van een eenvoudige foto tot een kostbaar werk: we zoeken samen de juiste omlijsting" [level=1] [ref=e30]':
+          - text: Van een eenvoudige foto
+          - text: "tot een kostbaar werk:"
+          - text: we zoeken samen de
+          - emphasis [ref=e31]: juiste omlijsting
+        - paragraph [ref=e32]: Persoonlijk advies, rustige begeleiding en materialen van hoge kwaliteit. Niet alleen mooi aan de muur, maar ook technisch passend bij het werk dat u wilt bewaren of presenteren.
+        - generic [ref=e33]:
+          - link "Maak een afspraak" [ref=e34] [cursor=pointer]:
+            - /url: index.html#contact
+          - link "Bekijk mogelijkheden" [ref=e35] [cursor=pointer]:
+            - /url: "#diensten-overzicht"
+      - img "Voorbeelden van lijsten in het atelier van De Lijsterij" [ref=e38]
+  - main [ref=e39]:
+    - region "Werkgebied" [ref=e40]:
+      - generic [ref=e43]: Inlijsten in Voorhout voor schilderijen, foto's, borduurwerk en bijzondere objecten uit Katwijk, Noordwijk, Leiden, Sassenheim, Lisse, Rijnsburg, Hillegom en Noordwijkerhout.
+    - generic [ref=e44]:
+      - generic [ref=e45]:
+        - generic [ref=e46]: Het proces
+        - heading "Zo eenvoudig werkt het" [level=2] [ref=e47]
+        - paragraph [ref=e48]:
+          - text: Drie stappen van uw werk naar de muur, zonder gedoe en met alle aandacht. Voorbeelden vindt u in het
+          - link "portfolio" [ref=e49] [cursor=pointer]:
+            - /url: portfolio.html
+          - text: .
+      - generic [ref=e50]:
+        - generic [ref=e51]:
+          - generic [ref=e52]: I
+          - generic [ref=e53]:
+            - generic [ref=e54]: Kom langs of stuur een foto
+            - paragraph [ref=e55]: Breng uw werk mee naar het atelier, of stuur alvast een foto. We maken vrijblijvend een afspraak op een moment dat u uitkomt.
+        - generic [ref=e56]:
+          - generic [ref=e57]: II
+          - generic [ref=e58]:
+            - generic [ref=e59]: We kiezen samen de lijst
+            - paragraph [ref=e60]: In alle rust kijken we naar uw werk, uw interieur en uw wensen. U krijgt eerlijk advies, zonder druk en zonder haast.
+        - generic [ref=e61]:
+          - generic [ref=e62]: III
+          - generic [ref=e63]:
+            - generic [ref=e64]: Klaar om op te hangen
+            - paragraph [ref=e65]: Uw werk wordt vakkundig ingelegd, gesneden en samengesteld. Binnen de afgesproken tijd klaar en perfect afgewerkt.
+    - generic [ref=e67]:
+      - generic "Voorbeelden van inlijstwerk" [ref=e68]:
+        - figure [ref=e69]:
+          - img "Detail van lijsthoekprofiel in goudtint" [ref=e71]
+        - figure [ref=e72]:
+          - img "Detail van klassiek lijsthoekprofiel" [ref=e74]
+        - figure [ref=e75]:
+          - img "Detail van zwarte lijst met goudrand" [ref=e77]
+        - figure [ref=e78]:
+          - img "Detail van een lijst met ornament en kleuraccent" [ref=e80]
+        - figure [ref=e81]:
+          - img "Detail van donker lijstprofiel met sierlijn" [ref=e83]
+        - figure [ref=e84]:
+          - img "Detail van warm houten lijstprofiel" [ref=e86]
+      - generic [ref=e87]:
+        - generic [ref=e88]:
+          - generic [ref=e89]:
+            - generic [ref=e90]: Wat wij doen
+            - heading "Voor elk werk vinden we een oplossing die klopt" [level=2] [ref=e91]:
+              - text: Voor elk werk vinden we
+              - text: een oplossing die
+              - emphasis [ref=e92]: klopt
+          - generic [ref=e93]:
+            - paragraph [ref=e94]: Een goede inlijsting begint niet bij een standaardlijst, maar bij kijken. Naar het werk, het materiaal, de uitstraling en de plek waar het uiteindelijk komt te hangen.
+            - paragraph [ref=e95]: Daarom nemen we in het atelier de tijd om samen te vergelijken, te voelen en te kiezen. Soms is dat sober en terughoudend, soms rijker en klassieker. Altijd met respect voor het werk zelf.
+        - complementary [ref=e96]:
+          - generic [ref=e97]: Waar we op letten
+          - list [ref=e98]:
+            - listitem [ref=e99]: Verhouding tussen werk en lijst
+            - listitem [ref=e100]: Bescherming met passend glas en materialen
+            - listitem [ref=e101]: Uitstraling in relatie tot interieur of expositie
+            - listitem [ref=e102]: Een oplossing die technisch en visueel klopt
+    - generic [ref=e103]:
+      - generic [ref=e104]:
+        - generic [ref=e105]: Diensten
+        - heading "Maatwerk, materiaal en afwerking in dienst van het werk" [level=2] [ref=e106]:
+          - text: Maatwerk, materiaal en
+          - text: afwerking
+          - emphasis [ref=e107]: in dienst van het werk
+        - paragraph [ref=e108]: "Van maatwerk en passe-partout tot museumglas en restauratie: hieronder staat het aanbod helder bij elkaar."
+      - generic [ref=e109]:
+        - generic [ref=e110]:
+          - generic [ref=e111]:
+            - generic [ref=e112]: Maatwerk inlijsten
+            - paragraph [ref=e113]: Elke lijst op maat gesneden en samengesteld. We kiezen samen de juiste combinatie van lijst, passe-partout en glas.
+          - generic [ref=e114]:
+            - generic:
+              - img "Maatwerk inlijsten detail"
+        - generic [ref=e115]:
+          - generic [ref=e116]:
+            - generic [ref=e117]: Passe-partout
+            - paragraph [ref=e118]: Van sober wit tot dubbele passe-partout in elke kleur. Altijd zuurvrij en op museumkwaliteit.
+          - generic [ref=e119]:
+            - generic:
+              - img "Passe-partout lagen detail"
+        - generic [ref=e120]:
+          - generic [ref=e121]:
+            - generic [ref=e122]: Museumglas
+            - paragraph [ref=e123]: Anti-reflecterend en UV-werend glas beschermt uw kunstwerk tegen licht, stof en vocht — onzichtbaar maar essentieel.
+          - generic [ref=e124]:
+            - generic:
+              - img "Museumglas met minimale reflectie"
+        - generic [ref=e125]:
+          - generic [ref=e126]:
+            - generic [ref=e127]: Foto & canvas
+            - paragraph [ref=e128]: Uw mooiste foto's, prints en canvasdoeken inlijsten op een manier die past bij uw interieur en persoonlijke smaak.
+          - generic [ref=e129]:
+            - generic:
+              - img "Foto en canvas inlijsting"
+        - generic [ref=e130]:
+          - generic [ref=e131]:
+            - generic [ref=e132]: Restauratie & herstel
+            - paragraph [ref=e133]: Oude, beschadigde of versleten lijsten krijgen een nieuw leven. Ik herstel wat nodig is en zorg dat de lijst weer klaar is voor de toekomst.
+          - generic [ref=e134]:
+            - generic:
+              - img "Restauratie van ornamentlijst"
+        - generic [ref=e135]:
+          - generic [ref=e136]:
+            - generic [ref=e137]: Advies aan huis
+            - paragraph [ref=e138]: Grote werken of een hele wand inrichten? Ik kom langs voor advies op maat.
+          - generic [ref=e139]:
+            - generic:
+              - img "Advies aan huis bij ophangen van lijsten"
+    - generic [ref=e140]:
+      - generic [ref=e141]:
+        - generic [ref=e142]: Beelden uit het atelier
+        - heading "Profielen, details en mogelijkheden in beeld" [level=2] [ref=e143]:
+          - text: Profielen, details en
+          - text: mogelijkheden
+          - emphasis [ref=e144]: in beeld
+        - paragraph [ref=e145]: Een eerste indruk van de soorten lijsten, hoeken en afwerkingen waaruit we samen kunnen kiezen.
+      - generic [ref=e146]:
+        - figure [ref=e147]:
+          - img "Voorbeelden van lijstprofielen en hoekmonsters" [ref=e149]
+        - figure [ref=e150]:
+          - img "Wand met verschillende lijstprofielen" [ref=e152]
+        - figure [ref=e153]:
+          - img "Detail van een schilderijlijst met ornament" [ref=e155]
+        - figure [ref=e156]:
+          - img "Voorbeelden van houten lijstprofielen" [ref=e158]
+        - figure [ref=e159]:
+          - img "Verschillende sierlijsten en hoekdetails" [ref=e161]
+    - generic [ref=e162]:
+      - generic [ref=e163]:
+        - generic [ref=e164]: Meer voorbeelden
+        - heading "Extra beelden van profielen en afwerkingen" [level=2] [ref=e165]:
+          - text: Extra beelden van
+          - text: profielen en
+          - emphasis [ref=e166]: afwerkingen
+        - paragraph [ref=e167]: Deze aanvullende selectie laat nog beter zien hoeveel richting, materiaal en detail er mogelijk is binnen een goede inlijsting.
+      - generic [ref=e168]:
+        - figure [ref=e169]:
+          - img "Extra voorbeeld van verschillende lijsten en hoekmodellen bij De Lijsterij" [ref=e171]
+        - figure [ref=e172]:
+          - img "Voorbeelden van lijsten en hoekmodellen bij De Lijsterij" [ref=e174]
+        - figure [ref=e175]:
+          - img "Extra voorbeeld van een lijsthoek uit het atelier" [ref=e177]
+        - figure [ref=e178]:
+          - img "Selectie van verschillende lijstsoorten en profielhoeken" [ref=e180]
+        - figure [ref=e181]:
+          - img "Detail van klassieke lijsthoek in warme houttinten" [ref=e183]
+    - generic [ref=e184]:
+      - generic [ref=e185]:
+        - generic [ref=e186]: Kwaliteit
+        - heading "Waarom deze aanpak het verschil maakt" [level=2] [ref=e187]:
+          - text: Waarom deze aanpak
+          - text: het verschil
+          - emphasis [ref=e188]: maakt
+        - paragraph [ref=e189]: Een goede lijst doet meer dan mooi zijn. De juiste keuze helpt een werk beter uitkomen en beter bewaard blijven.
+      - generic [ref=e190]:
+        - article [ref=e191]:
+          - heading "Persoonlijk advies" [level=3] [ref=e192]
+          - paragraph [ref=e193]: Geen snelle keuze uit een rek, maar een afweging die past bij het werk, uw smaak en de ruimte waar het komt te hangen.
+        - article [ref=e194]:
+          - heading "Duurzame materialen" [level=3] [ref=e195]
+          - paragraph [ref=e196]: Zuurvrije materialen, passend glas en een verzorgde afwerking beschermen het werk voor de lange termijn.
+        - article [ref=e197]:
+          - heading "Rust in het proces" [level=3] [ref=e198]
+          - paragraph [ref=e199]: Het kiezen van een lijst hoeft niet gehaast te zijn. In het atelier is ruimte om te vergelijken, te twijfelen en tot de juiste keuze te komen.
+    - region "Kwaliteiten" [ref=e200]:
+      - generic [ref=e203]: Museumkwaliteit materialen
+      - generic [ref=e206]: Vertrouwd door kunstenaars
+      - generic [ref=e209]: Winnaar De Nieuwe Vermeer
+      - generic [ref=e212]: Persoonlijk advies zonder haast
+      - generic [ref=e215]: Erkend meesterinlijster
+    - generic [ref=e217]:
+      - generic [ref=e218]:
+        - generic [ref=e219]: Afspraak
+        - heading "Neem uw werk mee en we kijken samen wat past" [level=2] [ref=e220]:
+          - text: Neem uw werk mee
+          - text: en we kijken samen wat
+          - emphasis [ref=e221]: past
+        - paragraph [ref=e222]: "Of het nu om een schilderij, foto, tekening, borduurwerk of object gaat: in het atelier zoeken we samen naar de juiste oplossing."
+      - generic [ref=e223]:
+        - link "Overleg met Karolien" [ref=e224] [cursor=pointer]:
+          - /url: index.html#contact
+        - link "Bekijk portfolio" [ref=e225] [cursor=pointer]:
+          - /url: portfolio.html
+  - contentinfo [ref=e226]:
+    - generic [ref=e227]:
+      - img [ref=e228]
+      - generic [ref=e229]:
+        - text: De
+        - emphasis [ref=e230]: Lijsterij
+    - generic [ref=e232]: Â© 2026 De Lijsterij
+    - generic [ref=e233]: Design by Valknut
