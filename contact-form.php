@@ -10,7 +10,7 @@ $email = filter_var(trim($_POST["email"] ?? ""), FILTER_SANITIZE_EMAIL);
 $categorie = strip_tags(trim($_POST["categorie"] ?? ""));
 $bericht = trim($_POST["bericht"] ?? "");
 
-$recipient = "mikbrokke@gmail.com";
+$recipient = "info@delijsterij.nl";
 $subjectSuffix = $categorie !== "" ? $categorie : "Contactaanvraag";
 $subject = "Nieuw bericht van De Lijsterij: $subjectSuffix";
 
@@ -34,3 +34,5 @@ if (mail($recipient, $subject, $email_content, $email_headers)) {
     echo "Oeps! Er ging iets mis bij het verzenden. Controleer of je hosting PHP mail ondersteunt.";
 }
 ?>
+
+
