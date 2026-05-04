@@ -1434,8 +1434,8 @@ h2 em {
 
 .review-text {
   font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-size: clamp(22px, 2.2vw, 30px);
+  font-style: normal;
+  font-size: clamp(18px, 1.8vw, 20px);
   line-height: 1.65;
   color: var(--ink);
   margin-bottom: 1.25rem;
@@ -2371,7 +2371,7 @@ footer {
   width: 100%;
   max-width: 560px;
   justify-self: start;
-  margin-left: -15rem;
+  margin-left: 0;
 }
 
 .story-grid--about .section-header {
@@ -2834,17 +2834,29 @@ footer {
   gap: 1.75rem;
   padding: 1.15rem;
   background: var(--cream);
+  align-items: center;
 }
 
 .portfolio-feature-image--duo img {
-  min-height: 520px;
+  min-height: 0;
+  height: auto;
+  object-fit: contain;
 }
 
 .portfolio-feature-image-rembrandt {
   background: #fff;
-  object-fit: cover;
-  object-position: 54% 49%;
+  object-fit: contain;
+  object-position: center;
   padding: 6px;
+}
+
+@media (max-width: 1200px) {
+  body.page-portfolio .portfolio-feature-image--duo img {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    object-fit: contain !important;
+  }
 }
 
 .portfolio-feature-copy {
