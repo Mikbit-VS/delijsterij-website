@@ -1685,12 +1685,24 @@ footer {
 
 .footer-links {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 4px;
   font-size: 12px;
   color: rgba(247, 243, 236, 0.35);
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+.footer-links a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: rgba(247, 243, 236, 0.7);
 }
 
 /* -- ANIMATIONS -- */
@@ -2093,7 +2105,7 @@ footer {
     gap: 1rem;
   }
   .footer-links {
-    justify-content: center;
+    align-items: center;
   }
 }
 
